@@ -2,7 +2,6 @@ iamME
 ==================
 [code climate] [code coverage]
 ==================
-demkiw test
 
 ## Synopsis
 
