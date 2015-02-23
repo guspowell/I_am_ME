@@ -17,5 +17,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
 
+# run this code in Cl to update codeclimate => CODECLIMATE_REPO_TOKEN=673bdcbd1c66baf871653e1973be8b3dc6ae1b6e818c87d4739fde46fbf17ea5 bundle exec rake

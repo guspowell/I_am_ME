@@ -1,8 +1,7 @@
 iamME
 ==================
-[code climate] [code coverage]
+[![Code Climate](https://codeclimate.com/github/ciawalsh/iamME/badges/gpa.svg)](https://codeclimate.com/github/ciawalsh/iamME) [![Test Coverage](https://codeclimate.com/github/ciawalsh/iamME/badges/coverage.svg)](https://codeclimate.com/github/ciawalsh/iamME)
 ==================
-demkiw test
 
 ## Synopsis
 
