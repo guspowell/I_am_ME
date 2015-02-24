@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails-api'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', '~> 4.2'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
