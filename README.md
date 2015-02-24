@@ -22,3 +22,10 @@ For our Final Projects, we have chosen to work on Tom & Amar's idea of a visual 
 - ...
 - ...
 
+## Contributors
+
+- Charlie
+- Danielle
+- Ptolemy
+- India
+- Gus
