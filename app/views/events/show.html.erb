@@ -2,26 +2,24 @@
 
 <html>
   <head>
-<!--     <link rel="stylesheet" type="text/css" href="./app/stylesheets/index.css"> -->
-    <link rel="stylesheet" type="text/css" href="./app/stylesheets/event_widget.css">
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><%= stylesheet_link_tag "event_widget.css" %>
+    <%= stylesheet_link_tag "normalize.css" %>
      <title>I am ME</title>
-  </head>
-  <script>
-    $(document).ready(function(){
-  //
-     $(".hidden").hide();
-  //     $("img").hide();
-  //
-      $(".more").click(function(){
-          $(".frame").toggleClass("active");
-          $(".hidden").toggle();
-          $(".title").toggle();
-          $(".location").toggle();
-          $(".me").toggle();
-      });
-   });
-  </script>
+    <script>
+      $(document).ready(function(){
+    //
+       $(".hidden").hide();
+    //     $("img").hide();
+    //
+        $(".more").click(function(){
+            $(".frame").toggleClass("active");
+            $(".hidden").toggle();
+            $(".title").toggle();
+            $(".location").toggle();
+            $(".me").toggle();
+        });
+     });
+    </script>
 </head>
 
   <body>
@@ -67,7 +65,7 @@
                 <div class="top">
                   <h1 class="title2">Rebecca Ferguson</h1>
                   <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
-                  <HR>
+<!--                   <HR> -->
                 </div>
                 <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
                 <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>Jazz Cafe</h2>

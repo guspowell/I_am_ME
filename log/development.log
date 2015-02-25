@@ -7028,3 +7028,3392 @@ Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 
 
 
 Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:08:04 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:27:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (219.7ms)
+Completed 200 OK in 1211ms (Views: 961.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/events/app/stylesheets/event_widget.css" for ::1 at 2015-02-25 15:27:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/events/app/stylesheets/event_widget.css"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/indiadearlove/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/indiadearlove/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/indiadearlove/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (75.7ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (168.7ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:27:32 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:27:33 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:28:22 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 140ms (Views: 137.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/stylesheet_link_tag" for ::1 at 2015-02-25 15:28:22 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"stylesheet_link_tag"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered events/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 138ms (Views: 136.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:28:23 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:28:54 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 206ms (Views: 203.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/events/%3Clink" for ::1 at 2015-02-25 15:28:55 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"<link"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered events/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 163ms (Views: 161.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:28:55 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:29:08 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/events/%3Clink" for ::1 at 2015-02-25 15:29:08 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"<link"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered events/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 165ms (Views: 163.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:29:08 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:29:09 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:30:13 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 211ms (Views: 209.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:30:13 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:32:51 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (107.0ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( event_widget.css )` to `config/initializers/assets.rb` and restart your server):
+    3: <html>
+    4:   <head>
+    5: <!--  <link rel="stylesheet" type="text/css" href="./app/stylesheets/index.css"> -->
+    6:     <%= stylesheet_link_tag    "event_widget.css", :media => "all" %>
+    7:      <title>I am ME</title>
+    8:   </head>
+    9:   <script>
+  app/views/events/show.html.erb:6:in `_app_views_events_show_html_erb___584179407410499340_70363899303340'
+
+
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (59.7ms)
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:33:13 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( event_widget.css )` to `config/initializers/assets.rb` and restart your server):
+    3: <html>
+    4:   <head>
+    5: <!--  <link rel="stylesheet" type="text/css" href="./app/stylesheets/index.css"> -->
+    6:     <%= stylesheet_link_tag "event_widget.css", :media => "all" %>
+    7:      <title>I am ME</title>
+    8:   </head>
+    9:   <script>
+  app/views/events/show.html.erb:6:in `_app_views_events_show_html_erb___584179407410499340_70363898060740'
+
+
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.4ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (41.7ms)
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:34:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (165.6ms)
+Completed 200 OK in 720ms (Views: 621.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:34:52 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:35:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 365ms (Views: 318.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:35:47 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:35:48 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:35:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 514ms (Views: 319.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:36:00 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:36:20 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 259ms (Views: 257.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/event_widget-845310d13b5ee0bce400480e0d7202fe.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/application-555392d5b9b68631466e75c1328395cc.css?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:36:21 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:38:54 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 279ms (Views: 277.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:38:54 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:38:56 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 147ms (Views: 145.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:38:57 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:43:19 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 276ms (Views: 273.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:43:20 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:43:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (173.3ms)
+Completed 200 OK in 753ms (Views: 665.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:43:50 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:43:51 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:44:31 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 200ms (Views: 196.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:44:32 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:44:43 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:44:43 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:45:25 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 166ms (Views: 164.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:45:25 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:45:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (96.6ms)
+Completed 200 OK in 560ms (Views: 467.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/event_widget-3d643a60d88c2aa1ebb43ac122124270.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/application-28e1f28d5cf7396a0c612cbb87edd5d5.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:45:57 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:52:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (225.6ms)
+Completed 200 OK in 505ms (Views: 502.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application-9c0179bc4df57aa8ddb9a5fa9282b2a8.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:52:59 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:54:47 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (89.6ms)
+Completed 500 Internal Server Error in 115ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( normalize.css )` to `config/initializers/assets.rb` and restart your server):
+    4:   <head>
+    5: <!--  <link rel="stylesheet" type="text/css" href="./app/stylesheets/index.css"> -->
+    6:     <%= stylesheet_link_tag "event_widget.css" %>
+    7:     <%= stylesheet_link_tag "normalize.css" %>
+    8:      <title>I am ME</title>
+    9:   </head>
+   10:   <script>
+  app/views/events/show.html.erb:7:in `_app_views_events_show_html_erb___1276612306735796952_70300694103740'
+
+
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (15.1ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/indiadearlove/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (85.8ms)
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:55:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (122.8ms)
+Completed 200 OK in 675ms (Views: 577.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:55:38 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:55:39 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:57:30 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (97.5ms)
+Completed 200 OK in 260ms (Views: 257.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:57:31 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:58:45 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 228ms (Views: 225.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:58:46 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:08:30 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (74.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (157.9ms)
+Completed 200 OK in 465ms (Views: 361.6ms | ActiveRecord: 74.0ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:08:31 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 16:11:52 +0000
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 170ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:11:52 +0000
+
+
+Started GET "/events/2" for ::1 at 2015-02-25 16:12:02 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered events/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 179ms (Views: 176.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:12:02 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:13:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (207.0ms)
+Completed 200 OK in 1447ms (Views: 1338.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:13:06 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:13:07 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:20:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (2.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 216ms (Views: 148.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:20:11 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:20:50 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 233ms (Views: 231.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:20:50 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:20:51 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:21:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 166ms (Views: 164.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:21:11 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:22:01 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 193ms (Views: 191.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/event_widget-dac6de367e2128a0a8c46d47842c7489.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/application-407298e93421420f1d7ddd67b05373c5.css?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:22:01 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:22:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 239ms (Views: 236.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/event_widget-4c8dc09fb79a16ded8bdc1e15e571bc2.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/application-25bf5e590838681475fcc3159ca720cb.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:22:48 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:23:17 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 241ms (Views: 239.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/event_widget-f9286b9b412182e6e6b1d1e3421c9bec.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/application-9599b4edf6df603423a73b6295c02378.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:23:17 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:23:18 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:23:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 250ms (Views: 248.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/event_widget-af205b1d0c8eb5373b3539e3992c6235.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/application-b8a1742031a8b7536fc4855e22d34cb0.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:23:49 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:24:02 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 223ms (Views: 221.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/event_widget-c49270d9ea0e3ca31351ebb46c38a913.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/application-8f739bbbda5d6c973b84bf40a4b910e5.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:24:02 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:25:46 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 182ms (Views: 180.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/event_widget-c49270d9ea0e3ca31351ebb46c38a913.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/application-8f739bbbda5d6c973b84bf40a4b910e5.css?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:25:47 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 16:29:29 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 174ms (Views: 172.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/event_widget-c49270d9ea0e3ca31351ebb46c38a913.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/events-6f69ff704147a9db125ca2127af0ea5e.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/scaffolds-4ac0ac0c81646e8cd428393c62cd7ac2.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/application-8f739bbbda5d6c973b84bf40a4b910e5.css?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/more_info-2d104331428c32fbb0283239acd59634.png" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/play-a2a6511c142c54b4ed44c6475bf36f2f.png" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/map-713d980f748c9e50635b937da060c352.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/price_tag-894044d97a5396bd9b916b118941560b.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/share-ae57aad39118987ab109221e28d491d6.svg" for ::1 at 2015-02-25 16:29:30 +0000
+
+
+Started GET "/assets/web_link-6a01282fd9d4c51300892a3708eb0ff8.svg" for ::1 at 2015-02-25 16:29:30 +0000
