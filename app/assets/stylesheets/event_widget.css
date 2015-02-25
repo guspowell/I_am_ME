@@ -83,26 +83,11 @@
   font-weight: normal;
 }
 
-/*img {
-  height:5%;
-}*/
-
-/*table .play:active{
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-table .more:active{
-  transform: scale(1.1, 1.1);
-}*/
-
+/*
 .more:active, .active {
   transform: scale(2, 2);
 }
-
+*/
 .hidden {
   width:100%;
   margin-top: -2%;
@@ -126,23 +111,6 @@ table .more:active{
   font-family: Helvetica;
   font-weight: bold;
 }
-
-/*.hidden .top {
-  border: dotted 1px black;
-  padding: 0px;
-}*/
-
-/*.hidden .price {
-  height: 0.005%;
-  margin-left: 40%;
-}*/
-
-/*.header {
-  height: 8%;
-  width: 100%;
-  background-color: white;
-  color: black;
-}*/
 
 hr { 
   display: block;
