@@ -1,0 +1,56 @@
+.frame {
+  position: relative;
+  width: 820px;
+  height: 600px;
+  margin:auto;
+  border: 1px solid black;
+  background-image: url('http://s3.amazonaws.com/rapgenius/filepicker%2FW7fmOwv6SO2kY4O2O5q5_Jay-z.jpg');
+}
+
+.frame .me {
+  height: 30%;
+  margin-right: -5%;
+  margin-bottom: -2%;
+  position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+.frame h1 {
+  font-family: Helvetica;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.frame h2 {
+  font-family: Helvetica;
+  font-size: 2em;
+  font-weight: 400;
+  color: #A1A1A1;
+  position: absolute;
+    bottom: 0%;
+    left: 5%;
+}
+
+
+h1 {
+  font-family: Helvetica;
+  font-size: 10%;
+  font-weight: bold;
+  margin: 0 0 3% 0;
+}
+
+h2 {
+
+  font-family: Helvetica;
+  font-size: 10%;
+  font-weight: normal;
+}
+
+img {
+  height:5%;
+}
