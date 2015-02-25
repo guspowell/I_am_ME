@@ -1,19 +1,148 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./app/stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="./app/stylesheets/event_widget.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <title>I am ME</title>
+  </head>
+  <script>
+    $(document).ready(function(){
+  //
+     $(".hidden").hide();
+  //     $("img").hide();
+  //
+      $(".more").click(function(){
+          $(".frame").toggleClass("active");
+          $(".hidden").toggle();
+          $(".title").toggle();
+          $(".location").toggle();
+          $(".me").toggle();
+      });
+   });
+  </script>
+</head>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+  <body>
+    <section class='calendar'>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+      <table border="1" cellpadding="3" cellspacing="0">
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+        <tr class='days'>
+          <td>Monday</td>
+          <td>Tuesday</td>
+          <td>Wednesday</td>
+          <td>Thursday</td>
+          <td>Friday</td>
+          <td>Saturday</td>
+          <td>Sunday</td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td>
+            <section class='frame'>
+
+              <div class="container">
+                <img class='more' src="../public/images/more_info.png">
+                <img class='play' src="../public/images/play.png">
+                <h1 class='title'>Rebecca Ferguson</h1>
+                <h2 class='location'>Jazz Cafe</h2>
+                <img class='me' src="../public/images/ME.gif">
+              </div> 
+
+              <div class ='hidden'>
+                <div class="top">
+                  <h1 class="title2">Rebecca Ferguson</h1>
+                  <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
+                  <HR>
+                </div>
+                <img src="../public/images/ME.gif">
+                <h2><img src="../public/images/map.svg" class="map">Jazz Cafe</h2>
+                <h2><img src="../public/images/Price_tag.svg" class="price">£800</h2>
+                <h2><img src="../public/images/share.svg" alt="Share">Share</h2>
+                <h2><img src="../public/images/web_link.svg" alt="Web Link">Web Link</h2>
+              </div>
+
+            </section>
+
+          </td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+
+      </table>
+
+
+    </section>
+
+
+
+  </body>
+</html>
