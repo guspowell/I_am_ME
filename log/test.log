@@ -1732,3 +1732,52 @@ Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.7ms)
   [1m[35mEvent Load (2.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."name" = $1 LIMIT 1  [["name", "Rollerderby"]]
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
 >>>>>>> 4bb3ffdc0edd11c194f174a8cc2038439d5404ab
+  [1m[36m (128.9ms)[0m  [1mDROP DATABASE IF EXISTS "iamME_test"[0m
+  [1m[35m (281.8ms)[0m  CREATE DATABASE "iamME_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "events" ("id" serial primary key, "name" character varying, "date" timestamp, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) 
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150224171327')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150224164548')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:02:37 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:04:34 +0000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:15:19 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 1434ms (Views: 1409.0ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:17:06 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 29.2ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:29:28 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 53ms (Views: 38.0ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:29:42 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 47ms (Views: 33.2ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
