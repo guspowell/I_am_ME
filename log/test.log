@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[36m (249.2ms)[0m  [1mCREATE DATABASE "iamME_test" ENCODING = 'unicode'[0m
   [1m[36m (121.6ms)[0m  [1mDROP DATABASE IF EXISTS "iamME_test"[0m
   [1m[35m (422.0ms)[0m  CREATE DATABASE "iamME_test" ENCODING = 'unicode'
@@ -1961,3 +1962,5 @@ Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   Rendered events/show.html.erb (0.7ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+=======
+>>>>>>> 1b2173ad4c620d99196f469ce678c59b9db2ed57

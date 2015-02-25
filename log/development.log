@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[36m (362.3ms)[0m  [1mCREATE DATABASE "iamME_development" ENCODING = 'unicode'[0m
   [1m[36m (14.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
   [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
@@ -10827,3 +10828,5 @@ Processing by EventsController#show as JSON
   [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 12]]
   Rendered events/show.json.jbuilder (0.9ms)
 Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+=======
+>>>>>>> 1b2173ad4c620d99196f469ce678c59b9db2ed57
