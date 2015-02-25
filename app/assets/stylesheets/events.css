@@ -1,0 +1,18 @@
+
+
+#calendar {
+  width: 100%;
+  height: 1000px;
+}
+
+section.day {
+  height: 100%;
+  width: 14.285714286%;
+  border: 2px solid black;
+  float: left;
+}
+
+div.hours {
+  height: 4%;
+  border-bottom: 2px solid black;
+}
