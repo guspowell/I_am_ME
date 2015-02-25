@@ -38,10 +38,13 @@
 
        $.get( "http://localhost:3000/events/5", function( event ) {
 
-         $( ".title" )
-          .text( event.name ) // John
+        $( ".title", "title2" )
+          .text( event.name )
 
-        }, "json" )
+        $(".description")
+          .text( event.description )
+
+
 
      );
 
