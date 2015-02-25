@@ -1611,3 +1611,2245 @@ Processing by EventsController#show as JSON
 Filter chain halted as :set_event rendered or redirected
 Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 2.4ms)
 >>>>>>> 4bb3ffdc0edd11c194f174a8cc2038439d5404ab
+
+
+Started GET "/" for ::1 at 2015-02-25 10:44:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (20.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 10:44:32 +0000
+Processing by EventsController#index as JSON
+Completed 500 Internal Server Error in 26ms
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x007f868c000838>):
+  app/models/event.rb:3:in `<class:Event>'
+  app/models/event.rb:1:in `<top (required)>'
+  app/controllers/events_controller.rb:7:in `index'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 10:45:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as JSON
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.json.jbuilder (4.7ms)
+Completed 200 OK in 19ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:45:09 +0000
+Processing by EventsController#new as JSON
+Completed 500 Internal Server Error in 10ms
+
+ActionView::MissingTemplate (Missing template events/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/missing_template.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:46:36 +0000
+Processing by EventsController#new as JSON
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template events/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/missing_template.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:46:39 +0000
+Processing by EventsController#new as JSON
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template events/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.3ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/missing_template.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:50:14 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (30.9ms)
+  Rendered events/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 121ms (Views: 114.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 10:50:14 +0000
+
+
+Started POST "/events" for ::1 at 2015-02-25 10:54:58 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0r0dpcBbNPQ+r40hPys7KNQRDITPJkrEY0K3Pwq9YnGIBycEcAF2lkFe5AcO3iIqsNRYudOqwsUcw7wqh3RQCQ==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"10", "date(5i)"=>"50", "description"=>"baldasfjasg", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/076ec2a8-fb05-4167-975e-6d990a70b0d1/iron-man-3-wallpaper-for-iphone-4s-4.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 2ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/076ec2a8-fb05-4167-975e-6d990a70b0d1/iron-man-3-wallpaper-for-iphone-4s-4.jpg"):
+  app/controllers/events_controller.rb:28:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 10:57:26 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:57:32 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.5ms)
+  Rendered events/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 10:57:41 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n3cYhBpsDn62VCNpboXez8nfAh6LCCc4lyFjQuWVkdbFzSIlqjZMHMmlSk9fcMfNrRpWI5eErznooGhXaFyjrg==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"10", "date(5i)"=>"57", "description"=>"blah blah "}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("name", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ironman"], ["description", "blah blah "], ["date", "2015-02-25 10:57:00.000000"], ["created_at", "2015-02-25 10:57:41.331356"], ["updated_at", "2015-02-25 10:57:41.331356"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/4
+Completed 302 Found in 12ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/events/4" for ::1 at 2015-02-25 10:57:41 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 10:57:43 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-02-25 10:57:43 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (1.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (27.9ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:59:05 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.1ms)
+  Rendered events/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 10:59:07 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.4ms)
+  Rendered events/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 10:59:21 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pS1GSAFTqWAEkgNw7H/mc/wrA13xxhGAjU/Xk3oIQqb/l3zpsQnrAntjalbdiv9xmO5XYO1KmYHyztyG98Fw3g==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"10", "date(5i)"=>"59", "description"=>"blah blah ", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc545c70260 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1026-1o1q4tb.jpg>, @original_filename="iron-man-3-wallpaper-for-iphone-4s-4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"iron-man-3-wallpaper-for-iphone-4s-4.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-1q93tqv.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct20150225-1026-n057yt'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct20150225-1026-n057yt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct20150225-1026-182n1wr'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-ndwuct20150225-1026-182n1wr'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1026-jokl5r.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Ironman"], ["description", "blah blah "], ["image_file_name", "iron-man-3-wallpaper-for-iphone-4s-4.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 587674], ["image_updated_at", "2015-02-25 10:59:21.059190"], ["date", "2015-02-25 10:59:00.000000"], ["created_at", "2015-02-25 10:59:21.749355"], ["updated_at", "2015-02-25 10:59:21.749355"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/5
+Completed 302 Found in 716ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/events/5" for ::1 at 2015-02-25 10:59:21 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 10:59:32 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-02-25 10:59:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (1.3ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (21.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:02:43 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-02-25 11:02:43 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (0.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (18.1ms)
+
+
+Started DELETE "/events/5" for ::1 at 2015-02-25 11:02:52 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kcZYD52Gb+YLnFr98T/rYmWaQ7USbBrGFcbxJqH/FAvLfGKuLdwthHRtM9vAyvJgAV8XiA7gksdqR/ozLDYmcw==", "id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  COMMIT
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/005/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/005/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/005/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+Redirected to http://localhost:3000/events
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:02:52 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2015-02-25 11:02:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (0.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (26.5ms)
+
+
+Started DELETE "/events/4" for ::1 at 2015-02-25 11:02:58 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SOOL0ulbzGfMKes0/CMPNlHC/G8JKBtBYehKPj50PYYSWbFzWQGOBbPYghLN1hY0NQeoUhWkk0AeaUErs70P/g==", "id"=>"4"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 4]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:02:58 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:03:00 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.2ms)
+  Rendered events/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:03:15 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1cPJ75lXpuFECnHMsdensRqondfnKUsiJNHOSJ9SkU+PefNOKQ3kgzv7GOqAIr6zfm3J6vulwyNbUMVdEpujNw==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"03", "description"=>"BATTTTTMAN", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc541dde470 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1026-dnz1ip.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-ae8y4h.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko320150225-1026-1td6ltr'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko320150225-1026-1td6ltr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko3.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko320150225-1026-1r3bybi'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1xifko320150225-1026-1r3bybi'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1026-1d7qc5p.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "BATTTTTMAN"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 11:03:15.339592"], ["date", "2015-02-25 11:03:00.000000"], ["created_at", "2015-02-25 11:03:15.967970"], ["updated_at", "2015-02-25 11:03:15.967970"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/6
+Completed 302 Found in 653ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/events/6" for ::1 at 2015-02-25 11:03:15 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:03:18 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:08:56 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:08:56 +0000
+
+
+Started DELETE "/events/6" for ::1 at 2015-02-25 11:18:56 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CpXb2AJHDC4XPXfdtrM/GmFQm2chDY9Ef/a3KV02crJQL+F5sh1OTGjMHvuHRiYYBZXPWj2BB0UAd7w80P9Ayg==", "id"=>"6"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  COMMIT
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/006/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/006/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/006/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+Redirected to http://localhost:3000/events
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:18:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:18:57 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:18:58 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (2.9ms)
+  Rendered events/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:19:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 80ms (Views: 70.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:19:35 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:19:38 +0000
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant EventsController::S3_BUCKET):
+  app/controllers/events_controller.rb:17:in `new'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:19:38 +0000
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant EventsController::S3_BUCKET):
+  app/controllers/events_controller.rb:17:in `new'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:19:56 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (16.7ms)
+  Rendered events/new.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `url' for nil:NilClass):
+    13: //       fileInput.after(barContainer);
+    14: //       fileInput.fileupload({
+    15: //         fileInput:       fileInput,
+    16: //         url:             '<%= @s3_direct_post.url %>',
+    17: //         type:            'POST',
+    18: //         autoUpload:       true,
+    19: //         formData:         <%= @s3_direct_post.fields.to_json.html_safe %>,
+  app/views/events/new.html.erb:16:in `_app_views_events_new_html_erb___3663049827037875163_70177900258560'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:20:28 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (5.2ms)
+  Rendered events/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:20:29 +0000
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:20:47 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LLr4A7cGVSCHtJu194wM5tB8hQswqDl+Lkzk9TRPrLl2AMKiB1wXQvhF8pPGeRXktLnRNiwksX9Rze/guYaewQ==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"20", "description"=>"Batman\r\n", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fa721995348 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1443-5dtqfb.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1fihgeh.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv91920150225-1443-17hlw2q'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv91920150225-1443-17hlw2q'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv919.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv91920150225-1443-i31c4v'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-1isv91920150225-1443-i31c4v'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1443-kifp8i.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "Batman\r\n"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 11:20:47.156261"], ["date", "2015-02-25 11:20:00.000000"], ["created_at", "2015-02-25 11:20:47.788645"], ["updated_at", "2015-02-25 11:20:47.788645"]]
+[paperclip] saving /events/images/000/000/007/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 647ms
+
+NameError (uninitialized constant Paperclip::Storage::S3::AWS):
+  app/controllers/events_controller.rb:31:in `block in create'
+  app/controllers/events_controller.rb:30:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:23:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 80ms (Views: 70.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:23:24 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:23:26 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (45.1ms)
+  Rendered events/new.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 93ms (Views: 87.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:23:44 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Szpp9RGoITV6lGhcqUr2BuoSigz2lIubfbRQe6y/iKLltMGZBzi5qobOIdDUDLaf20eFS9W2i8Sd9pUY3vMWg==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"23", "description"=>"Batman", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f848c839dd0 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1577-zs4jv3.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-9ct1z5.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-stwyvk'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-stwyvk'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-tagsqs'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-tagsqs'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1yk502y.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "Batman"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 11:23:44.818315"], ["date", "2015-02-25 11:23:00.000000"], ["created_at", "2015-02-25 11:23:45.468262"], ["updated_at", "2015-02-25 11:23:45.468262"]]
+[paperclip] saving /events/images/000/000/008/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.339782 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>282006,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg,:key=>"events/images/000/000/008/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/008/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.078052 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>18539,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-stwyvk,:key=>"events/images/000/000/008/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/008/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.073157 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>12489,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-17r6hne20150225-1577-tagsqs,:key=>"events/images/000/000/008/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/8
+Completed 302 Found in 1237ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/events/8" for ::1 at 2015-02-25 11:23:46 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered events/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:23:46 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:23:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:25:06 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:25:06 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:25:09 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:25:09 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:25:58 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:25:58 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:26:36 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:26:36 +0000
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:35:14 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:35:15 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:37:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:37:56 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:37:57 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.7ms)
+  Rendered events/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:38:10 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P05rM4R82fRcDTiFiEI/FhrdqEgQA4Xfy9RK+/DjxsBl9FGSNCabliP8UaO5tyYUfhj8dQyPDd60VUHufSr0uA==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"37", "description"=>"basdgasg", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f848e290440 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1577-1ub98fd.jpg>, @original_filename="iron-man-3-wallpaper-for-iphone-4s-4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"iron-man-3-wallpaper-for-iphone-4s-4.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-2ndovg.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-d1jtcp'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-d1jtcp'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-1lbiiew'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-1lbiiew'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-1nokhvh.jpg'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ironman"], ["description", "basdgasg"], ["image_file_name", "iron-man-3-wallpaper-for-iphone-4s-4.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 587674], ["image_updated_at", "2015-02-25 11:38:10.699261"], ["date", "2015-02-25 11:37:00.000000"], ["created_at", "2015-02-25 11:38:11.344835"], ["updated_at", "2015-02-25 11:38:11.344835"]]
+[paperclip] saving /events/images/000/000/009/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 200 0.352766 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>587674,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: iron-man-3-wallpaper-for-iphone-4s-4.jpg,:key=>"events/images/000/000/009/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[paperclip] saving /events/images/000/000/009/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 200 0.058091 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>13562,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-d1jtcp,:key=>"events/images/000/000/009/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[paperclip] saving /events/images/000/000/009/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 200 0.052338 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>2457,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: ac8bb68e1f70b0e3ec49979dd131e0e620150225-1577-wxt8ln20150225-1577-1lbiiew,:key=>"events/images/000/000/009/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+  [1m[35m (6.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/9
+Completed 302 Found in 1133ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/events/9" for ::1 at 2015-02-25 11:38:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:38:11 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:38:15 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/8" for ::1 at 2015-02-25 11:44:00 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0SjBPYBI9P9te7lE7sMAaFRnlzb+RqUFOg/4gOIHN1N/pmlRlthsYJEh8MiThUDxZTKYcd1kpVraTT3jkEupQ==", "id"=>"8"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+[AWS S3 200 0.156738 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.027897 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.027497 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  COMMIT
+[paperclip] deleting /events/images/000/000/008/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.031041 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/008/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.032131 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/008/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.029316 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/008/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+Redirected to http://localhost:3000/events
+Completed 302 Found in 317ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:44:00 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:44:01 +0000
+
+
+Started DELETE "/events/9" for ::1 at 2015-02-25 11:44:02 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YLI1AfGM8KnQiYMbegabViK2rEhR9dpPmIeD+gUBcnc6CA+gQdayy6946j1L84JURnP4dU15Uk7nBojviMhADw==", "id"=>"9"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[AWS S3 200 0.096065 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[AWS S3 200 0.035298 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[AWS S3 200 0.025751 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 9]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /events/images/000/000/009/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 204 0.028683 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/original/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[paperclip] deleting /events/images/000/000/009/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 204 0.026914 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/medium/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+[paperclip] deleting /events/images/000/000/009/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg
+[AWS S3 204 0.029327 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/009/thumb/iron-man-3-wallpaper-for-iphone-4s-4.jpg")  
+
+Redirected to http://localhost:3000/events
+Completed 302 Found in 253ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:44:03 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:44:03 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:44:16 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.6ms)
+  Rendered events/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:44:31 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWOkPZbtcyQAhoVcx1kNYmI2tizflTiXAyRlhdSirw3f2Z6cJrcxRn937Hr2rBRgBvPiEcMZsJZ8pW6QWWuddQ==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"44", "description"=>"Batman", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f848e29bac0 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1577-kdciji.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ibebar.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-acduzc'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-acduzc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-ul4nni'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-ul4nni'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1ik8lxy.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "Batman"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 11:44:31.510703"], ["date", "2015-02-25 11:44:00.000000"], ["created_at", "2015-02-25 11:44:32.146542"], ["updated_at", "2015-02-25 11:44:32.146542"]]
+[paperclip] saving /events/images/000/000/010/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.310126 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>282006,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg,:key=>"events/images/000/000/010/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/010/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.08412 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>18539,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-acduzc,:key=>"events/images/000/000/010/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/010/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.062866 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>12489,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1xev5ob20150225-1577-ul4nni,:key=>"events/images/000/000/010/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/10
+Completed 302 Found in 1114ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/events/10" for ::1 at 2015-02-25 11:44:32 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:44:32 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:44:34 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1[0m
+
+
+Started DELETE "/events/10" for ::1 at 2015-02-25 11:58:17 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QKD5aLggDt3JYSC8aOSUNn1PmkpGGCKKLDnIAO/3YFcaGsPJCHpMv7aQSZpZEY00GYrOd1qUqotTuMMVYj5SLw==", "id"=>"10"}
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/models/event.rb:6: syntax error, unexpected =>, expecting keyword_end
+  :url => ":s3_domain_url"
+         ^):
+  app/models/event.rb:6: syntax error, unexpected =>, expecting keyword_end
+  app/controllers/events_controller.rb:68:in `set_event'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/events/10" for ::1 at 2015-02-25 11:58:28 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 43.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:58:28 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:58:30 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/10" for ::1 at 2015-02-25 11:58:32 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A/WFO6qH4EubkWHknGAInAfGoYeYx6oOsQPevV5WiZdZT7+aGt2iKeRgCMKtlRGeYwP1uoRLIg/OgtWo05+77w==", "id"=>"10"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[AWS S3 200 0.132773 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.028368 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.026688 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 10]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /events/images/000/000/010/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.028112 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/010/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.029641 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/010/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.042581 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/010/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+Redirected to http://localhost:3000/events
+Completed 302 Found in 301ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:58:33 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:58:33 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 11:58:34 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (4.2ms)
+  Rendered events/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 11:58:45 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NlUHjoL/Qx8SXNdJQc4S1zDaIlVxWjxlcCA75sSwh0Ns7z0vMqUBfW2tvm9wOwvVVB92aG3WtGQPoTDzSXm1Ow==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"11", "date(5i)"=>"58", "description"=>"Batman", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f848cad8f78 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1577-h5vnxe.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-6u5av3.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-1k1n7nt'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-1k1n7nt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-14dg609'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-14dg609'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1577-1mq5rdk.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "Batman"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 11:58:45.714486"], ["date", "2015-02-25 11:58:00.000000"], ["created_at", "2015-02-25 11:58:46.365791"], ["updated_at", "2015-02-25 11:58:46.365791"]]
+[paperclip] saving /events/images/000/000/011/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.270955 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>282006,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg,:key=>"events/images/000/000/011/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/011/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.074203 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>18539,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-1k1n7nt,:key=>"events/images/000/000/011/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/011/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.095562 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>12489,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1577-ruobxx20150225-1577-14dg609,:key=>"events/images/000/000/011/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/11
+Completed 302 Found in 1114ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/events/11" for ::1 at 2015-02-25 11:58:46 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 11:58:46 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 11:58:48 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1
+
+
+Started DELETE "/events/11" for ::1 at 2015-02-25 12:06:36 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fbQSuGhBPvhZ/KChBBJ4a35/QhwM2eoA1EtD/k45urYnDigZ2Bt8miYNyYc152FpGroWIRBVYgGrykjrw/CIzg==", "id"=>"11"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[AWS S3 200 0.347233 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.065329 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[AWS S3 200 0.054788 0 retries] head_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 11]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /events/images/000/000/011/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.056673 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/011/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.057745 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] deleting /events/images/000/000/011/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 204 0.051162 0 retries] delete_object(:bucket_name=>"bucketiamme",:key=>"events/images/000/000/011/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+Redirected to http://localhost:3000/events
+Completed 302 Found in 655ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:06:37 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:06:37 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:06:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 81ms (Views: 69.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:06:47 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 12:07:04 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (42.5ms)
+  Rendered events/new.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 90ms (Views: 84.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/events" for ::1 at 2015-02-25 12:07:17 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tw01unweS3rjEiQ2+SnaXuWiUPcEMoX9I1/cv/+/xe8Zg53Wao7T5R9IbbqEb5rH1PdfsCcQhaLDHRncjfNbw==", "event"=>{"name"=>"Batman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"12", "date(5i)"=>"07", "description"=>"Batman", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fd1b0cf9a98 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150225-1958-14ic3d0.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1vggm92.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-mlm99h'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-mlm99h'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-snbwyf'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-snbwyf'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1fck2e1.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Batman"], ["description", "Batman"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-25 12:07:17.506716"], ["date", "2015-02-25 12:07:00.000000"], ["created_at", "2015-02-25 12:07:18.136924"], ["updated_at", "2015-02-25 12:07:18.136924"]]
+[paperclip] saving /events/images/000/000/012/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 1.322329 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>282006,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg,:key=>"events/images/000/000/012/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/012/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.083359 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>18539,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-mlm99h,:key=>"events/images/000/000/012/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+[paperclip] saving /events/images/000/000/012/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[AWS S3 200 0.073282 0 retries] put_object(:acl=>:public_read,:bucket_name=>"bucketiamme",:content_length=>12489,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: c3e12863ab37c709c1ef2d2aff8f262720150225-1958-1is7j6j20150225-1958-snbwyf,:key=>"events/images/000/000/012/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg")  
+
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/12
+Completed 302 Found in 2192ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/events/12" for ::1 at 2015-02-25 12:07:19 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered events/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:07:19 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:07:23 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" ASC LIMIT 1[0m
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:08:17 +0000
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:08:17 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:08:17 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:09:01 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:09:01 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:09:30 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:09:30 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:10:15 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:10:15 +0000
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:10:19 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 12:10:19 +0000
+
+
+Started GET "/events/12/edit" for ::1 at 2015-02-25 12:17:55 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered events/_form.html.erb (3.7ms)
+  Rendered events/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 12:18:00 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.4ms)
