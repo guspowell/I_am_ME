@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :calendars
+  resources :users do
+    resources :calendars
+    resources :events
+  end
 
   get '/' => 'events#index'
   devise_for :users

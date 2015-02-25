@@ -10,6 +10,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.json
   def show
+    @calendar.events_ids = @calendar.events.map { |event| event.id }
   end
 
   # GET /calendars/new
