@@ -346,13 +346,13 @@ table .more:active{
   transform: scale(1.1, 1.1);
 }*/
 
-/*.more:active, .active {
+.more:active, .active {
   transform: scale(2, 2);
-}*/
+}
 
 .hidden {
   width:100%;
-  margin-top: 100%;
+  margin-top: -2%;
   background-color: white;
   border: 1px solid black;
   padding: 10px;
@@ -400,5 +400,6 @@ hr {
   border-style: dotted;
   border-width: 1px;
 } 
+
 
 

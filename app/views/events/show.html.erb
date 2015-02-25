@@ -2,6 +2,7 @@
 
 <html>
   <head>
+<<<<<<< HEAD
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
     </script>
 
@@ -38,6 +39,32 @@
       <div id='map-canvas'></div>
     </div>
 
+=======
+    <%= stylesheet_link_tag "event_widget.css" %>
+    <%= stylesheet_link_tag "normalize.css" %>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <title>I am ME</title>
+  </head>
+  <script>
+    $(document).ready(function(){
+  //
+     $(".hidden").hide();
+  //     $("img").hide();
+  //
+      $(".more").click(function(){
+          $(".frame").toggleClass("active");
+          $(".hidden").toggle();
+          $(".title").toggle();
+          $(".location").toggle();
+          $(".me").toggle();
+      });
+   });
+  </script>
+</head>
+
+  <body>
+
+>>>>>>> 202ce47db62c073e612abcdb34969a3ae80d5f1e
     <section class='calendar'>
 
       <table border="1" cellpadding="3" cellspacing="0">
@@ -80,13 +107,13 @@
                 <div class="top">
                   <h1 class="title2">Rebecca Ferguson</h1>
                   <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
-<!--                   <HR> -->
+                  <HR>
                 </div>
-                <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
-                <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>Jazz Cafe</h2>
-                <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
-                <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
-                <h2><a href='#'><%= image_tag("web_link.svg", :class => 'web_link') %></a>Web Link</h2>
+                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
+                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>Jazz Cafe</h2>
+                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
+                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
+                  <h2><a href='#'><%= image_tag("web_link.svg", :class => 'web_link') %></a>Web Link</h2>
               </div>
 
             </section>
