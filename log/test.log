@@ -1781,3 +1781,11 @@ Processing by EventsController#index as HTML
   Rendered events/index.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 47ms (Views: 33.2ms | ActiveRecord: 1.6ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-02-25 11:39:13 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 30.9ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK

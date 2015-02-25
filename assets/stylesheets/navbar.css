@@ -1,0 +1,135 @@
+/* ----------cal drop down---------------*/
+
+.right-buttons li:hover ul {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1% 2%;
+  margin-top: 4.2%;
+  margin-left: -2%;
+  text-align: center;
+}
+
+.right-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+/* -----------------------------------------*/
+
+
+/* ----------plus drop down---------------*/
+
+.right-buttons li:hover .plus-dropdown {
+  display: block;
+  position: absolute;
+  width: 10%;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+  margin-top: 4.2%;
+  margin-left: -8%;
+  text-align: center;
+}
+
+.right-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+/* -----------------------------------------*/
+
+.left-buttons li ul {
+  display: none;
+}
+
+/* ----------settings---------------*/
+
+.left-buttons li:hover ul {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1% 2%;
+  margin-top: -0.5%;
+  margin-left: -2%;
+  text-align: center;
+}
+
+.left-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+/* ----------cal drop down---------------*/
+
+.right-buttons li:hover ul {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1% 2%;
+  margin-top: 4.2%;
+  margin-left: -2%;
+  text-align: center;
+}
+
+.right-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+/* -----------------------------------------*/
+
+
+/* ----------plus drop down---------------*/
+
+.right-buttons li:hover .plus-dropdown {
+  display: block;
+  position: absolute;
+  width: 10%;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+  margin-top: 4.2%;
+  margin-left: -8%;
+  text-align: center;
+}
+
+.right-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+/* -----------------------------------------*/
+
+.left-buttons li ul {
+  display: none;
+}
+
+/* ----------settings---------------*/
+
+.left-buttons li:hover ul {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1% 2%;
+  margin-top: -0.5%;
+  margin-left: -2%;
+  text-align: center;
+}
+
+.left-buttons li ul li {
+  display: block;
+  float: none;
+  line-height: 2.2em;
+}
+
+
