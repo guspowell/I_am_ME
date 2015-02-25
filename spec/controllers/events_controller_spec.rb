@@ -24,17 +24,11 @@ RSpec.describe EventsController, type: :controller do
   # Event. As you add validations to Event, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    {
-    name: "Football",
-    date: "01-01-2015",
-    description: "Super cool event"
-  }
+    skip("{Add a hash of attributes valid for your model}")
   }
 
-  let(:invalid_attributes) { 
-    {
-    yourmom: "derp"
-  }
+  let(:invalid_attributes) {
+    skip("Add a hash of attributes invalid for your model")
   }
 
   # This should return the minimal set of values that should be in the session
