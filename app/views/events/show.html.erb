@@ -37,13 +37,16 @@
 
        $.get( "http://localhost:3000/events/5", function( event ) {
 
-        $( ".title", "title2" )
+        $( ".title, .title2" )
           .text( event.name )
 
         $(".description")
           .text( event.description )
 
+        $(".location2")
+          .text( event.location )
 
+        }, "json" )
 
      );
 
@@ -97,7 +100,7 @@
                 </div>
                 <div class="bottom">
                   <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
-                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>Jazz Cafe</h2>
+                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a><p class="location2"></p></h2>
                   <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
                   <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
                   <h2><a href='#'><%= image_tag("web_link.svg", :class => 'web_link') %></a>Web Link</h2>
