@@ -245,7 +245,7 @@ iframe {
 
 
 
-.frame {
+.container {
   position: relative;
   width: 100%;
   height: 160px;
@@ -258,7 +258,7 @@ iframe {
 
 }
 
-.frame .me {
+.container .me {
   height: 30%;
   margin-right: -5%;
   margin-bottom: -2%;
@@ -267,7 +267,7 @@ iframe {
     right: 0%;
 }
 
-.frame h1 {
+.container h1 {
   font-family: Helvetica;
   font-size: 0.9em;
   font-weight: bold;
@@ -277,7 +277,7 @@ iframe {
     left: 5%;
 }
 
-.frame h2 {
+.container h2 {
   font-family: Helvetica;
   font-size: 0.7em;
   font-weight: 400;
@@ -304,8 +304,4 @@ h2 {
 
 img {
   height:5%;
-}
-
-table td:hover{
-  transform: scale(2, 2);
 }
