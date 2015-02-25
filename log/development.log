@@ -1,0 +1,7 @@
+  [1m[36mActiveRecord::SchemaMigration Load (17.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvents (20150224164548)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (174.3ms)[0m  [1mCREATE TABLE "events" ("id" serial primary key, "name" character varying, "date" timestamp, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "events" already exists
+: CREATE TABLE "events" ("id" serial primary key, "name" character varying, "date" timestamp, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.5ms)[0m  ROLLBACK
