@@ -2,9 +2,14 @@
 
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><%= stylesheet_link_tag "event_widget.css" %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+
+    <%= stylesheet_link_tag "event_widget.css" %>
     <%= stylesheet_link_tag "normalize.css" %>
-     <title>I am ME</title>
+
+    <title>I am ME</title>
+
     <script>
       $(document).ready(function(){
     //
@@ -20,9 +25,19 @@
         });
      });
     </script>
-</head>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
+
+  </head>
 
   <body>
+
+    <div id='map-container'>
+      <div id='map-canvas'></div>
+    </div>
+
     <section class='calendar'>
 
       <table border="1" cellpadding="3" cellspacing="0">
@@ -40,7 +55,7 @@
           <td><div></div></td>
           <td><div></div></td>
           <td><div></div></td>
-          <td><div></div></td>
+          <td></td>
           <td><div></div></td>
           <td><div></div></td>
           <td><div></div></td>

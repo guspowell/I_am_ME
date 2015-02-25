@@ -1,0 +1,22 @@
+#map-container {
+   height: 400px;
+   width: 100%;
+   border-color: #fff;
+   margin-top: 25px;
+   border-width: 7px;
+   margin: 0;
+   padding: 0;
+ }
+ #map-canvas {
+   height: 100%;
+   width: 100%;
+ }
+
+ /* Bootstrap Css Map Fix*/
+#map-container #map-canvas img {
+  max-width: none;
+}
+/* Bootstrap Css Map Fix*/
+#map-container #map-canvas label {
+  width: auto; display:inline;
+}
