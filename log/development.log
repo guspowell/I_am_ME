@@ -20,3 +20,1299 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 17:10:50 +0000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (1.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 17:10:50 +0000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (2.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 17:11:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:11:17 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1057ms (Views: 1053.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:11:18 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:11:23 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (24.2ms)
+  Rendered events/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 67ms (Views: 61.9ms | ActiveRecord: 1.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToEvents (20150224171327)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "events" ADD "image_file_name" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "events" ADD "image_content_type" character varying
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "events" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "events" ADD "image_updated_at" timestamp
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150224171327"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'events'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:16:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (1.0ms)
+  Rendered events/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 29ms
+
+SyntaxError (/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected tLABEL
+...ppend=  form_for(@event), html: {multipart: true} do |f| @ou...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...nt), html: {multipart: true} do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/events/_form.html.erb:1: syntax error, unexpected tLABEL
+  app/views/events/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/events/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___3569060281557010987_70145857565120'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:16:50 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (1.0ms)
+  Rendered events/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected tLABEL
+...ppend=  form_for(@event), html: {multipart: true} do |f| @ou...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...nt), html: {multipart: true} do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/events/_form.html.erb:1: syntax error, unexpected tLABEL
+  app/views/events/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/events/_form.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___3569060281557010987_70145870255500'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (22.5ms)
+  Rendered events/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:09 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (4.8ms)
+  Rendered events/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:17:27 +0000
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:18:12 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BBy7k5bhHq7j66uOsrZq25TtcT4GGZA0UIe1/f7QublepoEyJrtczJwawqiDQ3PZ8CglAxqVGDUvBr7ocxmLwQ==", "event"=>{"name"=>"Batmans Coming", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"20", "date(5i)"=>"00", "description"=>"Blah Blah Blah", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f983d122168 @tempfile=#<Tempfile:/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/RackMultipart20150224-80867-1hg8se0.jpg>, @original_filename="papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[image]\"; filename=\"papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-1ihsw1t.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub20150224-80867-18yzvue'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub20150224-80867-18yzvue'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]'
+Command :: convert '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub20150224-80867-nop7ck'
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-v3loub20150224-80867-nop7ck'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/yb/p7yp7zrx0b1_5cxbvcp5d6qc0000gp/T/c3e12863ab37c709c1ef2d2aff8f262720150224-80867-aek1nt.jpg'
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "events" ("name", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Batmans Coming"], ["description", "Blah Blah Blah"], ["image_file_name", "papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 282006], ["image_updated_at", "2015-02-24 17:18:12.271714"], ["date", "2015-02-24 20:00:00.000000"], ["created_at", "2015-02-24 17:18:12.991635"], ["updated_at", "2015-02-24 17:18:12.991635"]]
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 770ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:13 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:18:26 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:18:49 +0000
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:28:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:28:47 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:28:47 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 138ms (Views: 125.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/jquery.ui.widget-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:22 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:23 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-02-24 17:30:23 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 140ms (Views: 129.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:32:56 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:36:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:36:57 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:36:58 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (1.0ms)
+  Rendered events/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected { arg, expecting ')'
+... html: {class: "directUpload"}{multipart: true}) do |f| @out...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/events/_form.html.erb:1: syntax error, unexpected { arg, expecting ')'
+  app/views/events/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___3069023259827783917_70290812117560'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:36:58 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (1.2ms)
+  Rendered events/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:1: syntax error, unexpected { arg, expecting ')'
+... html: {class: "directUpload"}{multipart: true}) do |f| @out...
+...                               ^
+/Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/app/views/events/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/events/_form.html.erb:1: syntax error, unexpected { arg, expecting ')'
+  app/views/events/_form.html.erb:36: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/events/new.html.erb:3:in `_app_views_events_new_html_erb___3069023259827783917_70290845673200'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:37:08 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (16.6ms)
+  Rendered events/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:37:09 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (2.7ms)
+  Rendered events/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:40:06 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (4.2ms)
+  Rendered events/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/application-ad0ea1a8f450a5cfd37fdb32923ea30c.css?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:42:19 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (4.4ms)
+  Rendered events/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:43:32 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.3ms)
+  Rendered events/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:50 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:47:53 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:48:02 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (4.0ms)
+  Rendered events/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:48:24 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hcFVSEYUwGfw7SbJcKzN/Q7tNsdBqvgTcfoMrjeEMJffe2/p9k6CBY8cT+9BWdT/aihi+l0mcBIOewe7uk0C7w==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"48", "description"=>"Ironman Blah blah ", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/836c2e44-2a46-4f58-939b-c0f190287357/iron-man-3-wallpaper-for-iphone-4s-4.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 1ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/836c2e44-2a46-4f58-939b-c0f190287357/iron-man-3-wallpaper-for-iphone-4s-4.jpg"):
+  app/controllers/events_controller.rb:28:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.3ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:50:55 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:50:58 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (2.6ms)
+  Rendered events/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:51:12 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EozpNAasqTBUWkkVhkaia1bOqPbeyEHEFTSTo3xJSwxINtOVtvbrUiurIDO3s7tpMgv8y8JEycVqtZi28YB5dA==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"50", "description"=>"Ironman", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/0cedabcb-83cd-48df-9b84-f4eb5f5d6d54/iron-man-3-wallpaper-for-iphone-4s-4.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 1ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/0cedabcb-83cd-48df-9b84-f4eb5f5d6d54/iron-man-3-wallpaper-for-iphone-4s-4.jpg"):
+  app/controllers/events_controller.rb:29:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:54:09 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EozpNAasqTBUWkkVhkaia1bOqPbeyEHEFTSTo3xJSwxINtOVtvbrUiurIDO3s7tpMgv8y8JEycVqtZi28YB5dA==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"50", "description"=>"Ironman", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/0cedabcb-83cd-48df-9b84-f4eb5f5d6d54/iron-man-3-wallpaper-for-iphone-4s-4.jpg"}, "commit"=>"Create Event"}
+Unpermitted parameters: utf8, authenticity_token, event, commit
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-02-24 17:54:09.970504"], ["updated_at", "2015-02-24 17:54:09.970504"]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2015-02-24 17:54:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered events/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:10 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:54:12 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2015-02-24 17:54:12 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.2ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:54:16 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.4ms)
+  Rendered events/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7hWss4pJE+jkrclVcyUnGuJSpbzStcGA3nz9IpsyI4dAmwTfnNmLdxj3gNkOY2eD0weq+/GXwd8+PjhB6X69g==", "event"=>{"name"=>"Ironman", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"54", "description"=>"Ironman", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/08623ed4-dc01-49de-ae08-788feb90e300/iron-man-3-wallpaper-for-iphone-4s-4.jpg"}, "commit"=>"Create Event"}
+Unpermitted parameters: utf8, authenticity_token, event, commit
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-02-24 17:54:29.700200"], ["updated_at", "2015-02-24 17:54:29.700200"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/3
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered events/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:54:29 +0000
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:54:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2015-02-24 17:54:33 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (0.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+
+
+Started DELETE "/events/2" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dAUEssvdq+fiOMQ6w1nHI1MYt9AI7/w4Ixc6Bt522/Iuvz4Te4fphZ3JrRzyrN4hN93j7RRjdDlcljETU7/pig==", "id"=>"2"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2015-02-24 17:57:23 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /opt/rubies/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (1.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (24.6ms)
+
+
+Started DELETE "/events/3" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hbXWWkE5oDj3optLSpdCjtR1c/+Lo76mhpHBl8vsw0rfD+z78WPiWohT8m17YluMsLAnwpcvNqf5EMqCRiXxMg==", "id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/events
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:30 +0000
+
+
+Started DELETE "/events/1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dlMX2VYCl5SixjcUxVThYJMeCsKuNCcK5FwrvIR0y98s6S145ljV9t03XjL0ofhi99te/7K4rwub3SCpCb35pw==", "id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 1]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/001/original/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/001/medium/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+[paperclip] deleting /Users/Charles-Walsh/Desktop/Coding/Challenges/IAMME/public/system/events/images/000/000/001/thumb/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg
+Redirected to http://localhost:3000/events
+Completed 302 Found in 15ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events-aeb162005a029e123393c9ef2b175873.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/scaffolds-8d12299a8fe386a43f244b3eeb399cf9.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/application-d01d8eab680478b04db0a1a27533fbfd.css?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for 127.0.0.1 at 2015-02-24 17:57:34 +0000
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-02-24 17:57:36 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (3.4ms)
+  Rendered events/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:57:49 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ylWtT6ZkUWqjmsY99lgI39wxFgrjdc7FtHax+bSlKjiQ75fuFj4TCNxrrxvHrRHduPRCN//5RsTL97rsOWwYQA==", "event"=>{"name"=>"Batmans Coming", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"57", "description"=>"blah", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 1ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"):
+  app/controllers/events_controller.rb:29:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (22.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 17:58:58 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ylWtT6ZkUWqjmsY99lgI39wxFgrjdc7FtHax+bSlKjiQ75fuFj4TCNxrrxvHrRHduPRCN//5RsTL97rsOWwYQA==", "event"=>{"name"=>"Batmans Coming", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"57", "description"=>"blah", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 7ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"):
+  app/controllers/events_controller.rb:28:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.4ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 18:05:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKHQWdez4dJ9tiA3nTwEwNpQQIQc1jx82UDDDfTp3vCaG+r4Z+mjsAJHSRGsyR3CvpUUuQBatH2mwcgYeSDsiA==", "event"=>{"name"=>"Batmans Coming", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"57", "description"=>"blah", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 17ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"):
+  app/controllers/events_controller.rb:28:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.0ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-24 18:23:21 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKHQWdez4dJ9tiA3nTwEwNpQQIQc1jx82UDDDfTp3vCaG+r4Z+mjsAJHSRGsyR3CvpUUuQBatH2mwcgYeSDsiA==", "event"=>{"name"=>"Batmans Coming", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"24", "date(4i)"=>"17", "date(5i)"=>"57", "description"=>"blah", "image"=>"//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 1ms
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for "//bucketiamme.s3.amazonaws.com/uploads/8b29ad5c-5d21-4d0a-b7b7-c186ae110e2d/papers.co-ab86-wallpaper-batman-by-bats-pattern-darknight-22-wallpaper.jpg"):
+  app/controllers/events_controller.rb:28:in `create'
+
+
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.5ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /opt/rubies/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Image</th>
       <th>Date</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -16,6 +17,7 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
+        <td><%= image_tag event.image.url %></td>
         <td><%= event.date %></td>
         <td><%= event.description %></td>
         <td><%= link_to 'Show', event %></td>
