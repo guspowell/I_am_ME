@@ -2,6 +2,7 @@
 
 <html>
   <head>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <%= stylesheet_link_tag "event_widget.css" %>
@@ -30,23 +31,23 @@
 
     <script type="text/javascript">
 
-      alert("jQuery is")
+     alert("jQuery is")
 
-      $(document).ready(
-        function() {
-          console.log('hello')
-          $('.title').load('http://localhost:3000/events/3.json :name');
-            });
+     $(document).ready(
 
-    </script>
+       $.get( "http://localhost:3000/events/5", function( event ) {
 
-  </head>
+         $( ".title" )
+          .text( event.name ) // John
 
-  <body>
+        }, "json" )
 
-    <div id='map-container'>
-      <div id='map-canvas'></div>
-    </div>
+     );
+
+   </script>
+
+</head>
+
     <section class='calendar'>
 
       <table border="1" cellpadding="3" cellspacing="0">
@@ -80,10 +81,10 @@
               <div class="container">
                 <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
                 <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
-                <h1 class='title'>Rebecca Ferguson</h1>
+                <h1 class='title'>ffdsahjkgf</h1>
                 <h2 class='location'>Jazz Cafe</h2>
                 <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-              </div> 
+              </div>
 
               <div class ='hidden'>
                 <div class="top">
