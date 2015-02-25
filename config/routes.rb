@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :events, defaults: {format: :json}
+  resources :events
 
   get '/' => 'events#index'
 
