@@ -10830,3 +10830,358 @@ Processing by EventsController#show as JSON
 Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
 =======
 >>>>>>> 1b2173ad4c620d99196f469ce678c59b9db2ed57
+
+
+Started GET "/" for ::1 at 2015-02-25 15:09:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/augustuspowell/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/augustuspowell/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/augustuspowell/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.1ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (1410.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20150225122927)
+  [1m[35m (0.3ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/augustuspowell/Projects/iamME/db/migrate/20150225122927_devise_create_users.rb:34)
+  [1m[36m (169.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (16.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150225122927"]]
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (20.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'events'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for ::1 at 2015-02-25 15:11:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3284ms (Views: 3266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendar-7919c8e0ced372c212894b02c107730e.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/event_widget-7865993ccd12bb317752a37376897234.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/events-e00e14cbc5c83743a80b035b6be9c593.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/index-11a76ea02e5f7b72cf16f297ab3b5bdf.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/navbar-439d1b1d3cb7ce848fc82a4919f48e7d.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/scaffolds-e0f3ffb6ad3a6cadb166124f0b27df0f.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/application-6192b5afcfd8f2687d92ad1dffded8b4.css?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/jquery.ui.widget-b4c60ee7b99afec99b94eebdc7a00401.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/z.jquery.fileupload-b1cee60a2a7b40befddfd2fd0fcdcc7d.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/application-55792e992558bde8f8ece0b7f03c975c.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/settings-c9da22c986d894c13032f36b3d1f7f1d.svg" for ::1 at 2015-02-25 15:11:49 +0000
+
+
+Started GET "/assets/log_out-8bf8bc7e8adbcbabbf15f883218d83eb.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/search-2f0753811f61f12f204c778d86a20cd7.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/ME-6cbbdd7d08a184046034f9156f6a2b96.gif" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/create-88903968ec2f96945a12b2e2966a806b.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/MEmates-003f4bc434713e62b00106a7ec87cd9d.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/MEcals-eb17aa5e7dc8104ad84187777d54303b.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/assets/inspireME-2b0ecf89a827d85c4b64fd85ab09022d.svg" for ::1 at 2015-02-25 15:11:50 +0000
+
+
+Started GET "/events/edit" for ::1 at 2015-02-25 15:12:26 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered events/show.html.erb within layouts/application (59.0ms)
+Completed 500 Internal Server Error in 290ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @event.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/events/show.html.erb:5:in `_app_views_events_show_html_erb___2805143847444544101_70323371731780'
+
+
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (14.4ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (145.3ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 15:34:40 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (91.8ms)
+  Rendered events/new.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 421ms (Views: 376.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:34:40 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:34:40 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:34:40 +0000
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:36:19 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @event.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/events/show.html.erb:5:in `_app_views_events_show_html_erb___2805143847444544101_70323371731780'
+
+
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /Users/augustuspowell/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (57.2ms)
+
+
+Started GET "/events/" for ::1 at 2015-02-25 15:36:37 +0000
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 647ms (Views: 646.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:36:38 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:36:38 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:36:38 +0000
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 15:38:28 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (8.8ms)
+  Rendered events/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 299ms (Views: 297.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:38:29 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:38:29 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:38:29 +0000
+  [1m[36mEvent Load (2.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+
+
+Started POST "/events" for ::1 at 2015-02-25 15:41:10 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKOgNWIlUrkqt4QLM1bij+13IisoZCnzHjCvjvkiHeJ+y2n0yEA3kzmqrahDwRsw3qk9phcmFxNvmeYW5VJ3ng==", "event"=>{"name"=>"test event", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"15", "date(5i)"=>"38", "description"=>"testing"}, "commit"=>"Create Event"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (93.4ms)[0m  [1mINSERT INTO "events" ("name", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "test event"], ["description", "testing"], ["date", "2015-02-25 15:38:00.000000"], ["created_at", "2015-02-25 15:41:10.966366"], ["updated_at", "2015-02-25 15:41:10.966366"]]
+  [1m[35m (45.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 165ms (ActiveRecord: 139.0ms)
+
+
+Started GET "/events/1" for ::1 at 2015-02-25 15:41:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 339ms (Views: 277.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:41:11 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:41:11 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:41:11 +0000
+
+
+Started GET "/events.json" for ::1 at 2015-02-25 15:41:42 +0000
+Processing by EventsController#index as JSON
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.json.jbuilder (101.1ms)
+Completed 200 OK in 146ms (Views: 143.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for ::1 at 2015-02-25 15:42:08 +0000
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 227ms (Views: 226.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2015-02-25 15:42:14 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (17.3ms)
+  Rendered events/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 483ms (Views: 480.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:42:15 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:42:15 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:42:15 +0000
+
+
+Started POST "/events" for ::1 at 2015-02-25 15:42:26 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tiSUUGwC836+9uRj0wzNds8O3Of7VjOBdM1IaYnkf9KUTF2RxmeWVK3rzcCjmzTJ/NDDasQUDWEFZAHxlZQVrg==", "event"=>{"name"=>"test 2", "date(1i)"=>"2015", "date(2i)"=>"2", "date(3i)"=>"25", "date(4i)"=>"15", "date(5i)"=>"42", "description"=>"second test"}, "commit"=>"Create Event"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "events" ("name", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "test 2"], ["description", "second test"], ["date", "2015-02-25 15:42:00.000000"], ["created_at", "2015-02-25 15:42:26.364167"], ["updated_at", "2015-02-25 15:42:26.364167"]]
+  [1m[36m (82.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 93ms (ActiveRecord: 83.9ms)
+
+
+Started GET "/events/2" for ::1 at 2015-02-25 15:42:26 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered events/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 207ms (Views: 204.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 15:42:26 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 15:42:26 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-02-25 15:42:26 +0000
+
+
+Started GET "/events.json" for ::1 at 2015-02-25 15:42:34 +0000
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (3.2ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events.json" for ::1 at 2015-02-25 15:49:25 +0000
+Processing by EventsController#index as JSON
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.json.jbuilder (6.6ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.6ms)
