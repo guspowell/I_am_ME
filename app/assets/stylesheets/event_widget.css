@@ -391,6 +391,12 @@ table .more:active{
   color: black;
 }*/
 
+.bottom {
+  font-size:2%;
+  font-family: Helvetica;
+  font-weight: normal;
+}
+
 hr { 
   display: block;
   margin-top: 0.5em;
