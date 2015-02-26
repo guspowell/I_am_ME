@@ -24,13 +24,13 @@ var buildWidgetBottom = function(day) {
 
   // <section class='widget'>
 
-    <div class="thumbnail">
-      <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
-      <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
-      <h1 class='title'>ffdsahjkgf</h1>
-      <h2 class='location'>Jazz Cafe</h2>
-      <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-    </div>
+    // <div class="thumbnail">
+    //   <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+    //   <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+    //   <h1 class='title'>ffdsahjkgf</h1>
+    //   <h2 class='location'>Jazz Cafe</h2>
+    //   <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+    // </div>
 
   //   <div class ='expanded'>
   //     <div class="top">
