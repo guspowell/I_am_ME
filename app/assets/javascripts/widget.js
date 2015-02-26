@@ -1,4 +1,4 @@
-alert("jQuery is")
+// alert("jQuery is")
 
 var appendWidgetFromAPI = function() {
 
