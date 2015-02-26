@@ -24,8 +24,16 @@
         });
      
         $(".map").click(function(){
-          $(".container").css('background-image','url(https://thenypost.files.wordpress.com/2013/09/jayz.jpg)');
+          if($(this).hasClass('expanded')){
+            $(".container").css('background-image','url(https://thenypost.files.wordpress.com/2013/09/jayz.jpg)');
+            $(this).addClass('collapsed').removeClass('expanded');
+          }
+          else{
+            $(".container").css('background-image','url(http://s3.amazonaws.com/rapgenius/filepicker%2FW7fmOwv6SO2kY4O2O5q5_Jay-z.jpg)');            
+            $(this).addClass('expanded').removeClass('collapsed');
+          } 
         });
+
 
      });
 
