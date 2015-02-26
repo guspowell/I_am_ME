@@ -4,9 +4,14 @@
   <head>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
+    <script src="./app/javascripts/map/gmap.js"></script>
 
     <%= stylesheet_link_tag "event_widget.css" %>
     <%= stylesheet_link_tag "normalize.css" %>
+    <%= stylesheet_link_tag "map.css" %>
 
     <title>I am ME</title>
 
@@ -14,6 +19,7 @@
       $(document).ready(function(){
 
        $(".hidden").hide();
+       $("#map-canvas").hide();
 
         $(".more").click(function(){
             $(".frame").toggleClass("active");
@@ -21,27 +27,14 @@
             $(".title").toggle();
             $(".location").toggle();
             $(".me").toggle();
+
         });
      
         $(".map").click(function(){
-          if($(this).hasClass('expanded')){
-            $(".container").css('background-image','url(https://thenypost.files.wordpress.com/2013/09/jayz.jpg)');
-            $(this).addClass('collapsed').removeClass('expanded');
-          }
-          else{
-            $(".container").css('background-image','url(http://s3.amazonaws.com/rapgenius/filepicker%2FW7fmOwv6SO2kY4O2O5q5_Jay-z.jpg)');            
-            $(this).addClass('expanded').removeClass('collapsed');
-          } 
+          $("#map-canvas").toggle();
         });
-
-
+        
      });
-
-
-    </script>
-
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
     </script>
 
     <script type="text/javascript">
@@ -99,7 +92,8 @@
           <td>
             <section class='frame'>
 
-              <div class="container">
+              <div id="googleMap" class="container">
+                <div id='map-canvas'></div>
                 <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
                 <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
                 <h1 class='title'>ffdsahjkgf</h1>
