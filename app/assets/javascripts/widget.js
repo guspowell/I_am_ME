@@ -1,40 +1,6 @@
-// alert("jQuery is")
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
 
-var appendWidgetFromAPI = function() {
 
-  $.get( "http://localhost:3000/events/5", function( event ) {
 
-   $( ".title, .title2" )
-     .text( event.name )
-
-   $(".description")
-     .text( event.description )
-
-   $(".location2, .location")
-     .text( event.location )
-
-   }, "json" )
-
-}
-
-var popoutWidgetEffect = function() {
-
-  $(".hidden").hide();
-
-  $(".more").click(function(){
-      $(".frame").toggleClass("active");
-      $(".hidden").toggle();
-      $(".title").toggle();
-      $(".location").toggle();
-      $(".me").toggle();
-  });
-
-}
-
-$(document).ready(function(){
-
-  popoutWidgetEffect()
-
-  appendWidgetFromAPI()
-
-});
