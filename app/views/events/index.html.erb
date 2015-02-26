@@ -16,11 +16,12 @@
   <% @day = 1%>
   <% while @day <= @number_of_days  do %>
     <% @hour = 1%>
-    <div class="day" id= <%="day#{@day}"%>> </div>
+    <section class="day" id= <%="day#{@day}"%>> 
       <% while @hour <= @number_of_hours %>
-        <div class="hour" id= <%="hour#{@hour}"%>> </div>
+        <div class="hours" id= <%="hour#{@hour}"%>> </div>
         <% @hour +=1%>
       <% end%>
+      </section>
     <% @day +=1%>
   <%end %>
 </section>
