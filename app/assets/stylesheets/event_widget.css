@@ -1,4 +1,4 @@
-.container {
+.widget .thumbnail {
   position: relative;
   width: 100%;
   height: 160px;
@@ -11,7 +11,7 @@
 
 }
 
-.container .me {
+.widget .thumbnail .me {
   height: 30%;
   margin-right: -5%;
   margin-bottom: -2%;
@@ -20,7 +20,7 @@
     right: 0%;
 }
 
-.container .more {
+.widget .thumbnail .more {
   height: 7%;
   margin-left: 3%;
   margin-top: 3%;
@@ -29,7 +29,7 @@
     left: 0%;
 }
 
-.container .play {
+.widget .thumbnail .play {
   height: 7%;
   margin-left: 3%;
   margin-top: 12%;
@@ -38,7 +38,7 @@
     left: 0%;
 }
 
-.container h1 {
+.widget .thumbnail h1 {
   font-family: Helvetica;
   font-size: 0.9em;
   font-weight: bold;
@@ -48,7 +48,7 @@
     left: 5%;
 }
 
-.container h2 {
+.widget .thumbnail h2 {
   font-family: Helvetica;
   font-size: 0.7em;
   font-weight: 400;
@@ -58,7 +58,7 @@
     left: 5%;
 }
 
-.container h3 {
+.widget .thumbnail h3 {
   font-family: Helvetica;
   font-size: 0.7em;
   font-weight: 400;
@@ -69,41 +69,21 @@
 }
 
 
-.container .title {
+.widget .thumbnail .title {
   font-family: Helvetica;
   font-size: 80%;
   font-weight: bold;
   margin: 0 0 3% 0;
 }
 
-.container .location {
+.widget .thumbnail .location {
 
   font-family: Helvetica;
   font-size: 20%;
   font-weight: normal;
 }
 
-/*img {
-  height:5%;
-}*/
-
-/*table .play:active{
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-table .more:active{
-  transform: scale(1.1, 1.1);
-}*/
-
-/*.more:active, .active {
-  transform: scale(2, 2);
-}*/
-
-.hidden {
+.widget .expanded {
   width:100%;
   margin-top: -2%;
   background-color: white;
@@ -111,43 +91,45 @@ table .more:active{
   padding: 10px;
 }
 
-.hidden img{
+.widget .expanded img{
   width:10%;
   float: left;
 }
 
-.hidden .bottom {
+.widget .expanded .expanded-info
+ {
   color: #424242;
 }
 
-.bottom .me2 {
+.widget .expanded-info .me2 {
   width: 60%;
   float: right;
   margin-top: -5%;
   margin-right: -5%;
 }
 
-.hidden .description {
+.widget .expanded .description {
   font-size: 8%;
   color: #424242;
   font-family: Helvetica;
   font-weight: normal;
 }
 
-.hidden .title2 {
+.widget .expanded .title {
   font-size: 5%;
   font-family: Helvetica;
   font-weight: bold;
 }
 
 
-.bottom {
+.widget .expanded-info
+ {
   font-size:2%;
   font-family: Helvetica;
   font-weight: normal;
 }
 
-hr {
+.widget .expanded hr {
   display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
