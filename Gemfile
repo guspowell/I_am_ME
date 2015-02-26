@@ -22,5 +22,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'airborne'
   gem 'jasmine-rails'
+  gem 'jasmine-jquery-rails'
 end
 
