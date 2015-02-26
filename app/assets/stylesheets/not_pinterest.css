@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+#login-background {
+  background: url("blurredbackground.jpg") no-repeat;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+#login-box {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.iamMElogin {
+  width: 30%;
+}
+
+#login-box input[type="text"],
+#login-box input[type="email"],
+#login-box input[type="password"],
+#login-box input[type="submit"] {
+  font-size: 1em;
+  width: 70%;
+  height: auto;
+  line-height: 1.7em;
+  margin-bottom: 3%;
+  padding: 3% 3.5%;
+  outline: none;
+  background: transparent;
+  border: 0.08em solid white;
+  border-radius: 2px;
+  color: #B8B8B8;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+#login-box input[type="submit"] {
+  color: #9d855f;
+  background-color: #F5F5F5;
+}
+
+.submit-button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
+  color: #0099FF;
+  text-decoration: none;
+  margin-top: 10%;
+  line-height: 1.5em;
+}

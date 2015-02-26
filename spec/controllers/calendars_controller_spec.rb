@@ -79,7 +79,7 @@ RSpec.describe CalendarsController, type: :controller do
         post :create, {:calendar => valid_attributes}, valid_session
         expect(assigns(:calendar)).to be_a(Calendar)
         expect(assigns(:calendar)).to be_persisted
-      end
+      endx
 
       it "redirects to the created calendar" do
         post :create, {:calendar => valid_attributes}, valid_session

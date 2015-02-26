@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  resources :users do
-    resources :calendars
-    resources :events
-  end
+  # resources :users do
+  #   resources :calendars
+  #   resources :events
+  # end
 
   get '/' => 'events#index'
   devise_for :users
