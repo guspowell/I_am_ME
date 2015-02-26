@@ -22,7 +22,23 @@
             $(".location").toggle();
             $(".me").toggle();
         });
+
+        
+
+        $(".map").click(function(){
+          $(".container").css('background-image','url(https://thenypost.files.wordpress.com/2013/09/jayz.jpg');
+        });
      });
+      $(function() {
+        $('.map').click(function () {
+
+        $('.map').not(this).css('background-image', 'url(https://thenypost.files.wordpress.com/2013/09/jayz.jpg)').removeClass('map');
+
+        if(!$(this).is('.map')){
+          $(this).css('background-image', 'url(http://a.abcnews.com/images/Entertainment/GTY_jayz_jef_130710_16x9_608.jpg)').addClass('map');
+        }
+      });
+      });
     </script>
 
     <script type="text/javascript"
