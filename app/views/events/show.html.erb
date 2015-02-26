@@ -27,6 +27,33 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas"></script>
 
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
+
+    <script type="text/javascript">
+
+     alert("jQuery is")
+
+     $(document).ready(
+
+       $.get( "http://localhost:3000/events/3", function( event ) {
+
+        $( ".title, .title2" )
+          .text( event.name )
+
+        $(".description")
+          .text( event.description )
+
+        $(".location2")
+          .text( event.location )
+
+        }, "json" )
+
+     );
+
+   </script>
+
 </head>
 
     <section class='calendar'>
