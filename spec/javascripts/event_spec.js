@@ -3,8 +3,6 @@
 
 describe('Calendar', function() {
   it("it appends sections with class day to the Calendar section", function() {
-    // var calendarBuilder = new CalendarBuilder();
-    buildCalendar();
-    expect($("<section class='calendar'></section>")).toContainHtml("<section class='day'></section>");
+     expect($(document)).toContainHtml("<section class='day'></section>");
   });
 });
