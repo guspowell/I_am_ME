@@ -1,4 +1,3 @@
-
 console.log("Hi Demkiw!");
 
 var numberOfhours = 24;
