@@ -18,7 +18,33 @@
     <% @hour = 1%>
     <section class="day" id= <%="day#{@day}"%>> 
       <% while @hour <= @number_of_hours %>
-        <div class="hours" id= <%="hour#{@hour}"%>> </div>
+        <div class="hours" id= <%="hour#{@hour}"%>> 
+        <section class='frame'>
+
+              <div class="container">
+                <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+                <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+                <h1 class='title'>ffdsahjkgf</h1>
+                <h2 class='location'>Jazz Cafe</h2>
+                <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+              </div>
+
+              <div class ='hidden'>
+                <div class="top">
+                  <h1 class="title2">Rebecca Ferguson</h1>
+                  <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
+                  <HR>
+                </div>
+                <div class="bottom">
+                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
+                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>London</h2>
+                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
+                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
+                </div>
+              </div>
+
+            </section>
+            </div>
         <% @hour +=1%>
       <% end%>
       </section>
