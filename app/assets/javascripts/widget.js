@@ -1,12 +1,4 @@
-
-
-
-
 console.log("Hi Demkiw Widget!");
-
-$(document).ready(function(){
-  buildWidgetSection()
-});
 
 var buildWidgetSection = function(date, hour){
   var widgetSection = document.createElement('section');
@@ -30,28 +22,28 @@ var buildWidgetBottom = function(day) {
 
 
 
-            <section class='widget'>
+  // <section class='widget'>
 
-              <div class="thumbnail">
-                <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
-                <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
-                <h1 class='title'>ffdsahjkgf</h1>
-                <h2 class='location'>Jazz Cafe</h2>
-                <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-              </div>
+    <div class="thumbnail">
+      <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+      <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+      <h1 class='title'>ffdsahjkgf</h1>
+      <h2 class='location'>Jazz Cafe</h2>
+      <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+    </div>
 
-              <div class ='expanded'>
-                <div class="top">
-                  <h1 class="title">Rebecca Ferguson</h1>
-                  <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
-                  <HR>
-                </div>
-                <div class="expanded-info">
-                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
-                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>London</h2>
-                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
-                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
-                </div>
-              </div>
+  //   <div class ='expanded'>
+  //     <div class="top">
+  //       <h1 class="title">Rebecca Ferguson</h1>
+  //       <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
+  //       <HR>
+  //     </div>
+  //     <div class="expanded-info">
+  //       <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
+  //       <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>London</h2>
+  //       <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
+  //       <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
+  //     </div>
+  //   </div>
 
-            </section>
+  // </section>

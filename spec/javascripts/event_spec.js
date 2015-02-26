@@ -3,6 +3,17 @@
 
 describe('Calendar', function() {
   it("it appends sections with class day to the Calendar section", function() {
-     expect($(document)).toContainHtml("<section class='day'></section>");
+     expect($(document)).toContainHtml($("<section class='day'></section>"));
   });
 });
+
+describe('Event Widget Builder', function() {
+
+  it("Can build the thumbnail", function() {
+    loadFixtures('thumbnail.html');
+    expect('penis').toEqual($('.thumbnail'));
+  });
+
+});
+
+

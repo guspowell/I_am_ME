@@ -5,7 +5,7 @@ var numberOfDays = 7;
 
 $(document).ready(function(){
   buildCalendar();
-  buildWidgetThumbnail();
+  buildWidgetSection();
 });
 
 var buildHourUnit = function(hour, day){
@@ -34,17 +34,20 @@ var buildCalendar = function(){
   }
 };
 
-var buildWidgetThumbnail = function(){ 
-  var thumbnailDiv =  $.parseHTML("<div class='thumbnail'> <h1> flerp derp </h1><a href='#'></a></div>")
-  $(thumbnailDiv).appendTo($('div#hour1.hours'))
+var buildWidgetSection = function(date, hour){
+  var widgetSection = $.parseHTML()
+  $(widgetSection).appendTo($('div#hour1.hours'))
 };
 
-// var buildFrameUnit = function(frameNumber){
-//   var frameDiv = document.createElement('div');
-//     $(frameDiv).addClass('frame').attr('id', frameNumber).appendTo($('#frame-holder'));
-//     $form = $("<form></form>");
-//     $form.append('<input type="text" id="second-box' + frameNumber + '" class="second-roll">');
-//     $form.append('<input type="text" id="first-box' + frameNumber + '" class="first-roll">');
-//     $(frameDiv).append($form);
-//     $(frameDiv).append('<p class="score" id="score'+frameNumber +'">??</p>')
-// };
+var buildWidgetThumbnail = function(){ 
+  var thumbnailDiv =  $.parseHTML("<div class='thumbnail'> <a href='#'></a><a href='#'></a><h1 class='title'>ffdsahjkgf</h1><h2 class='location'>Jazz Cafe</h2><a href='#'></a></div>")
+  $(thumbnailDiv).appendTo($('.day#day1.hours#hour2'))
+};
+
+var buildWidgetExpand = function(day) {
+  var expandedDiv = document.createElement('div');
+};
+
+var buildWidgetBottom = function(day) {
+  var expandedInfoDiv = document.createElement('div');
+};
