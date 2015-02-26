@@ -24,7 +24,7 @@ RSpec.describe CalendarsController, type: :controller do
   # Calendar. As you add validations to Calendar, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {name: 'MEcal', start_date: '26/02/2015'}
   }
 
   let(:invalid_attributes) {
@@ -39,7 +39,7 @@ RSpec.describe CalendarsController, type: :controller do
   describe "GET #index" do
     it "assigns all calendars as @calendars" do
       calendar = Calendar.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, :user_id=> 1
       expect(assigns(:calendars)).to eq([calendar])
     end
   end
@@ -47,14 +47,14 @@ RSpec.describe CalendarsController, type: :controller do
   describe "GET #show" do
     it "assigns the requested calendar as @calendar" do
       calendar = Calendar.create! valid_attributes
-      get :show, {:id => calendar.to_param}, valid_session
+      get :show, :user_id=> 1, :id => calendar.to_param
       expect(assigns(:calendar)).to eq(calendar)
     end
   end
 
   describe "GET #new" do
     it "assigns a new calendar as @calendar" do
-      get :new, {}, valid_session
+      get :new, :user_id=> 1
       expect(assigns(:calendar)).to be_a_new(Calendar)
     end
   end
@@ -62,7 +62,7 @@ RSpec.describe CalendarsController, type: :controller do
   describe "GET #edit" do
     it "assigns the requested calendar as @calendar" do
       calendar = Calendar.create! valid_attributes
-      get :edit, {:id => calendar.to_param}, valid_session
+      get :edit, :user_id=> 1, :id => calendar.to_param
       expect(assigns(:calendar)).to eq(calendar)
     end
   end
@@ -71,7 +71,7 @@ RSpec.describe CalendarsController, type: :controller do
     context "with valid params" do
       it "creates a new Calendar" do
         expect {
-          post :create, {:calendar => valid_attributes}, valid_session
+          post :create, :user_id=> 1, {:calendar => valid_attributes}, valid_session
         }.to change(Calendar, :count).by(1)
       end
 

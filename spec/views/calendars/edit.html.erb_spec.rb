@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "calendars/edit", type: :view do
+RSpec.describe "/users/1/calendars/edit", type: :view do
   before(:each) do
-    @calendar = assign(:calendar, Calendar.create!())
+    @user = User.new
+    @calendar = assign(:calendar, Calendar.create!(user_id: @user.id))
   end
 
   it "renders the edit calendar form" do

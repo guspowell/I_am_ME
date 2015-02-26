@@ -3,10 +3,12 @@ console.log("Hi Demkiw!");
 var numberOfhours = 24;
 var numberOfDays = 7; 
 
+
 $(document).ready(function(){
   buildCalendar();
   buildWidgetSection();
 });
+
 
 var buildHourUnit = function(hour, day){
   var hourDiv = document.createElement('div');
@@ -22,6 +24,7 @@ var buildCalendar = function(){
   var days  = 1;
   var hours;
   
+
   while(days <= numberOfDays){
     var hours = 1;
     var day = buildDayUnit(days).appendTo($('div#calendar'));

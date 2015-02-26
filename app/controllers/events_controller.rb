@@ -5,6 +5,11 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+
+    @number_of_days = 7
+    @number_of_hours = 24
+    
+
   end
 
   # GET /events/1
@@ -26,7 +31,6 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
