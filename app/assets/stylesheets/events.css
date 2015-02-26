@@ -8,7 +8,7 @@ table .days {
   border: 1px solid black;
 }
 
-#calendar {
+section#calendar {
   width: 100%;
   height: 5000px;
 }
