@@ -1,46 +1,178 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="../public/stylesheets/event_widget.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-  // $(document).ready(function(){
-  //
-  //     $("h2").hide();
-  //     $("img").hide();
-  //
-  //     $("h1").click(function(){
-  //         $("h2").toggle();
-  //         $("img").toggle();
-  //     });
-  // });
-  </script>
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <%= stylesheet_link_tag "event_widget.css" %>
+    <%= stylesheet_link_tag "normalize.css" %>
+
+    <title>I am ME</title>
+
+    <script>
+      $(document).ready(function(){
+
+       $(".hidden").hide();
+
+        $(".more").click(function(){
+            $(".frame").toggleClass("active");
+            $(".hidden").toggle();
+            $(".title").toggle();
+            $(".location").toggle();
+            $(".me").toggle();
+        });
+     });
+    </script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
+
+    <script type="text/javascript">
+
+     alert("jQuery is")
+
+     $(document).ready(
+
+       $.get( "http://localhost:3000/events/4", function( event ) {
+
+        $( ".title, .title2" )
+          .text( event.name )
+
+        $(".description")
+          .text( event.description )
+
+        $(".location2")
+          .text( event.location )
+
+        }, "json" )
+
+     );
+
+   </script>
+
 </head>
 
-<div>
+    <section class='calendar'>
+
+      <table border="1" cellpadding="3" cellspacing="0">
+
+        <tr class='days'>
+          <td>Monday</td>
+          <td>Tuesday</td>
+          <td>Wednesday</td>
+          <td>Thursday</td>
+          <td>Friday</td>
+          <td>Saturday</td>
+          <td>Sunday</td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td>
+            <section class='frame'>
+
+              <div class="container">
+                <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+                <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+                <h1 class='title'>ffdsahjkgf</h1>
+                <h2 class='location'>Jazz Cafe</h2>
+                <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+              </div>
+
+              <div class ='hidden'>
+                <div class="top">
+                  <h1 class="title2">Rebecca Ferguson</h1>
+                  <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
+                  <HR>
+                </div>
+                <div class="bottom">
+                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
+                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>London</h2>
+                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
+                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
+                </div>
+              </div>
+
+            </section>
+
+          </td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+        <tr>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </tr>
+
+      </table>
 
 
-  <section class='frame'>
-
-    <div class="container">
-      <h1>Rebecca Ferguson</h1>
-      <h2>Jazz Cafe</h2>
-      <img class='me' src="../public/images/ME.gif">
-    </div>
-
-  </section>
+    </section>
 
 
-  <h1> Taylor Swift </h1>
-  <h2> 1pm </h2>
-  <h2>Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
-  <h2><img src="../public/images/map.svg" alt="Map">My house</h2>
-  <h2><img src="../images/Price_tag.svg" alt="Price"> £800</h2>
-  <h2><img src="../images/share.svg" alt="Share">Share</h2>
-  <h2><img src="../images/web_link.svg" alt="Web Link">Web Link</h2>
-  <img src="../images/ME.gif" alt="ME">
-  <img src="../images/more_info.svg" alt="More Info">
-</div>
 
-      <li><a href='#'><%= image_tag("log_out.svg", :class => 'log-out') %></li>
-      <a href='#'><%= image_tag("map.svg"), :class => 'map' %>
-
-              <li><a href='#'><%= image_tag("log_out.svg", :class => 'log-out') %></li>
+  </body>
+</html>

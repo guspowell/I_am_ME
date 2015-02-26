@@ -196,13 +196,6 @@ body {
 /* -----------------------------------------*/
 
 
-
-
-
-
-
-
-
 table {
   background-color:#FFFFCC;
   border-collapse:collapse;
@@ -232,6 +225,7 @@ tr {
 }
 
 td  {
+  max-height: 160px;
 }
 
 iframe {
@@ -240,10 +234,6 @@ iframe {
   border: none;
   background-color:blue;
 }
-
-
-
-
 
 .container {
   position: relative;
