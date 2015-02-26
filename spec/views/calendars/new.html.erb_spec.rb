@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "calendars/new", type: :view do
+RSpec.describe "users/user_id/calendars/new", type: :view do
   before(:each) do
     assign(:calendar, Calendar.new())
+    assign(:user, User.new)
   end
 
   it "renders new calendar form" do
