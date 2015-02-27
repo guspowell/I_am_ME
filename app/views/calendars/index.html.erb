@@ -1,1 +1,27 @@
+<table>
+<tr class='days'>
+  <td>Monday</td>
+  <td>Tuesday</td>
+  <td>Wednesday</td>
+  <td>Thursday</td>
+  <td>Friday</td>
+  <td>Saturday</td>
+  <td>Sunday</td>
+</tr>
+</table>
+   
 
+<section id="calendar">
+  <% @day = @calendar.find_monday%>
+
+  <% while @day <= @sunday %>
+    <% @hour = Time.parse("1:00 am", @time)%>
+    <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>> 
+      <% while @hour <= @number_of_hours %>
+        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>> </div>
+        <% @hour = @hour + 3600%>
+      <% end%>
+      </section>
+    <% @day = @day.next_day%>
+  <%end %>
+</section>

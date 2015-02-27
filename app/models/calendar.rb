@@ -4,4 +4,25 @@ class Calendar < ActiveRecord::Base
   has_many :events
   belongs_to :user, dependent: :destroy
 
+  def find_monday
+    today = Time.now
+    day = today.to_date
+    
+    until day.monday? 
+      day = day.prev_day
+    end 
+    
+    @monday = day
+  end
+
+  def find_sunday(monday)
+    day = monday
+
+      until day.sunday? 
+        day =  day.next_day
+      end
+
+    @sunday = day
+  end
+
 end
