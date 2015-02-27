@@ -1,4 +1,4 @@
-class CalendarsController < ApplicationController
+class CalendarsController < ApplicationControlle
   before_action :set_calendar, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
@@ -12,6 +12,7 @@ class CalendarsController < ApplicationController
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
+    @events = Event.all
   end
 
   # GET /calendars/1
