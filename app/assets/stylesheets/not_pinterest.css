@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
-#login-background {
+.landing-page {
   background: url("blurredbackground.jpg") no-repeat;
   background-size: 100%;
   height: 100%;
@@ -65,15 +65,11 @@
   color: black;
   /*background-color: #F5F5F5;*/
   background-color: white;
+  border: 1.5px solid black;
 }
 
-.submit-button:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+#login-box input[type="submit"]:hover {
+  background: #E6E6E6;
   text-decoration: none;
 }
 

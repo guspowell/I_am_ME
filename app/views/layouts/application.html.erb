@@ -21,7 +21,7 @@
           <li><a href='#'>hfdsafh</a></li>
         </ul>
       </li>
-      <li><a href='#'><%= image_tag("log_out.svg", :class => 'log-out') %></li>
+      <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
       <li><a href='#'><%= image_tag("search.svg", :class => 'search') %><li>
       <input class='search-field' type='text' name='search-field'>
     </ul>
@@ -51,7 +51,7 @@
 
   </section>
 </section>
-  
+
 
 <%= yield %>
 

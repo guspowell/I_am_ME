@@ -1,6 +1,4 @@
-<section id='login-background'>
-
-  <section id='login-box'>
+<section id='login-box'>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -25,12 +23,10 @@
         <%= f.label :remember_me %>
       </div>
     <% end -%>
-    <p class='sign-up-link'>Sign up</p>
-    <p class='forgot-link'>Forgot your password?</p>
+    <p class='sign-up-link'><%= link_to('Register', new_user_registration_path)  %> </p>
+    <p class='forgot-link'><a href="/users/password/new">Forgot your password?</a></p>
   </div>
-  <!-- <%= render "devise/shared/links" %> -->
+
   <% end %>
 
   </section>
-
-</section>
