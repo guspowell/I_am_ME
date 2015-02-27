@@ -5,11 +5,6 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-
-    @number_of_days = 7
-    @number_of_hours = 24
-    
-
   end
 
   # GET /events/1
