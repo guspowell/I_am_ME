@@ -35,19 +35,36 @@
   padding: 3% 3.5%;
   outline: none;
   background: transparent;
-  border: 0.08em solid white;
-  border-radius: 2px;
-  color: white;
-  font-family: 'Exo', sans-serif;
+  border: 1px solid black;
+  color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   font-weight: 400;
   padding: 4px;
 }
 
+::-webkit-input-placeholder {
+   color: #737373;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #737373;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #737373;
+}
+
+:-ms-input-placeholder {
+   color: #737373;
+}
+
 #login-box input[type="submit"] {
   display: inline;
-  color: #9d855f;
-  background-color: #F5F5F5;
+  color: black;
+  /*background-color: #F5F5F5;*/
+  background-color: white;
 }
 
 .submit-button:hover {
