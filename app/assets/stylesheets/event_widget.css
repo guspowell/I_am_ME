@@ -1,25 +1,14 @@
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-Danielle ddemkiw
- 
-5  Unwatch 
-  Star 0
- Fork 0ciawalsh/iamME
- tree: d3780a5d7e  iamME/app/assets/stylesheets/event_widget.css
-Danielle ddemkiw 23 hours ago targetting correct element on DOM and parsing html for widget
-4 contributors India DearlovePtolemyDanielle Gus Powell
-144 lines (122 sloc)  2.292 kb RawBlameHistory  
+/*.widget{
+  visibility: hidden;
+} 
+*/ 
 .widget .thumbnail {
   position: relative;
   width: 100%;
   height: 160px;
   margin:auto;
-  background: url('http://s3.amazonaws.com/rapgenius/filepicker%2FW7fmOwv6SO2kY4O2O5q5_Jay-z.jpg');
-  -webkit-background-size: cover;
+/*  background: url('http://s3.amazonaws.com/rapgenius/filepicker%2FW7fmOwv6SO2kY4O2O5q5_Jay-z.jpg');
+*/  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -109,6 +98,7 @@ Danielle ddemkiw 23 hours ago targetting correct element on DOM and parsing html
 .widget .expanded img{
   width:10%;
   float: left;
+  z-index: 3000;
 }
 
 .widget .expanded .expanded-info
