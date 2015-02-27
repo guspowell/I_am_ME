@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.landing-page {
+  background: url("blurredbackground.jpg") no-repeat;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+#login-box {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 26%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.iamMElogin {
+  width: 35%;
+}
+
+#login-box input[type="text"],
+#login-box input[type="email"],
+#login-box input[type="password"],
+#login-box input[type="submit"] {
+  font-size: 1em;
+  width: 100%;
+  height: auto;
+  line-height: 1.7em;
+  margin-bottom: 3%;
+  padding: 3% 3.5%;
+  outline: none;
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+::-webkit-input-placeholder {
+   color: #737373;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #737373;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #737373;
+}
+
+:-ms-input-placeholder {
+   color: #737373;
+}
+
+#login-box input[type="submit"] {
+  display: inline;
+  color: black;
+  /*background-color: #F5F5F5;*/
+  background-color: white;
+  border: 1.5px solid black;
+}
+
+#login-box input[type="submit"]:hover {
+  background: #E6E6E6;
+  text-decoration: none;
+}
+
+h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
+  color: #0099FF;
+  text-decoration: none;
+  margin-top: 10%;
+  line-height: 1.5em;
+}
+
+.login-links .checkbox {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.login-links .sign-up-link {
+  display: inline-block;
+  width: 25%;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.login-links .forgot-link {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  font-size: 0.85em;
+}

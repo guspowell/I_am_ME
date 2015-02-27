@@ -1,18 +1,34 @@
 Rails.application.routes.draw do
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  
 
-  resources :users do
+
+  # resources :users do
+  #   resources :calendars
+  #   resources :events
+  # end
+  #
+  # root :to => 'calendars#index'
+  #
+  # devise_for :users, controllers: { sessions: "users/sessions",
+  #                                   registrations: "users/registrations",
+  #                                   passwords: "users/passwords"
+  #                                   }
+# =======
+    devise_for :users, controllers: { sessions: "users/sessions",
+                                      registrations: "users/registrations",
+                                      passwords: "users/passwords"
+                                      } do
     resources :calendars
     resources :events
   end
 
-  root :to => 'calendars#index'
-
-  devise_for :users
-  resources :events
-  resources :calendars
+  get '/' => 'calendars#index'
+  # devise_for :users, controllers: { sessions: "users/sessions",
+  #                                   registrations: "users/registrations",
+  #                                   passwords: "users/passwords"
+  #                                   }
+# >>>>>>> userlogin
 
   # root to: "events#index"
 
