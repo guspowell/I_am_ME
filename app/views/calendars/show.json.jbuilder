@@ -1,3 +1,4 @@
-json.(@calendar, :name, :start_date)
+json.name @calendar.name
+json.start_date @calendar.start_date.strftime('%Y%d%m')
   
 
