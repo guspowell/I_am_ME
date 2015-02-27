@@ -4,7 +4,9 @@
   <head>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
     <%= stylesheet_link_tag "event_widget.css" %>
     <%= stylesheet_link_tag "normalize.css" %>
 
@@ -41,9 +43,7 @@
       });
     </script>
 
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
-    </script>
+    
 
     <script type="text/javascript">
 
@@ -70,125 +70,4 @@
 
 </head>
 
-    <section class='calendar'>
-
-      <table border="1" cellpadding="3" cellspacing="0">
-
-        <tr class='days'>
-          <td>Monday</td>
-          <td>Tuesday</td>
-          <td>Wednesday</td>
-          <td>Thursday</td>
-          <td>Friday</td>
-          <td>Saturday</td>
-          <td>Sunday</td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td>
-            <section class='frame'>
-
-              <div class="container">
-                <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
-                <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
-                <h1 class='title'>ffdsahjkgf</h1>
-                <h2 class='location'>Jazz Cafe</h2>
-                <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-              </div>
-
-              <div class ='hidden'>
-                <div class="top">
-                  <h1 class="title2">Rebecca Ferguson</h1>
-                  <h2 class="description">Taylor is playing some sick tuness, and it is going to be a sick part with loads of fun people and beers and stuff<h2>
-                  <HR>
-                </div>
-                <div class="bottom">
-                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
-                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a>London</h2>
-                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a>£800</h2>
-                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
-                </div>
-              </div>
-
-            </section>
-
-          </td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-        <tr>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-          <td><div></div></td>
-        </tr>
-
-      </table>
-
-
-    </section>
-
-
-
-  </body>
 </html>

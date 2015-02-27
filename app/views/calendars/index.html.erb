@@ -1,3 +1,63 @@
+  <head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+    </script>
+
+    <%= stylesheet_link_tag "event_widget.css" %>
+    <%= stylesheet_link_tag "normalize.css" %>
+    <%= stylesheet_link_tag "map.css" %>
+
+    <title>I am ME</title>
+
+    <script>
+      $(document).ready(function(){
+
+        $(".expanded").hide();
+        $("#map-canvas").hide();
+
+        $(".more").click(function(){
+            $(".widget").toggleClass("active");
+            $(".expanded").toggle();
+            $(".title").toggle();
+            $(".location").toggle();
+            $(".me").toggle();
+        });
+
+        $(".map").click(function(){
+          $("#map-canvas").toggle();
+        });
+            
+      });
+
+    </script>
+
+    <script type="text/javascript">
+
+     alert("jQuery is")
+
+     $(document).ready(
+
+       $.get( "http://localhost:3000/events/4", function( event ) {
+
+        $( ".title, .title2" )
+          .text( event.name )
+
+        $(".description")
+          .text( event.description )
+
+        $(".location2")
+          .text( event.location )
+
+        }, "json" )
+
+     );
+
+   </script>
+
+</head>
+
 <table>
 <tr class='days'>
   <td>Monday</td>
@@ -22,13 +82,15 @@
           
 
           <section class='widget'>
-
-            <div class="thumbnail">
+            <div id="googleMap" class="thumbnail">
+            <div id='map-canvas'></div>
+              
               <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
               <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
               <h1 class='title'>f</h1>
               <h2 class='location'></h2>
               <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+            
             </div>
 
             <div class ='expanded'>
