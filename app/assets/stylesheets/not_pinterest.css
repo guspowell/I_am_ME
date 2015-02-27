@@ -13,14 +13,14 @@
   text-align: center;
   top: 50%;
   left: 50%;
-  width: 35%;
+  width: 26%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
 
 .iamMElogin {
-  width: 30%;
+  width: 35%;
 }
 
 #login-box input[type="text"],
@@ -28,7 +28,7 @@
 #login-box input[type="password"],
 #login-box input[type="submit"] {
   font-size: 1em;
-  width: 70%;
+  width: 100%;
   height: auto;
   line-height: 1.7em;
   margin-bottom: 3%;
@@ -37,7 +37,7 @@
   background: transparent;
   border: 0.08em solid white;
   border-radius: 2px;
-  color: #B8B8B8;
+  color: white;
   font-family: 'Exo', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -45,6 +45,7 @@
 }
 
 #login-box input[type="submit"] {
+  display: inline;
   color: #9d855f;
   background-color: #F5F5F5;
 }
@@ -64,4 +65,25 @@ h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
   text-decoration: none;
   margin-top: 10%;
   line-height: 1.5em;
+}
+
+.login-links .checkbox {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.login-links .sign-up-link {
+  display: inline-block;
+  width: 25%;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.login-links .forgot-link {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  font-size: 0.85em;
 }
