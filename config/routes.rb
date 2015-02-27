@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   # end
 
   get '/' => 'events#index'
-  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+  devise_for :users, controllers: { sessions: "users/sessions",
+                                    registrations: "users/registrations",
+                                    passwords: "users/passwords"
+                                    }
   resources :events
 
   # root to: "events#index"
