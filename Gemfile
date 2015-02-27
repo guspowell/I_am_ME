@@ -23,5 +23,5 @@ group :development, :test do
   gem 'airborne'
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
+  gem 'launchy'
 end
-
