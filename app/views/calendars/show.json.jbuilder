@@ -1,5 +1,5 @@
-json.array!(@calendar) do |calendar|
-  json.extract! calendar, :id, :name, :date, :description, :location
-  json.event calendar.event, :id
-  json.id calendar_id(calendar, format: :json)
-end
+json.name @calendar.name
+json.start_date @calendar.start_date.strftime('%Y-%d-%m')
+json.events @calendar.events.map {|event| event.id }
+  
+
