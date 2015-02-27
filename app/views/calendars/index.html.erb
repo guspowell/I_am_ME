@@ -25,7 +25,7 @@
 
           <section class='widget'>
 
-          <div class="thumbnail" background=<%= @event.image.url(:large) %>>
+          <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium)%>); width: 160px; height: 160px">
               
               <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
               <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
