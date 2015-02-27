@@ -2,6 +2,7 @@
   visibility: hidden;
 } 
 */ 
+
 .widget .thumbnail {
   position: relative;
   width: 100%;
@@ -144,5 +145,4 @@
   border-style: dotted;
   border-width: 1px;
   letter-spacing: 10px;
-} 
-
+}

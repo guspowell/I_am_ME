@@ -1,5 +1,6 @@
 class CalendarsController < ApplicationController
   before_action :set_calendar, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /calendars
   # GET /calendars.json
