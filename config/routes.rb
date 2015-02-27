@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/' => 'events#index'
   devise_for :users
   resources :events
+  resources :calendars
 
   # root to: "events#index"
 
