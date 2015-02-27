@@ -1,18 +1,7 @@
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-Danielle ddemkiw
- 
-5  Unwatch 
-  Star 0
- Fork 0ciawalsh/iamME
- tree: d3780a5d7e  iamME/app/assets/stylesheets/event_widget.css
-Danielle ddemkiw 23 hours ago targetting correct element on DOM and parsing html for widget
-4 contributors India DearlovePtolemyDanielle Gus Powell
-144 lines (122 sloc)  2.292 kb RawBlameHistory  
+.widget {
+  visibility: hidden;
+}
+
 .widget .thumbnail {
   position: relative;
   width: 100%;
@@ -154,5 +143,4 @@ Danielle ddemkiw 23 hours ago targetting correct element on DOM and parsing html
   border-style: dotted;
   border-width: 1px;
   letter-spacing: 10px;
-} 
-
+}
