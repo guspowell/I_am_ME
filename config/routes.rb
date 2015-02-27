@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :events
   end
 
-  get '/' => 'events#index'
+  root :to => 'calendars#index'
+
   devise_for :users
   resources :events
   resources :calendars
