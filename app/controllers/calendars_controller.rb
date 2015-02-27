@@ -6,6 +6,7 @@ class CalendarsController < ApplicationController
   # GET /calendars.json
   def index
     # @calendars = Calendar.all
+    @events = Event.all
     @calendar = Calendar.new
     @day = @calendar.find_monday
     @sunday = @calendar.find_sunday(@day)
