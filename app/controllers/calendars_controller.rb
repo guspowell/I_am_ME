@@ -11,6 +11,7 @@ class CalendarsController < ApplicationController
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
+    @events = Event.all
   end
 
   # GET /calendars/1
