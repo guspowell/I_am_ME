@@ -18,7 +18,34 @@
     <% @hour = Time.parse("1:00 am", @time)%>
     <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>> 
       <% while @hour <= @number_of_hours %>
-        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>> </div>
+        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>> 
+          
+          <section class='frame'>
+
+              <div class="container">
+                <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+                <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+                <h1 class='title'></h1>
+                <h2 class='location'></h2>
+                <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+              </div>
+
+              <div class ='hidden'>
+                <div class="top">
+                  <h1 class="title2"></h1>
+                  <h2 class="description"><h2>
+                  <HR>
+                </div>
+                <div class="bottom">
+                  <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
+                  <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a></h2>
+                  <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %></a></h2>
+                  <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
+                </div>
+              </div>
+
+            </section>
+        </div>
         <% @hour = @hour + 3600%>
       <% end%>
       </section>
