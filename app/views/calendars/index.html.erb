@@ -28,7 +28,7 @@
         $(".map").click(function(){
           $("#map-canvas").toggle();
         });
-            
+
       });
 
     </script>
@@ -58,6 +58,7 @@
 
 </head>
 
+<section id="days-and-calendar">
 <table>
 <tr class='days'>
   <td>Monday</td>
@@ -69,40 +70,39 @@
   <td>Sunday</td>
 </tr>
 </table>
-   
 
 <section id="calendar">
   <% @day = @calendar.find_monday%>
 
-  
+
   <% while @day <= @sunday %>
     <% @hour = Time.parse("1:00 am", @time)%>
     <% @events = Event.all.select {|event| event.date.strftime('%Y-%m-%d') == @day.strftime('%Y-%m-%d') } %>
 
 
-    <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>> 
+    <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
       <% while @hour <= @number_of_hours %>
 
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.sample %>
 
-        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>> 
+        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>>
 
 
           <section class='widget'>
             <div id="googleMap" class="thumbnail">
             <div id='map-canvas'></div>
-              
+
 
             <div class="thumbnail">
 
           <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
-              
+
               <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
               <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
               <h1 class='title'><%= @event.name if @event %></h1>
               <h2 class='location'><%= @event.location if @event %></h2>
               <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-            
+
             </div>
 
             <div class ='expanded'>
@@ -128,4 +128,5 @@
       </section>
     <% @day = @day.next_day %>
   <%end %>
+</section>
 </section>

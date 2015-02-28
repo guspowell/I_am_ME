@@ -65,7 +65,7 @@
   color: black;
   /*background-color: #F5F5F5;*/
   background-color: white;
-  border: 1.5px solid black;
+  border: 2px solid black;
 }
 
 #login-box input[type="submit"]:hover {
