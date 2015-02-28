@@ -25,8 +25,8 @@ For our Final Projects, we have chosen to work on Tom & Amar's idea of a visual 
 
 ## Contributors
 
-- Charlie
-- Danielle
-- Ptolemy
-- India
-- Gus
+- [Charlie Walsh](https://github.com/ciawalsh) 
+- [Danielle Demkiw](https://github.com/ddemkiw)
+- [Ptolemy Barnes](https://github.com/ptolemybarnes)
+- [India Dearlove](https://github.com/indiadearlove)
+- [Gus Powell](https://github.com/guspowell)
