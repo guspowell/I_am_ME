@@ -1,5 +1,11 @@
 #days-and-calendar {
-  margin-top: 64px;
+  margin-top: 60px;
+}
+
+table {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
 table .days {
@@ -13,6 +19,9 @@ table .days {
 }
 
 section#calendar {
+  position: absolute;
+    top: 91px;
+    left: 0;
   width: 100%;
   height: 4000px;
 }
@@ -27,4 +36,10 @@ section .day {
 div.hours {
   height: 4.166667%;
   border-bottom: 1px solid #d4d4d4;
+}
+
+div.hours:hover {
+  height: 4.166667%;
+  border-bottom: 1px solid #d4d4d4;
+  background-color: #EEEEEE;
 }

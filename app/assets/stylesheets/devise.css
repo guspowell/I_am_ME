@@ -20,7 +20,7 @@
 
 
 .iamMElogin {
-  width: 35%;
+  width: 40%;
 }
 
 #login-box input[type="text"],
@@ -44,6 +44,10 @@
   padding: 4px;
 }
 
+input:-webkit-autofill {
+    color: transparent !important;
+}
+
 ::-webkit-input-placeholder {
    color: #737373;
 }
@@ -62,14 +66,14 @@
 
 #login-box input[type="submit"] {
   display: inline;
-  color: black;
-  /*background-color: #F5F5F5;*/
-  background-color: white;
-  border: 2px solid black;
+  color: #9d855f ;
+  background-color: #E6E6E6;
+  border: 1px solid white;
+;
 }
 
 #login-box input[type="submit"]:hover {
-  background: #E6E6E6;
+  background: #CFCFCF;
   text-decoration: none;
 }
 

@@ -1,12 +1,12 @@
 nav {
- height: 8%;
+ height: 60px;
  width: 100%;
  background-color: white;
  color: black;
  position: fixed;
-    left:0;
-    top:0;
- background-color: red;
+  left:0;
+  top:0;
+ z-index: 10;
 }
 
 .left-buttons {
@@ -42,9 +42,9 @@ nav {
  position: absolute;
  outline: none;
  margin-left: 0;
- margin-top: 1.5%;
- border: 0.15em solid black;
- height: 3%;
+ margin-top: 22px;
+ border: 2px solid black;
+ height: 20px;
  width: 12%;
 }
 
