@@ -1,11 +1,13 @@
 class CalendarsController < ApplicationController
   before_action :set_calendar, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
   # GET /calendars
   # GET /calendars.json
   def index
-    # @calendars = Calendar.all
+      # @calendars = Calendar.all
+    @user = current_user.id
     @events = Event.all
     @calendar = Calendar.new
     @day = @calendar.find_monday
