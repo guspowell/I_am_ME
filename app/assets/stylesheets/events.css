@@ -9,13 +9,14 @@ table {
 }
 
 table .days {
+  font-family: 'Montserrat', sans-serif;
   width: 14.285714286%;
   height: 30px;
-  background-color: black;
   color: white;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 2px;
   border: 1px solid black;
+  background-color: blue;
 }
 
 section#calendar {

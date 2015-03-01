@@ -1,5 +1,5 @@
 nav {
- height: 60px;
+ height: 61px;
  width: 100%;
  background-color: white;
  color: black;
@@ -107,6 +107,13 @@ nav {
  height: 65%;
  margin-right: 4.5%;
  margin-top: 30%;
+}
+
+.right-buttons .map {
+ float: right;
+ height: 46%;
+ margin-right: 4.5%;
+ margin-top: 60%;
 }
 
 .right-buttons li ul {

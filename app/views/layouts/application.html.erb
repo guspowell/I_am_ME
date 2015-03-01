@@ -5,15 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script type="text/javascript"
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
   </script>
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <!-- <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
 
 <nav>
   <section class='left-buttons'>
@@ -44,6 +44,7 @@
       </li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><a href='#'><%= image_tag("inspireME.svg", :class => 'bunny') %>
+      <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
       <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
         <ul class='cal-dropdown'>
           <li><a href='#'>ME</a></li>

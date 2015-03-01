@@ -10,14 +10,14 @@
   <td>Sunday</td>
 </tr>
 </table>
-   
+
 
 <section id="calendar">
   <% @day = 1%>
   <% while @day <= @number_of_days  do %>
 
     <% @hour = 1%>
-    <section class="day" id= <%="day#{@day}"%>> 
+    <section class="day" id= <%="day#{@day}"%>>
       <% while @hour <= @number_of_hours %>
 
         <div class="hours" id= <%="hour#{@hour}"%>> </div>
