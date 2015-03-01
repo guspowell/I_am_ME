@@ -11,16 +11,14 @@ feature 'event' do
       
       visit("/users/#{user.id}/events/new")
       
-      fill_in 'event_name',      with: 'Superhero Dance Off'
-      select '2015'       , from: 'event_date_1i'
-      select 'February'      , from: 'event_date_2i'
-      select '28'          , from: 'event_date_3i'
-      select '12'         , from: 'event_date_4i'
-      select '00'         , from: 'event_date_5i'
-      fill_in 'event_description', with: 'Why is this happening?'
-      fill_in 'event_location', with: 'Hyde Park'
-      attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
+      fill_form(:event, {  name: 'Superhero Dance Off', 'event_date_1i' => '2015',
+                          'event_date_2i'=>'February', 'event_date_3i'=>'28',
+                          'event_date_4i'=>'12'      , 'event_date_5i'=>'00',
+                          'event_description'=>'Why is this happening?',
+                          'event_location'=>   'Hyde Park' })
 
+      
+      attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
       click_button 'Create Event'
 
       expect(page).to have_content('Superhero Dance Off')
