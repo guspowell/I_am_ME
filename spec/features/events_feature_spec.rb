@@ -22,7 +22,6 @@ feature 'event' do
       attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
 
       click_button 'Create Event'
-      save_and_open_page
 
       expect(page).to have_content('Superhero Dance Off')
     end
