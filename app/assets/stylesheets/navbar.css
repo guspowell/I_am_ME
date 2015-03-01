@@ -51,7 +51,7 @@ nav {
 .center {
  display: inline-block;
  height: 100%;
- width: 10%;
+ width: 8%;
  text-align: center;
  padding: 0px;
  margin-left: 4.4%;
@@ -59,7 +59,10 @@ nav {
 
 .center .logo {
  display: inline;
- height: 100%;
+ position: absolute;
+  top: -6px;
+  left: 46%;
+ height: 74px;
  padding: 0px;
  margin: 0px;
 }
