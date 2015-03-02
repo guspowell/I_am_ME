@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+  alert("jQuery is")
+
 
   // $.get( "http://localhost:3000/events/4", function( event ) {
 
