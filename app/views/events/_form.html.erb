@@ -14,6 +14,10 @@
   <h2>Create Event</h2>
 
   <div class="field">
+    <%= f.label :calendar_id %><br>
+    <%= f.collection_select :calendar_id, Calendar.all, :id, :name %>
+  </div>
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>

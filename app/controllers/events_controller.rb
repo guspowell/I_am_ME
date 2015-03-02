@@ -16,7 +16,6 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    # @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
     @event = Event.new
   end
 
@@ -27,6 +26,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    @calendars = Calendar.all
     @event = Event.new(event_params)
     @event.user_id = current_user.id
     @event.save
@@ -78,6 +78,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :date, :description, :image, :location)
+      params.require(:event).permit(:name, :date, :description, :image, :location, :calendar_id)
     end
 end
