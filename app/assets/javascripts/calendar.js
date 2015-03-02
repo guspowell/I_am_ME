@@ -1,6 +1,13 @@
 
 $(document).ready(function(){
 
+  $("#map-canvas").hide();
+
+  $("#map").click(function(){
+    $("#map-canvas").toggle();
+    $(".widget-small").css("background-image", "transparent");
+  });
+
 
   $('.more').click(function() {
     var widget = $(this).closest("[class^='widget']");
