@@ -11,6 +11,8 @@
   background-color: white;
   background-repeat: no-repeat;
   z-index: 8;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .widget-large .more {
@@ -41,28 +43,39 @@
 
 .widget-large h1.title {
   font-weight: bold;
-  bottom: 41%;
+  bottom: 38%;
   position: absolute;
   font-family: Helvetica;
   font-size: 1.5em;
-  margin: 0 0 3% 0;
+  width: 100%;
+  margin-left: 2%
 }
 
 .widget-large h2.location {
   bottom: 36%;
   position: absolute;
   font-family: Helvetica;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: normal;
+  width: 100%;
+  margin-left: 2%;
+
 }
 
 .widget-large .description {
   display: block;
-  position: absolute;
-  font-size: 0.8em;
+  width: 90%;
+  padding: 0 0 4% 0;
+  font-size: 0.6em;
+  line-height: 1.8em;
   bottom: 21%;
-  margin: 5%;
+  word-wrap: break-word;
+  border-bottom: 1px dashed grey;
+  margin: 0 auto;
+  margin-top: 90%;
 }
+
+.widget-large p { margin: 0; padding: 0; }
 
 .widget-large #bottom-section {
   margin-top: 100%;
