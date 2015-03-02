@@ -5,11 +5,11 @@
     <%= image_tag("iamME.png", :class => 'iamMElogin') %>
 
     <div class="field">
-      <%= f.email_field :email, autocomplete: "off", autofocus: true, :placeholder => 'Email address' %>
+      <%= f.text_field :login, autocomplete: "off", autofocus: true, :placeholder => 'Username' %>
     </div>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "off", :placeholder => 'password' %>
+      <%= f.password_field :password, autocomplete: "off", :placeholder => 'Password' %>
     </div>
 
     <div class="actions">
