@@ -14,31 +14,34 @@
   <h2>Create Event</h2>
 
   <div class="field">
-    <%= f.label :calendar_id %><br>
-    <%= f.collection_select :calendar_id, Calendar.all, :id, :name %>
+    <%= f.label :calendar_id, :class=>'calendar-label' %>
+    <%= f.collection_select :calendar_id, Calendar.all, :id, :name%>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :class=>'name-field' %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date, :ampm => true, :minute_step => 30 %>
+    <%= f.label :location %>
+    <%= f.text_field :location, :class=>'location-field' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :description %>
+    <%= f.text_area :description, :class=>'description-field' %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.datetime_select :date, :ampm => true, :minute_step => 30, :class=>'date-field' %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
+
   <br>
   <div class="actions">
     <%= f.submit %>
+    <button class= "back-button" type="button"><%= link_to 'Back', events_path %></button>
   </div>
+
+
 <% end %>
