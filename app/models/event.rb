@@ -11,14 +11,12 @@ class Event < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
 
-  def all_tags=(names)
-    self.tags = names.split(",").map do |name|
-        Tag.where(name: name.strip).first_or_create!
-    end
+  def add_tag(tag)
+    self.tags << tag 
   end
    
-  def all_tags
-    self.tags.map(&:name).join(", ")
+  def get_tags 
+    self.tags
   end
 
 

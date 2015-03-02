@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-feature 'tags' do
-
+feature 'Tags' do
 
   scenario "adding tags to events" do
     tag = create(:tag, name: "Sports")
-    event = create(:event_with_tag, tag: tag)
+    event = create(:event)
 
-    expect(event.tags).to_include tag
+    event.add_tag(tag)
 
+    expect(event.tags).to eq([tag])
   end
 
 end
