@@ -30,13 +30,14 @@
 
     <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
       <% while @hour <= @number_of_hours %>
-
+      
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.sample %>
 
 
         <section class="widget-container">
           <% if @event %>
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
+              <div id='map-canvas'></div>
               <a><%= image_tag("more_info.svg", :class => 'more') %></a>
               <a><%= image_tag("play_button.svg", :class => 'play') %></a>
 
