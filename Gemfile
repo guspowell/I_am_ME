@@ -24,4 +24,5 @@ group :development, :test do
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
   gem 'launchy'
+  gem 'formulaic'
 end
