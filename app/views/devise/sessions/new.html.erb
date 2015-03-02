@@ -2,10 +2,10 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <%= image_tag("iamME.gif", :class => 'iamMElogin') %>
+    <%= image_tag("iamME.png", :class => 'iamMElogin') %>
 
     <div class="field">
-      <%= f.email_field :email, autofocus: true, :placeholder => 'Email address' %>
+      <%= f.email_field :email, autocomplete: "off", autofocus: true, :placeholder => 'Email address' %>
     </div>
 
     <div class="field">
