@@ -25,48 +25,34 @@
       <% while @hour <= @number_of_hours %>
 
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.sample %>
+        
+        <section class="widget-container">
+          <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
 
-        <div class="hours" id= <%="#{@hour.strftime('%H:%M')}"%>> 
-
-
-          <section class='widget'>
-            <div id="googleMap" class="thumbnail">
-            <div id='map-canvas'></div>
-              
-
-            <div class="thumbnail">
-
-          <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
-              
-              <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
-              <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
-              <h1 class='title'><%= @event.name if @event %></h1>
-              <h2 class='location'><%= @event.location if @event %></h2>
-              <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+            <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
+            <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
             
+            <div id="name-and-location">
+              <h1 class='title'>   <%= @event.name if @event %></h1>
+              <h2 class='location'><%= @event.location if @event %></h2>
             </div>
 
-            <div class ='expanded'>
-              <div class="top">
-              <h1 class="title"><%= @event.name if @event %></h1>
-
-              <h2 class="description"><%= @event.description if @event %><h2>
-                <HR>
-              </div>
-              <div class="expanded-info">
-                <a href='#'><%= image_tag("ME.gif", :class => 'me2') %></a>
-                <h2><a href='#'><%= image_tag("map.svg", :class => 'map') %></a></h2>
-                <h2><a href='#'><%= image_tag("price_tag.svg", :class => 'price') %>$100</a></h2>
-                <h2><a href='#'><%= image_tag("share.svg", :class => 'share') %></a>Share</h2>
-              </div>
-            </div>
-
-          </section>
-
-        </div>
+            <div class="description"><p><%= @event.description if @event %></p></div>
+            
+            <section id='bottom-section'>
+              <p class='large-icons'><%= image_tag("map.svg", :id => 'map') %>           </p>
+              <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>100</p>
+              <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>100    </p>
+              
+              <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
+            </section>
+          </div>
+        </section>
+        
         <% @hour = @hour + 3600%>
       <% end%>
-      </section>
+
+    </section>
     <% @day = @day.next_day %>
   <%end %>
 </section>

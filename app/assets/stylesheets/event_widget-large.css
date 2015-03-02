@@ -1,0 +1,68 @@
+
+.widget-large {
+  position: relative;
+  border: 2px solid black;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-size: 100% 48%;
+  background-repeat: no-repeat;
+}
+
+.widget-large .more {
+  display: none;
+}
+
+.widget-large .play {
+  display: none;
+}
+
+.widget-large #name-and-location {
+  font-family: Helvetica;
+  color: black;
+  float: left;
+  margin-left: 4%;
+}
+
+.widget-large h1.title {
+  font-weight: bold;
+  bottom: 41%;
+  position: absolute;
+  font-family: Helvetica;
+  font-size: 1.5em;
+  margin: 0 0 3% 0;
+}
+
+.widget-large h2.location {
+  bottom: 36%;
+  position: absolute;
+  font-family: Helvetica;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.widget-large .description {
+  display: block;
+  position: absolute;
+  font-size: 0.8em;
+  bottom: 21%;
+  margin: 5%;
+}
+
+.widget-large #bottom-section {
+  bottom: 1%;
+}
+
+.widget-large .large-icons img {
+  float: left;
+  width: 2em;
+}
+
+.widget-large .me {
+  height: 17%;
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+}
