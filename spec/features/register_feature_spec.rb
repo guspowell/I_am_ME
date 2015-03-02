@@ -30,11 +30,10 @@ feature 'Registration' do
 
     scenario 'Registering with an invalid email' do
       visit('/users/sign_up')
-      fill_in('Email address', with: 'invalidemail')
-      fill_in('password', with: '12345678')
-      fill_in('password confirmation', with: '12345678')
-      click_button('Sign up')
-      expect(page).not_to have_css('.header')
+
+      invalid_attributes = attributes_for(:user, email_address: "emailfailatzombocom")
+      sign_up_with(invalid_attributes)
+      
       expect(page).to have_content("Email is invalid Log in")
     end
 

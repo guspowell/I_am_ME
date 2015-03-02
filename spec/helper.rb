@@ -16,7 +16,7 @@ end
 
 def sign_up_with(attributes)
   visit '/users/sign_up'
-  puts attributes
+
   fill_in 'Username',              with: attributes[:username]
   fill_in 'Email address',         with: attributes[:email_address]
   fill_in 'password'     ,         with: attributes[:password]
