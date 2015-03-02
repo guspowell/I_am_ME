@@ -34,12 +34,3 @@ section .day {
   border-right: 1px solid #d4d4d4;
   float: left;
 }
-
-div.hours {
-  height: 4.166667%;
-  border-bottom: 1px solid #d4d4d4;
-}
-
-div.hours:hover {
-  background-color: #E6E6E6
-}
