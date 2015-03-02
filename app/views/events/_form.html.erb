@@ -19,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.datetime_select :date, :ampm => true, :minute_step => 30 %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
