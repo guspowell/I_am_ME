@@ -21,10 +21,5 @@ class Event < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
 
-  def self.tagged_with(name)
-    Tag.find_by_name!(name).posts
-  end
-
-
 
 end
