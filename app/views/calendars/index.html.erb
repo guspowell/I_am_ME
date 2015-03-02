@@ -35,13 +35,13 @@
 
             <div class="thumbnail">
 
-          <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
+              <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
               
-              <a href='#'><%= image_tag("more_info.svg", :class => 'more') %></a>
-              <a href='#'><%= image_tag("play_button.svg", :class => 'play') %></a>
+              <a href='#'><%= image_tag("more_info.svg", :class => 'more') if @event %></a>
+              <a href='#'><%= image_tag("play_button.svg", :class => 'play') if @event %></a>
               <h1 class='title'><%= @event.name if @event %></h1>
               <h2 class='location'><%= @event.location if @event %></h2>
-              <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
+              <a href='#'><%= image_tag("ME.gif", :class => 'me') if @event %></a>
             
             </div>
 
