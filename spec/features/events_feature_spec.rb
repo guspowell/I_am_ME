@@ -14,7 +14,8 @@ feature 'event' do
                           'event_date_2i'=>'March', 'event_date_3i'=>'2',
                           'event_date_4i'=>'12',
                           'event_description'=>'Why is this happening?',
-                          'event_location'=>   'Hyde Park' })
+                          'event_location'=>   'Hyde Park',
+                          'event_all_tags'} => 'Sports, Music ')
       attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
       click_button 'Create Event'
 
