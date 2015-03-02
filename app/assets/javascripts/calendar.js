@@ -3,15 +3,36 @@ $(document).ready(function(){
 
 
   $('.more').click(function() {
-    var scopedWidget       = $(this).closest('.widget-small');
+    var widget = $(this).closest("[class^='widget']");
+    var widgetClass;
     
-    var scopedWidgetWidth  = $(scopedWidget).width();
-    var scopedWidgetHeight = $(scopedWidget).height();
+    if (widget.attr('class') === 'widget-small') {
+      widgetClass = enlargeWidget(widget);
+    }
+    if (widget.attr('class') === 'widget-large') {
+      widgetClass = shrinkWidget(widget);
+    }
     
-    scopedWidget.animate({height: scopedWidgetHeight*3 + 'px'}, 250);
-    scopedWidget.animate({width: scopedWidgetWidth*1.65 + 'px'}, 250);
-    
-    scopedWidget.attr('class', 'widget-large')
+    widget.attr('class', widgetClass);
   });
-      
+
+  var enlargeWidget = function(widget) {
+    var scopedWidgetWidth  = $(widget).width();
+    var scopedWidgetHeight = $(widget).height();
+    
+    widget.animate({height: scopedWidgetHeight*3 + 'px'}, 250);
+    widget.animate({width: scopedWidgetWidth*1.65 + 'px'}, 250);
+    
+    return  'widget-large'; 
+  }
+
+  var shrinkWidget = function(widget) {
+    var scopedWidgetWidth  = $(widget).width();
+    var scopedWidgetHeight = $(widget).height();
+    
+    widget.animate({height: scopedWidgetHeight/3 + 'px'}, 250);
+    widget.animate({width: scopedWidgetWidth/1.65 + 'px'}, 250);
+    
+    return 'widget-small'; 
+  }
 });
