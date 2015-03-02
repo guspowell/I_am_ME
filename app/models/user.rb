@@ -16,9 +16,9 @@ class User < ActiveRecord::Base
             :uniqueness => {
               :case_sensitive => false
             }
-  before_create :build_me_cal
+  after_create :build_me_cal
 
-  
+
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
   def build_me_cal
     calendar = Calendar.new
     calendar.name = "Me"
+    calendar.user_id = self.id
     calendar.save
   end
 
