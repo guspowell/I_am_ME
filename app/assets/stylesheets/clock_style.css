@@ -1,0 +1,12 @@
+#clock { 
+  /*display: none;*/ 
+  position: fixed; 
+  top: 135px; 
+  right: 50px; 
+  z-index: 400; 
+  background: #484848;
+  border: 1px solid black; 
+  /*border-radius: 100%;*/
+  padding: 10px 10px 10px 20px; 
+  color: white;  
+}
