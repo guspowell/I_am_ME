@@ -11,6 +11,10 @@
   </div>
 
   <div class="field">
+    <%= f.text_field :username, autofocus: true, :placeholder => 'Username' %>
+  </div>
+
+  <div class="field">
     <% if @validatable %>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", :placeholder => 'password' %>
