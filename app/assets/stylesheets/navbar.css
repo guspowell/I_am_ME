@@ -39,13 +39,13 @@ nav {
 }
 
 .left-buttons .search-field {
- position: absolute;
+ float: left;
  outline: none;
  margin-left: 0;
  margin-top: 22px;
  border: 2px solid black;
  height: 20px;
- width: 12%;
+ width: 100%;
 }
 
 .center {
@@ -141,6 +141,7 @@ nav {
  float: none;
  line-height: 2.2em;
 }
+
 
 /* -----------------------------------------*/
 
