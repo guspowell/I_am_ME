@@ -39,11 +39,9 @@ feature 'Registration' do
 
     scenario 'Registering with different passwords' do
       visit('/users/sign_up')
-      fill_in('Email address', with: 'invalidemail')
-      fill_in('password', with: '12345678')
-      fill_in('password confirmation', with: 'wrong')
-      click_button('Sign up')
-      expect(page).not_to have_css('.header')
+      
+      sign_up_with(attributes_for(:user, password_confirmation: 'banaaanas'))
+      
       expect(page).to have_content("Password confirmation doesn't match Password Log in")
     end
 
