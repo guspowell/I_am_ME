@@ -69,7 +69,6 @@ input:-webkit-autofill {
   color: #9d855f ;
   background-color: #E6E6E6;
   border: 1px solid white;
-;
 }
 
 #login-box input[type="submit"]:hover {
