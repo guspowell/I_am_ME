@@ -6,3 +6,10 @@ def register(email)
   fill_in('password confirmation', with: 'testtest')
   click_button('Sign up')
 end
+
+def login_as(user)
+  visit '/users/sign_in'
+  fill_in 'user_email', with: user.email
+  fill_in 'password', with: user.password
+  click_button 'Log in'
+end

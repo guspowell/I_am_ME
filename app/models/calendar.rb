@@ -5,9 +5,8 @@ class Calendar < ActiveRecord::Base
   belongs_to :user, dependent: :destroy
 
   def find_monday
-    today = Time.now
-    day = today.to_date
-    
+    day = Time.now.to_date
+
     until day.monday? 
       day = day.prev_day
     end 
