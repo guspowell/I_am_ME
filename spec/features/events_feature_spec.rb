@@ -15,7 +15,7 @@ feature 'event' do
                           'event_date_4i'=>'12',
                           'event_description'=>'Why is this happening?',
                           'event_location'=>   'Hyde Park' })
-                          
+
       attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
       click_button 'Create Event'
 
