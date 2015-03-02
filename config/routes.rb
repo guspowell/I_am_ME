@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/map'
+
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
 
