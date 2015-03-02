@@ -4,8 +4,6 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @number_of_hours = 24
-    @number_of_days = 7
     @events = Event.all
   end
 
@@ -17,6 +15,8 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @calendars = Calendar.all
+    @tags = Tag.all
   end
 
   # GET /events/1/edit
@@ -26,7 +26,6 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @calendars = Calendar.all
     @event = Event.new(event_params)
     @event.user_id = current_user.id
     @event.save
@@ -78,6 +77,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :date, :description, :image, :location, :calendar_id)
+      params.require(:event).permit(:name, :date, :description, :image, :location, :calendar_id, :all_tags)
     end
 end
