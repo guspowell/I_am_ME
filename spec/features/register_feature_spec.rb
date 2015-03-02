@@ -31,7 +31,7 @@ feature 'Registration' do
     scenario 'Registering with an invalid email' do
       visit('/users/sign_up')
 
-      invalid_attributes = attributes_for(:user, email_address: "emailfailatzombocom")
+      invalid_attributes = attributes_for(:user, email: "emailfailatzombocom")
       sign_up_with(invalid_attributes)
       
       expect(page).to have_content("Email is invalid Log in")
