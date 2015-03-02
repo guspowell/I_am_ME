@@ -1,0 +1,18 @@
+#create-event {
+  width: 40%;
+  height: 50%;
+  background-color: red;
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#create-event h2 {
+  color: black;
+  background-color: blue;
+  width: 100%;
+  margin: 0;
+  padding: 2%;
+  border-bottom: 1px solid black
+}
