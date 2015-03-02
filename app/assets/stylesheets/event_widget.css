@@ -22,7 +22,7 @@
 }
 
 .widget .thumbnail .more {
-  height: 7%;
+  height: 20%;
   margin-left: 3%;
   margin-top: 3%;
   position: absolute;
@@ -31,7 +31,7 @@
 }
 
 .widget .thumbnail .play {
-  height: 7%;
+  height: 20%;
   margin-left: 3%;
   margin-top: 12%;
   position: absolute;
