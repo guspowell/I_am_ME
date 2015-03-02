@@ -18,7 +18,7 @@
 <nav>
   <section class='left-buttons'>
     <ul>
-      <li><a href='#'><%= image_tag("settings.svg", :class => 'settings') %>
+      <li><a><%= image_tag("settings.svg", :class => 'settings') %>
         <ul class='plus-dropdown'>
           <li><a href='#'>Profile</a></li>
           <li><a href='#'>hfdsafh</a></li>
@@ -26,7 +26,7 @@
         </ul>
       </li>
       <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
-      <li><a href='#'><%= image_tag("search.svg", :class => 'search') %><li>
+      <li><a><%= image_tag("search.svg", :class => 'search') %><li>
       <input class='search-field' type='text' name='search-field'>
     </ul>
   </section>
@@ -36,10 +36,10 @@
 
   <section class='right-buttons'>
     <ul>
-      <li><a href='#'><%= image_tag("create.svg", :class => 'plus') %>
+      <li><a><%= image_tag("create.svg", :class => 'plus') %>
         <ul class='plus-dropdown'>
           <li><%= link_to "Create event", '/users/' + current_user.id.to_s + '/events/new' %></li>
-          <li><a href='#'>Add Event</a></li>
+          <li><a>Add Event</a></li>
         </ul>
       </li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>

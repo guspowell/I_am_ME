@@ -1,63 +1,3 @@
-  <head>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1zE86HHNg61t-piIvl5BQw-hZeR5rBas">
-    </script>
-
-    <%= stylesheet_link_tag "event_widget.css" %>
-    <%= stylesheet_link_tag "normalize.css" %>
-    <%= stylesheet_link_tag "map.css" %>
-
-    <title>I am ME</title>
-
-    <script>
-      $(document).ready(function(){
-
-        $(".expanded").hide();
-        $("#map-canvas").hide();
-
-        $(".more").click(function(){
-            $(".widget").toggleClass("active");
-            $(".expanded").toggle();
-            $(".title").toggle();
-            $(".location").toggle();
-            $(".me").toggle();
-        });
-
-        $(".map").click(function(){
-          $("#map-canvas").toggle();
-        });
-
-      });
-
-    </script>
-
-    <script type="text/javascript">
-
-     alert("jQuery is")
-
-     $(document).ready(
-
-       $.get( "http://localhost:3000/events/4", function( event ) {
-
-        $( ".title, .title2" )
-          .text( event.name )
-
-        $(".description")
-          .text( event.description )
-
-        $(".location2")
-          .text( event.location )
-
-        }, "json" )
-
-     );
-
-   </script>
-
-</head>
-
 <section id="days-and-calendar">
 
 <table>
@@ -96,14 +36,14 @@
 
             <div class="thumbnail">
 
-          <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
-
-              <a href='#'><%= image_tag("more_info.png", :class => 'more') %></a>
-              <a href='#'><%= image_tag("play.png", :class => 'play') %></a>
+              <div class="thumbnail" style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
+              
+              <a href='#'><%= image_tag("more_info.svg", :class => 'more') if @event %></a>
+              <a href='#'><%= image_tag("play_button.svg", :class => 'play') if @event %></a>
               <h1 class='title'><%= @event.name if @event %></h1>
               <h2 class='location'><%= @event.location if @event %></h2>
-              <a href='#'><%= image_tag("ME.gif", :class => 'me') %></a>
-
+              <a href='#'><%= image_tag("ME.gif", :class => 'me') if @event %></a>
+            
             </div>
 
             <div class ='expanded'>
