@@ -60,9 +60,9 @@ nav {
 .center .logo {
  display: inline;
  position: absolute;
-  top: -6px;
+  top: 6px;
   left: 46%;
- height: 74px;
+ height: 50px;
  padding: 0px;
  margin: 0px;
 }

@@ -2,32 +2,16 @@
 $(document).ready(function(){
 
 
-  // $.get( "http://localhost:3000/events/4", function( event ) {
-
-  // $( ".title, .title2" )
-  //   .text( event.name )
-
-  // $(".description")
-  //   .text( event.description )
-
-  // $(".location2")
-  //   .text( event.location )
-
-  // }, "json" )
-
-  $(".expanded").hide();
-  $("#map-canvas").hide();
-
-  $(".more").click(function(){
-      $(".widget").toggleClass("active");
-      $(".expanded").toggle();
-      $(".title").toggle();
-      $(".location").toggle();
-      $(".me").toggle();
-  });
-
-  $(".map").click(function(){
-    $("#map-canvas").toggle();
+  $('.more').click(function() {
+    var scopedWidget       = $(this).closest('.widget-small');
+    
+    var scopedWidgetWidth  = $(scopedWidget).width();
+    var scopedWidgetHeight = $(scopedWidget).height();
+    
+    scopedWidget.animate({height: scopedWidgetHeight*3 + 'px'}, 250);
+    scopedWidget.animate({width: scopedWidgetWidth*1.65 + 'px'}, 250);
+    
+    scopedWidget.attr('class', 'widget-large')
   });
       
 });

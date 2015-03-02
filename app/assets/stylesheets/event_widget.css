@@ -1,144 +1,76 @@
-
-
-
-.widget .thumbnail {
-  position: relative;
+.widget-container {
   width: 100%;
   height: 160px;
-  margin:auto;
+}
+
+.widget-container:hover {
+  background-color: #E6E6E6
+}
+
+section.widget-small {
+  border: 2px solid black;
+  padding: 0px;
+}
+
+.widget-small {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: 5;
 }
 
-.widget .thumbnail .me {
-  height: 30%;
-  margin-right: -5%;
-  margin-bottom: -2%;
-  position: absolute;
-    bottom: 0%;
-    right: 0%;
-}
-
-.widget .thumbnail .more {
+.widget-small .more {
   height: 20%;
-  margin-left: 3%;
+  margin-left: -5%;
   margin-top: 3%;
   position: absolute;
-    top: 0%;
-    left: 0%;
+  top: 0%;
+  left: 0%;
 }
 
-.widget .thumbnail .play {
+.widget-small .play {
   height: 20%;
-  margin-left: 3%;
-  margin-top: 12%;
+  margin-left: -5%;
+  margin-top: 10%;
   position: absolute;
-    top: 0%;
-    left: 0%;
+  top: 0%;
+  left: 0%;
 }
 
-.widget .thumbnail h1 {
+.widget-small #name-and-location {
   font-family: Helvetica;
-  font-size: 0.9em;
+  color: black;
+  float: left;
+  margin-left: 4%;
+}
+
+.widget-small h1.title {
   font-weight: bold;
-  color: white;
+  bottom: 9%;
   position: absolute;
-    bottom: 10%;
-    left: 5%;
-}
-
-.widget .thumbnail h2 {
   font-family: Helvetica;
-  font-size: 0.7em;
-  font-weight: 400;
-  color: #A1A1A1;
-  position: absolute;
-    bottom: 0%;
-    left: 5%;
-}
-
-.widget .thumbnail h3 {
-  font-family: Helvetica;
-  font-size: 0.7em;
-  font-weight: 400;
-  color: #A1A1A1;
-  position: absolute;
-    bottom: 0%;
-    left: 5%;
-}
-
-
-.widget .thumbnail .title {
-  font-family: Helvetica;
-  font-size: 80%;
-  font-weight: bold;
+  font-size: 0.8em;
   margin: 0 0 3% 0;
 }
 
-.widget .thumbnail .location {
-
+.widget-small h2.location {
+  bottom: 0%;
+  position: absolute;
   font-family: Helvetica;
-  font-size: 20%;
+  font-size: 0.6em;
   font-weight: normal;
 }
 
-.widget .expanded {
-  width:100%;
-  margin-top: -2%;
-  background-color: white;
-  border: 1px solid black;
-  padding: 10px;
+.widget-small .description {
+  display: none;
+  position: relative;
 }
 
-.widget .expanded img{
-  width:10%;
-  float: left;
-  z-index: 3000;
-}
-
-.widget .expanded .expanded-info
- {
-  color: #424242;
-}
-
-.widget .expanded-info .me2 {
-  width: 60%;
-  float: right;
-  margin-top: -5%;
-  margin-right: -5%;
-}
-
-.widget .expanded .description {
-  font-size: 8%;
-  color: #424242;
-  font-family: Helvetica;
-  font-weight: normal;
-}
-
-.widget .expanded .title {
-  font-size: 5%;
-  font-family: Helvetica;
-  font-weight: bold;
-}
-
-
-.widget .expanded-info
- {
-  font-size:2%;
-  font-family: Helvetica;
-  font-weight: normal;
-}
-
-.widget .expanded hr {
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #424242;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: dotted;
-  border-width: 1px;
-  letter-spacing: 10px;
+.widget-small #bottom-section {
+  display: none;
 }
