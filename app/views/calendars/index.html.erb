@@ -27,7 +27,7 @@
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.sample %>
         
         <section class="widget-container">
-          <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) if @event %>); width: 160px; height: 160px">
+          <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) if @event %>);">
             <a><%= image_tag("more_info.svg", :class => 'more') if @event %></a>
             <a><%= image_tag("play_button.svg", :class => 'play') if @event %></a>
             
