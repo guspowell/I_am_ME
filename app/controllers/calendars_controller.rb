@@ -6,16 +6,19 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.json
   def index
-      # @calendars = Calendar.all
     @user = current_user.id
     @events = Event.all
     @calendar = Calendar.new
     @day = @calendar.find_monday
     @sunday = @calendar.find_sunday(@day)
+
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
-    @events = Event.all
+
+
+
+
   end
 
   # GET /calendars/1
