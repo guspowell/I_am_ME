@@ -1,7 +1,7 @@
 FactoryGirl.define do 
   factory :event do 
     name "Football"
-    date DateTime.now
+    date DateTime.now.change({min: 0})
     description "FOOOOTBBBAAAALLLLL"
     location "Hyde Park"
 

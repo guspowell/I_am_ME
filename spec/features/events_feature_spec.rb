@@ -12,7 +12,7 @@ feature 'Event' do
       login_as(user)
       visit '/' 
 
-      expect(page).to have_content 
+      expect(page).to have_content event.name
     end
   end
 
