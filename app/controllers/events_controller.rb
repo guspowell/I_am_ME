@@ -23,6 +23,7 @@ class EventsController < ApplicationController
   def edit
   end
 
+
   # POST /events
   # POST /events.json
   def create

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'pages/map'
+  post "/calendars/mebutton" => "calendars#mebutton"
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
