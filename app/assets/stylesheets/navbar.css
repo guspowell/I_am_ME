@@ -26,6 +26,7 @@ nav {
  height: 100%;
  display: inline-block;
  margin-right: 4%;
+ cursor: pointer; cursor: hand;
 }
 
 .left-buttons img {
@@ -94,6 +95,7 @@ nav {
  height: 100%;
  display: inline-block;
  margin-right: 4%;
+ cursor: pointer; cursor: hand;
 }
 
 .right-buttons img {
@@ -137,42 +139,25 @@ nav {
  display: block;
  position: absolute;
  background-color: white;
- border: 1px solid black;
- padding: 1% 2%;
+ border-top: 1px solid black;
+ border-right: 1px solid black;
+ border-left: 1px solid black;
  margin-top: 4.2%;
- margin-left: -2%;
+ margin-left: -3.5%;
  text-align: center;
-}
-
-.right-buttons li ul li {
- display: block;
- float: none;
- line-height: 2.2em;
-}
-
-
-/* -----------------------------------------*/
-
-
-/* ----------plus drop down---------------*/
-
-.right-buttons li:hover .plus-dropdown {
- display: block;
- position: absolute;
+ padding: 0;
  width: 10%;
- background-color: white;
- border: 1px solid black;
- padding: 1%;
- margin-top: 4.2%;
- margin-left: -8%;
- text-align: center;
 }
 
 .right-buttons li ul li {
  display: block;
  float: none;
  line-height: 2.2em;
+ border-bottom: 1px solid black;
+ width: 100%;
+ margin: 0;
 }
+
 
 /* -----------------------------------------*/
 
