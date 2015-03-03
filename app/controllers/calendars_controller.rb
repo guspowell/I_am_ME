@@ -21,7 +21,13 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.json
   def show
-
+    @calendar = Calendar.find(params[:id])
+    @events = @calendar.events.all
+    @day = @calendar.find_monday
+    @sunday = @calendar.find_sunday(@day)
+    @time = Time.now
+    @hour = Time.parse("1:00 am", @time)
+    @number_of_hours = @hour + 82800
   end
 
   # GET /calendars/new
