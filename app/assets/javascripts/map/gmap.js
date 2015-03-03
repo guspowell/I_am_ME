@@ -5,10 +5,13 @@ $(document).ready(function() {
     $('.map').click(function() {
       var widget = $(this).closest("[class^='widget']").find('#map-canvas').get(0);
       $(widget).show();
+      var des = $(this).closest("[class^='widget']").find('.description').get(0);
+      $(des).show();
       
       if($(this).hasClass('hide')){
         console.log("hide")
         $(widget).hide();
+        $(des).hide();
         $(this).addClass('show').removeClass('hide');
 
       }
@@ -24,7 +27,6 @@ $(document).ready(function() {
         $(this).addClass('hide').removeClass('show');
 
       }
-  
 
     });
 
