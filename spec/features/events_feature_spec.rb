@@ -5,14 +5,14 @@ feature 'Event' do
   context 'When I want to view an event' do
 
     scenario 'I can see a small widget' do
-      event= create(:event, name: "Mud Fight") 
-      user = create(:user)
-      user.calendars.sample.events << event
+      event = create(:event, name: "Mud Fight") 
+      user  = create(:user)
+      user.get_me_calendar.events << event
       
       login_as(user)
-      visit "users/#{user.id}/"
+      visit '/' 
 
-      expect(page).to have_content event.name
+      expect(page).to have_content 
     end
   end
 
@@ -33,18 +33,20 @@ feature 'Event' do
     end
   end
 
-  context 'deletion' do 
+  context 'When I want to delete an event' do 
 
-    scenario 'I want to delete an event' do 
-      create_event
-      attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
-      click_button 'Create Event'
+    scenario 'I can click delete within the edit event page' do 
+      user  = create(:user) 
+      event = create(:event, name: 'Hippy Jam')
+      user.get_me_calendar.events << event
+
       within(:css, '#days-and-calendar') do
         click_link 'Edit'
       end 
       click_link 'Delete'
-      expect(page).not_to have_content('Superhero Dance Off')
+      visit '/'
 
+      expect(page).not_to have_content('Hippy Jam')
     end 
   end
 end

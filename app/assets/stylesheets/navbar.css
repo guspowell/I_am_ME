@@ -186,5 +186,11 @@ a { text-decoration: none; color: black; }
  line-height: 2.2em;
 }
 
-
 /* -----------------------------------------*/
+
+#new-cal {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 12;
+}
