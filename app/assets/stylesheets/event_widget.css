@@ -26,24 +26,22 @@ section.widget-small {
 }
 
 .widget-small .more {
-  width: 50%;
-  margin: -5% 0 0 -11%;
+  width: 15%;
+  margin: 0% 0 0 0%;
   padding: 0;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 5%;
+  left: 5%;
   cursor: pointer; cursor: hand;
 }
 
 .widget-small .play {
-  width: 50%;
-  margin-left: -5%;
-  margin-top: 10%;
-  margin: -5% 0 0 -11%;
+  width: 15%;
+  margin: 0% 0 0 0%;
   padding: 0;
   position: absolute;
-  top: 12%;
-  left: 0%;
+  top: 15%;
+  left: 5%;
   cursor: pointer; cursor: hand;
 }
 

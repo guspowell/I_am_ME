@@ -20,7 +20,7 @@ $(document).ready(function() {
         $(des).show();
         $(play).show();
         $(more).show();
-        $(title).show();
+        $(title).show()
         $(this).addClass('show').removeClass('hide');
 
       }
