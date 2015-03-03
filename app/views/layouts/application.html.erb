@@ -36,7 +36,7 @@
 
   <section class='right-buttons'>
     <ul>
-      <li><a><%= image_tag("create.svg", :class => 'plus') %></li>
+      <li><%= link_to image_tag("create.svg", :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><a href='#'><%= image_tag("inspireME.svg", :class => 'bunny') %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
@@ -45,13 +45,21 @@
           <% current_user.calendars.each do |calendar|%>
             <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
           <% end %>
-          <li><strong><%= link_to "Create event", '/users/' + current_user.id.to_s + '/events/new' %></strong></li>
+          <li><strong><%= link_to "Add Calendar", '/users/' + current_user.id.to_s + '/calendars/new' %></strong></li>
         </ul>
       </li>
     </ul>
-
   </section>
 </nav>
+
+<section id="new-cal">
+  <%= form_for(@calendar, url: user_calendars_path(current_user.id)) do |f| %>
+    <div class="actions">
+      <%= f.text_field :name %>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</section>
 
 
 <%= yield %>
