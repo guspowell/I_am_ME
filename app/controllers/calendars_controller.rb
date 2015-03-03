@@ -39,6 +39,13 @@ class CalendarsController < ApplicationController
   def edit
   end
 
+  def mebutton
+    p params[:event_id]
+    @event = Event.find(params[:event_id])
+    current_user.calendars.where(:name=>'Me').sample.events << @event
+    redirect_to "/"
+  end
+
   # POST /calendars
   # POST /calendars.json
   def create
