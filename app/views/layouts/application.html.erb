@@ -48,7 +48,7 @@
       <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
         <ul class='cal-dropdown'>
           <% current_user.calendars.each do |calendar|%>
-            <li><a href='#'><%= calendar.name %></a></li>
+            <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
           <% end %>
         </ul>
       </li>

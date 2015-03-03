@@ -32,6 +32,7 @@ section.widget-small {
   position: absolute;
   top: 0%;
   left: 0%;
+  cursor: pointer; cursor: hand;
 }
 
 .widget-small .play {
@@ -43,6 +44,7 @@ section.widget-small {
   position: absolute;
   top: 12%;
   left: 0%;
+  cursor: pointer; cursor: hand;
 }
 
 .widget-small #name-and-location {
