@@ -41,6 +41,12 @@
 </script>
 
 <div id="clock">
+<section class="left-arrow">
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?week=last_week&wkid=#{(params[:wkid].to_i)-1}"%>
+</section>
+<section class="right-arrow">
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?week=next_week&wkid=#{(params[:wkid].to_i)+1}" %>
+</section>
   <div class="dynamic-time">
     <h3><span class="time">00:00</span></h3>
   </div>
@@ -62,10 +68,9 @@
 </table>
 
 <section id="calendar">
-  <% @day = @calendar.find_monday%>
-
-  <%= link_to (image_tag("arrow_previous.png")), user_calendars_path(current_user)+ "?week=last_week&id=#{(params[:id].to_i)-1}"%>
-  <%= link_to (image_tag("arrow_next.png")), user_calendars_path(current_user)+ "?week=next_week&id=#{(params[:id].to_i)+1}" %>
+<!-- 
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?week=last_week&wkid=#{(params[:wkid].to_i)-1}"%>
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?week=next_week&wkid=#{(params[:wkid].to_i)+1}" %> -->
 
 
   <% while @day <= @sunday %>

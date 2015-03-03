@@ -16,25 +16,20 @@ class CalendarsController < ApplicationController
   def show
     @calendar = Calendar.find(params[:id])
     @events = @calendar.events.all
-    @day = @calendar.find_monday
-    @sunday = @calendar.find_sunday(@day)
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
 
-    if params[:week] == 'next_week' 
-      while params[:id] > 0 
-        @day = @calendar.next_week(@day)
-        @sunday = @calendar.next_week(@sunday)
-      end
-
-    elsif params[:week] == 'last_week'
-      @day = @calendar.last_week(@day)
-      @sunday = @calendar.last_week(@sunday)
-    else
-      @day
-      @sunday
+    if params[:week] == "next_week"
+      @day = @calendar.find_future_monday(params[:wkid].to_i)
+      @sunday = @calendar.find_future_sunday(params[:wkid].to_i)
+    else params[:week] == "next_week"
+      @day = @calendar.find_monday
+      @sunday = @calendar.find_sunday(@day)
     end
+
+
+
   end
 
   # GET /calendars/new

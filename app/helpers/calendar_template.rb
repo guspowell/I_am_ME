@@ -25,12 +25,23 @@
     @sunday = day
   end
 
-  def next_week(day)
-    day + 7
+  def find_future_monday(wkid)
+    @monday = find_monday
+    while wkid > 0
+      @monday += 7
+      wkid -= 1
+    end 
+    return @monday
   end 
 
-  def last_week(day)
-    day - 7
-  end
+  def find_future_sunday(wkid)
+    @sunday = self.find_sunday(self.find_monday)
+    while wkid > 0
+      @sunday += 7
+      wkid -= 1
+    end 
+    return @sunday 
+  end 
+
 
 end
