@@ -47,9 +47,9 @@
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
       <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
         <ul class='cal-dropdown'>
-          <li><a href='#'>ME</a></li>
-          <li><a href='#'>Sport</a></li>
-          <li><a href='#'>Music</a></li>
+          <% current_user.calendars.each do |calendar|%>
+            <li><a href='#'><%= calendar.name %></a></li>
+          <% end %>
         </ul>
       </li>
     </ul>

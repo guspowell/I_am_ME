@@ -13,3 +13,13 @@ def login_as(user)
   fill_in 'user_password', with: user.password
   click_button 'Log in'
 end
+
+def sign_up_with(attributes)
+  visit '/users/sign_up'
+
+  fill_in 'Username',              with: attributes[:username]
+  fill_in 'Email address',         with: attributes[:email]
+  fill_in 'password'     ,         with: attributes[:password]
+  fill_in 'password confirmation', with: attributes[:password_confirmation]
+  click_button 'Sign up'
+end

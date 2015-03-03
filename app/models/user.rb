@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  attr_accessor :login
+
   has_many :events
   has_many :calendars
 
@@ -8,7 +11,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :authentication_keys => [:login]
 
-  attr_accessor :login
+  validates :username,
+            :presence => true,
+            :uniqueness => {
+              :case_sensitive => false
+            }
+  after_create :build_me_cal
+
+
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
@@ -23,10 +33,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  validates :username,
-    :presence => true,
-    :uniqueness => {
-      :case_sensitive => false
-    }
+  def build_me_cal
+    calendar = Calendar.new
+    calendar.name = "Me"
+    calendar.user_id = self.id
+    calendar.save
+  end
+
 
 end
