@@ -36,12 +36,7 @@
 
   <section class='right-buttons'>
     <ul>
-      <li><a><%= image_tag("create.svg", :class => 'plus') %>
-        <ul class='plus-dropdown'>
-          <li><%= link_to "Create event", '/users/' + current_user.id.to_s + '/events/new' %></li>
-          <li><a>Add Event</a></li>
-        </ul>
-      </li>
+      <li><a><%= image_tag("create.svg", :class => 'plus') %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><a href='#'><%= image_tag("inspireME.svg", :class => 'bunny') %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
@@ -50,6 +45,7 @@
           <% current_user.calendars.each do |calendar|%>
             <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
           <% end %>
+          <li><strong><%= link_to "Create event", '/users/' + current_user.id.to_s + '/events/new' %></strong></li>
         </ul>
       </li>
     </ul>
