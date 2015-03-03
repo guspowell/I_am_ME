@@ -5,3 +5,4 @@ log
 log/development.log
 secrets.yml
 public/system
+Procfile

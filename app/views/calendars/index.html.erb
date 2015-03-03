@@ -44,9 +44,9 @@
           <% if @event %>
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
               <div id='map-canvas' class='map-canvas'></div>
-              
-              <a><%= image_tag("more_info.svg", :class => 'more') %></a>
-              <a><%= image_tag("play_button.svg", :class => 'play') %></a>
+
+              <a><%= image_tag("more_info.png", :class => 'more') %></a>
+              <a><%= image_tag("play_button.png", :class => 'play') %></a>
 
               <div id="name-and-location">
                 <h1 class='title'>   <%= @event.name %></h1>
@@ -59,8 +59,7 @@
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>       </p>
-                <p class='large-icons'><%= link_to 'Edit', edit_event_path(@event) %> </p>
-                <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
+                <%= button_to 'ME', {:controller => "calendars", :class => 'me', :action => "mebutton", :event_id => @event.id } %>
               </section>
             </div>
           <% end %>
