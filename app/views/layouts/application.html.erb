@@ -36,7 +36,7 @@
 
   <section class='right-buttons'>
     <ul>
-      <li><%= link_to image_tag("create.svg",  :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
+      <li><%= link_to image_tag("create.svg", :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><a href='#'><%= image_tag("inspireME.svg", :class => 'bunny') %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
@@ -49,9 +49,17 @@
         </ul>
       </li>
     </ul>
-
   </section>
 </nav>
+
+<section id="new-cal">
+  <%= form_tag(url: user_calendars_path(current_user.id), multipart: true, method: 'post', action: 'create') do %>
+    <div class="actions">
+      <%= text_field_tag(:name) %>
+      <%= submit_tag("create") %>
+    </div>
+  <% end %>
+</section>
 
 
 <%= yield %>

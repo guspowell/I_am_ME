@@ -1,7 +1,7 @@
 class CalendarsController < ApplicationController
   before_action :set_calendar, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+  # prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
 
   # GET /calendars
@@ -19,17 +19,15 @@ class CalendarsController < ApplicationController
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
-
+    
     if params[:week] == "next_week"
       @day = @calendar.find_future_monday(params[:wkid].to_i)
       @sunday = @calendar.find_future_sunday(params[:wkid].to_i)
     else params[:week] == "next_week"
       @day = @calendar.find_monday
       @sunday = @calendar.find_sunday(@day)
+
     end
-
-
-
   end
 
   # GET /calendars/new
@@ -51,13 +49,12 @@ class CalendarsController < ApplicationController
   # POST /calendars
   # POST /calendars.json
   def create
-    @calendar = Calendar.new(calendar_params)
-    @calendar.user_id = current_user.id
-
+    @calendar = Calendar.new(:name => params[:name])
+    @calendar.user = current_user
     respond_to do |format|
       if @calendar.save
         current_user.calendars << @calendar
-        format.html { redirect_to @calendar, notice: 'Calendar was successfully created.' }
+        format.html { redirect_to '/users/' + current_user.id.to_s + '/calendars/' + @calendar.id.to_s, notice: 'Calendar was successfully created.' }
         format.json { render :show, status: :created, location: @calendar }
       else
         format.html { render :new }
@@ -98,6 +95,6 @@ class CalendarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def calendar_params
-      params[:calendar]
+      params.require(:calendar).permit(:user_id, :name)
     end
 end

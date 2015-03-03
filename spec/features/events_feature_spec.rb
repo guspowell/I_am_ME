@@ -2,6 +2,20 @@ require 'rails_helper'
 
 feature 'Event' do
 
+  context 'When I want to view an event' do
+
+    scenario 'I can see a small widget' do
+      event = create(:event, name: "Mud Fight") 
+      user  = create(:user)
+      user.get_me_calendar.events << event
+      
+      login_as(user)
+      visit '/' 
+
+      expect(page).to have_content 
+    end
+  end
+
   context 'When I want to create an event' do
 
     scenario 'I can fill in a form to do so' do
@@ -19,19 +33,20 @@ feature 'Event' do
     end
   end
 
+  context 'When I want to delete an event' do 
 
-  context 'deletion' do 
+    scenario 'I can click delete within the edit event page' do 
+      user  = create(:user) 
+      event = create(:event, name: 'Hippy Jam')
+      user.get_me_calendar.events << event
 
-    scenario 'I want to delete an event' do 
-      create_event
-      attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
-      click_button 'Create Event'
       within(:css, '#days-and-calendar') do
         click_link 'Edit'
       end 
       click_link 'Delete'
-      expect(page).not_to have_content('Superhero Dance Off')
+      visit '/'
 
+      expect(page).not_to have_content('Hippy Jam')
     end 
   end
 end
