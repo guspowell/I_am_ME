@@ -9,21 +9,30 @@ class CalendarsController < ApplicationController
     @user = current_user.id
     @events = Event.all
     @calendar = Calendar.new
-    @calendar.next = 0
-    @day = @calendar.find_page_monday
-    @sunday = @calendar.find_page_sunday
+    @day = @calendar.find_monday
+    @sunday = @calendar.find_sunday(@day)
+
+    if params[:week] == 'next_week' 
+     @day = @calendar.next_week(@day)
+     @sunday = @calendar.next_week(@sunday)
+    elsif params[:week] == 'last_week'
+      @day = @calendar.last_week(@day)
+      @sunday = @calendar.last_week(@sunday)
+    else
+      @day
+      @sunday
+    end
+
+    
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
-
-
-
-
   end
 
   # GET /calendars/1
   # GET /calendars/1.json
   def show
+    redirect_to '/'
 
   end
 

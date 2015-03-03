@@ -21,9 +21,8 @@
 
 <section id="calendar">
 
-
-  <%= link_to image_tag("arrow_next.png", :class => 'next_week')%>
-  <%= link_to image_tag("arrow_previous.png", :class => 'next_week')%>
+  <%= link_to (image_tag("arrow_previous.png")), user_calendars_path(current_user)+ "?week=last_week"%>
+  <%= link_to (image_tag("arrow_next.png")), user_calendars_path(current_user)+ "?week=next_week" %>
 
 
   <% while @day <= @sunday %>
