@@ -7,11 +7,20 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.json
   def index
-    @calendar = Calendar.find_by(:user_id => current_user.id).first
-    @user = current_user.id
-    @events = Event.all
+    @calendar = current_user.calendars.find_by(name: "Me")
+    redirect_to "/users/#{current_user.id}/calendars/#{@calendar.id}"
+  end
+
+  # GET /calendars/1
+  # GET /calendars/1.json
+  def show
+    @calendar = Calendar.find(params[:id])
+    @events = @calendar.events.all
     @day = @calendar.find_monday
     @sunday = @calendar.find_sunday(@day)
+    @time = Time.now
+    @hour = Time.parse("1:00 am", @time)
+    @number_of_hours = @hour + 82800
 
     if params[:week] == 'next_week' 
       while params[:id] > 0 
@@ -26,23 +35,6 @@ class CalendarsController < ApplicationController
       @day
       @sunday
     end
-
-    
-    @time = Time.now
-    @hour = Time.parse("1:00 am", @time)
-    @number_of_hours = @hour + 82800
-  end
-
-  # GET /calendars/1
-  # GET /calendars/1.json
-  def show
-    @calendar = Calendar.find(params[:id])
-    @events = @calendar.events.all
-    @day = @calendar.find_monday
-    @sunday = @calendar.find_sunday(@day)
-    @time = Time.now
-    @hour = Time.parse("1:00 am", @time)
-    @number_of_hours = @hour + 82800
   end
 
   # GET /calendars/new

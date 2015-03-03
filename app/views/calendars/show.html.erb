@@ -64,6 +64,9 @@
 <section id="calendar">
   <% @day = @calendar.find_monday%>
 
+  <%= link_to (image_tag("arrow_previous.png")), user_calendars_path(current_user)+ "?week=last_week&id=#{(params[:id].to_i)-1}"%>
+  <%= link_to (image_tag("arrow_next.png")), user_calendars_path(current_user)+ "?week=next_week&id=#{(params[:id].to_i)+1}" %>
+
 
   <% while @day <= @sunday %>
     <% @hour = Time.parse("1:00 am", @time)%>
