@@ -41,5 +41,9 @@ class User < ActiveRecord::Base
     self.calendars << calendar
   end
 
+  def get_me_calendar
+    self.calendars.find_by(name: "Me")
+  end
+
 
 end
