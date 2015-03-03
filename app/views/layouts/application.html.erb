@@ -45,7 +45,7 @@
           <% current_user.calendars.each do |calendar|%>
             <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
           <% end %>
-          <li><strong><%= link_to "Create event", '/users/' + current_user.id.to_s + '/events/new' %></strong></li>
+          <li><strong><%= link_to "Add Calendar", '/users/' + current_user.id.to_s + '/calendars/new' %></strong></li>
         </ul>
       </li>
     </ul>

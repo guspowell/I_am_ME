@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
     calendar.name = "Me"
     calendar.user_id = self.id
     calendar.save
+    self.calendars << calendar
   end
 
 
