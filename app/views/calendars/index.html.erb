@@ -19,6 +19,8 @@
 </tr>
 </table>
 
+
+
 <section id="calendar">
 
   <%= link_to (image_tag("arrow_previous.png")), user_calendars_path(current_user)+ "?week=last_week"%>
@@ -39,6 +41,8 @@
         <section class="widget-container">
           <% if @event %>
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
+              <div id='map-canvas' class='map-canvas'></div>
+              
               <a><%= image_tag("more_info.svg", :class => 'more') %></a>
               <a><%= image_tag("play_button.svg", :class => 'play') %></a>
 
@@ -50,7 +54,7 @@
               <div class="description"><p><%= @event.description %></p></div>
 
               <section id='bottom-section'>
-                <p class='large-icons'><%= image_tag("map.svg", :id => 'map') %>           </p>
+                <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>       </p>
                 <p class='large-icons'><%= link_to 'Edit', edit_event_path(@event) %> </p>
