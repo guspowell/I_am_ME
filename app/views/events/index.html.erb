@@ -1,28 +1,7 @@
-<table>
-<tr class='days'>
-  <td>Monday</td>
-  <td>Tuesday</td>
-  <td>Wednesday</td>
-  <td>Thursday</td>
-  <td>Friday</td>
-  <td>Saturday</td>
-  <td>Sunday</td>
-</tr>
-</table>
-
-
-<section id="calendar">
-  <% @day = 1%>
-  <% while @day <= @number_of_days  do %>
-
-    <% @hour = 1%>
-    <section class="day" id= <%="day#{@day}"%>>
-      <% while @hour <= @number_of_hours %>
-
-        <div class="hours" id= <%="hour#{@hour}"%>> </div>
-        <% @hour +=1%>
-      <% end%>
-      </section>
-    <% @day +=1%>
-  <%end %>
-</section>
+<% if @events%>
+  <ul style='margin-top:10em;'>  </ul>
+    <%@events.each do |event|%>
+    <li><%=event.name  %></li>
+  <%end%>
+  </ul>
+<%end%>

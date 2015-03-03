@@ -21,5 +21,9 @@ class Event < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
 
+  def self.search(query)
+    where('name like ?', "%#{query}%")
+  end
+
 
 end
