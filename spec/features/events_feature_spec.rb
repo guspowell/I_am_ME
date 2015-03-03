@@ -5,12 +5,12 @@ feature 'Event' do
   context 'When I want to view an event' do
 
     scenario 'I can see a small widget' do
-      event= create(:event, name: "Mud Fight") 
-      user = create(:user)
-      user.calendars.sample.events << event
+      event = create(:event, name: "Mud Fight") 
+      user  = create(:user)
+      user.get_me_calendar.events << event
       
       login_as(user)
-      visit "users/#{user.id}/"
+      visit '/' 
 
       expect(page).to have_content event.name
     end
