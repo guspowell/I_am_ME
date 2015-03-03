@@ -61,6 +61,7 @@ class CalendarsController < ApplicationController
 
     respond_to do |format|
       if @calendar.save
+        current_user.calendars << @calendar
         format.html { redirect_to @calendar, notice: 'Calendar was successfully created.' }
         format.json { render :show, status: :created, location: @calendar }
       else
