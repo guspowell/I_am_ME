@@ -3,18 +3,22 @@ class CalendarsController < ApplicationController
   before_action :authenticate_user!
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
+
   # GET /calendars
   # GET /calendars.json
   def index
+    @calendar = Calendar.find_by(:user_id => current_user.id).first
     @user = current_user.id
     @events = Event.all
-    @calendar = Calendar.new
     @day = @calendar.find_monday
     @sunday = @calendar.find_sunday(@day)
 
     if params[:week] == 'next_week' 
-     @day = @calendar.next_week(@day)
-     @sunday = @calendar.next_week(@sunday)
+      while params[:id] > 0 
+        @day = @calendar.next_week(@day)
+        @sunday = @calendar.next_week(@sunday)
+      end
+
     elsif params[:week] == 'last_week'
       @day = @calendar.last_week(@day)
       @sunday = @calendar.last_week(@sunday)
@@ -46,6 +50,7 @@ class CalendarsController < ApplicationController
     @calendar = Calendar.new
   end
 
+
   # GET /calendars/1/edit
   def edit
   end
@@ -54,6 +59,7 @@ class CalendarsController < ApplicationController
   # POST /calendars.json
   def create
     @calendar = Calendar.new(calendar_params)
+    @calendar.user_id = current_user.id
 
     respond_to do |format|
       if @calendar.save
