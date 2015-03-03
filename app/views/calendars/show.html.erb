@@ -41,6 +41,12 @@
 </script>
 
 <div id="clock">
+<section class="left-arrow">
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?week=last_week&wkid=#{(params[:wkid].to_i)-1}"%>
+</section>
+<section class="right-arrow">
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?week=next_week&wkid=#{(params[:wkid].to_i)+1}" %>
+</section>
   <div class="dynamic-time">
     <h3><span class="time">00:00</span></h3>
   </div>
@@ -62,10 +68,6 @@
 </table>
 
 <section id="calendar">
-  <% @day = @calendar.find_monday%>
-
-  <%= link_to (image_tag("arrow_previous.png")), user_calendars_path(current_user)+ "?week=last_week&id=#{(params[:id].to_i)-1}"%>
-  <%= link_to (image_tag("arrow_next.png")), user_calendars_path(current_user)+ "?week=next_week&id=#{(params[:id].to_i)+1}" %>
 
 
   <% while @day <= @sunday %>
@@ -76,15 +78,16 @@
 
     <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
       <% while @hour <= @number_of_hours %>
-
+        <% @count = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.count %>
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.sample %>
 
 
         <section class="widget-container">
-          <% if @event %>
+          <% if @event%>
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
-              <a><%= image_tag("more_info.svg", :class => 'more') %></a>
-              <a><%= image_tag("play_button.svg", :class => 'play') %></a>
+              <a><%= image_tag("more_info.png", :class => 'more') %></a>
+              <a><%= image_tag("play_button.png", :class => 'play') %></a>
+              <a><%= image_tag("plus.png", :class => 'plus') if @count > 1 %></a>
 
               <div id="name-and-location">
                 <h1 class='title'>   <%= @event.name %></h1>
@@ -96,7 +99,7 @@
               <section id='bottom-section'>
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map') %>           </p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
-                <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>       </p>
+                <p class='large-icons'><%= image_tag("share.svg", :id => 'share')  %>       </p>
                 <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
               </section>
             </div>

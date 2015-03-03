@@ -1,0 +1,13 @@
+.left-arrow {
+  position: fixed;
+  top: 400px; 
+  left: 50px;
+  z-index: 400;
+}
+
+.right-arrow {
+  position: fixed;
+  top: 400px; 
+  right: 50px;
+  z-index: 400;
+}
