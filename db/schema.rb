@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150302144659) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image_url"
     t.integer  "user_id"
     t.integer  "calendar_id"
     t.string   "location"
