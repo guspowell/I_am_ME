@@ -15,5 +15,16 @@ feature 'Calendars' do
       expect(current_path).to eq "/users/#{user.id}/calendars/#{calendar.id}"
     end
   end
+
+  context 'When I want to create a calendar' do
+
+    scenario 'I can click a link and do so' do
+      user = create(:user)
+      login_as(user)
+
+      visit '/'
+      click_link 'Add Calendar' 
+    end
+  end
 end
     

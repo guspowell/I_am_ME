@@ -45,6 +45,16 @@ section.widget-small {
   cursor: pointer; cursor: hand;
 }
 
+.widget-small .plus {
+  width: 15%;
+  margin: 0% 0 0 0%;
+  padding: 0;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  cursor: pointer; cursor: hand;
+}
+
 .widget-small #name-and-location {
   color: black;
   float: left;
