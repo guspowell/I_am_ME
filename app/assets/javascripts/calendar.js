@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
 
+  $("#map-canvas").hide();
+
+  // $(".map").click(function(){
+  //   $("#map-canvas").toggle();
+  // });
+
   $('.more').click(function() {
     var widget = $(this).closest("[class^='widget']");
     var widgetClass;
