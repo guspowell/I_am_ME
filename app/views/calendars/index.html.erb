@@ -20,7 +20,10 @@
 </table>
 
 <section id="calendar">
-  <% @day = @calendar.find_monday%>
+
+
+  <%= link_to image_tag("arrow_next.png", :class => 'next_week')%>
+  <%= link_to image_tag("arrow_previous.png", :class => 'next_week')%>
 
 
   <% while @day <= @sunday %>

@@ -9,9 +9,9 @@ class CalendarsController < ApplicationController
     @user = current_user.id
     @events = Event.all
     @calendar = Calendar.new
-    @day = @calendar.find_monday
-    @sunday = @calendar.find_sunday(@day)
-
+    @calendar.next = 0
+    @day = @calendar.find_page_monday
+    @sunday = @calendar.find_page_sunday
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800

@@ -16,7 +16,7 @@ class Calendar < ActiveRecord::Base
     @monday = day
   end
 
-  def find_sunday(monday)
+  def find_current_sunday(monday)
     day = monday
       until day.sunday? 
         day =  day.next_day
@@ -36,19 +36,25 @@ class Calendar < ActiveRecord::Base
     self.next -= 1
   end 
 
-  def find_day
+  def find_page_monday
     @day = find_monday
-    @sunday = find_sunday(@day)
     
       until self.next == 0
         @day = next_week(@day)
-        @sunday = next_week(@sunday)
         subtract_next
       end 
-
-    @day 
-    @sunday 
+    @day
   end 
+
+    def find_page_sunday
+      @sunday = find_current_sunday(@day)
+
+      until self.next == 0
+        @sunday = next_week(@sunday)
+        subtract_next
+      end  
+      @sunday 
+    end 
 
   def thing 
     until self.next == 0 
