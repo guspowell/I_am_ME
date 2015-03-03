@@ -55,8 +55,6 @@
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>       </p>
-                <!-- <%= button_to 'me', 'users/'+current_user.id.to_s+'/calendars/'+current_user.calendars.where(:name=>'Me').sample.id.to_s, :class => "me", :action => 'update' %> -->
-                <!-- <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a> -->
                 <%= button_to 'ME', {:controller => "calendars", :action => "mebutton", :event_id => @event.id } %>
               </section>
             </div>
