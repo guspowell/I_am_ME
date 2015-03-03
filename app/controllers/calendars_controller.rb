@@ -32,8 +32,6 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.json
   def show
-    redirect_to '/'
-
     @calendar = Calendar.find(params[:id])
     @events = @calendar.events.all
     @day = @calendar.find_monday
