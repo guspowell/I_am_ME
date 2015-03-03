@@ -25,4 +25,5 @@ group :development, :test do
   gem 'jasmine-jquery-rails'
   gem 'launchy'
   gem 'formulaic'
+  gem 'foreman'
 end
