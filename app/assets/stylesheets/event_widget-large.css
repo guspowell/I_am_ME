@@ -16,22 +16,18 @@
 }
 
 .widget-large .more {
-  height: 10%;
-  margin-left: -5%;
-  margin-top: 1%;
+  height: 4%;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 3%;
+  left: 3%;
   cursor: pointer; cursor: hand;
 }
 
 .widget-large .play {
-  height: 10%;
-  margin-left: -5%;
-  margin-top: 8%;
+  height: 4%;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 9%;
+  left: 3%;
   cursor: pointer; cursor: hand;
 }
 
