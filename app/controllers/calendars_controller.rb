@@ -40,7 +40,6 @@ class CalendarsController < ApplicationController
   end
 
   def mebutton
-    p params[:event_id]
     @event = Event.find(params[:event_id])
     current_user.calendars.where(:name=>'Me').sample.events << @event
     redirect_to "/"
