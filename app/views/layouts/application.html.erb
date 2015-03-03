@@ -53,10 +53,10 @@
 </nav>
 
 <section id="new-cal">
-  <%= form_for(@calendar, url: user_calendars_path(current_user.id)) do |f| %>
+  <%= form_tag(url: user_calendars_path(current_user.id), multipart: true, method: 'post', action: 'create') do %>
     <div class="actions">
-      <%= f.text_field :name %>
-      <%= f.submit %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag("create") %>
     </div>
   <% end %>
 </section>
