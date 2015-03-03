@@ -3,19 +3,12 @@ class CalendarsController < ApplicationController
   before_action :authenticate_user!
   # prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
+
   # GET /calendars
   # GET /calendars.json
   def index
-      # @calendars = Calendar.all
-    @user = current_user.id
-    @events = Event.all
-    @calendar = Calendar.new
-    @day = @calendar.find_monday
-    @sunday = @calendar.find_sunday(@day)
-    @time = Time.now
-    @hour = Time.parse("1:00 am", @time)
-    @number_of_hours = @hour + 82800
-    @events = Event.all
+    @calendar = current_user.calendars.find_by(name: "Me")
+    redirect_to "/users/#{current_user.id}/calendars/#{@calendar.id}"
   end
 
   # GET /calendars/1
@@ -28,12 +21,27 @@ class CalendarsController < ApplicationController
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
+
+    if params[:week] == 'next_week'
+      while params[:id] > 0
+        @day = @calendar.next_week(@day)
+        @sunday = @calendar.next_week(@sunday)
+      end
+
+    elsif params[:week] == 'last_week'
+      @day = @calendar.last_week(@day)
+      @sunday = @calendar.last_week(@sunday)
+    else
+      @day
+      @sunday
+    end
   end
 
   # GET /calendars/new
   def new
     @calendar = Calendar.new
   end
+
 
   # GET /calendars/1/edit
   def edit
@@ -52,6 +60,7 @@ class CalendarsController < ApplicationController
     @calendar.user = current_user
     respond_to do |format|
       if @calendar.save
+        current_user.calendars << @calendar
         format.html { redirect_to '/users/' + current_user.id.to_s + '/calendars/' + @calendar.id.to_s, notice: 'Calendar was successfully created.' }
         format.json { render :show, status: :created, location: @calendar }
       else

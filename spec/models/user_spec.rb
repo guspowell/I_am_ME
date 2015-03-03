@@ -12,4 +12,9 @@ RSpec.describe User, type: :model do
 
   end
 
+  it 'has a method that returns users Me Calendar' do
+    user = create(:user)
+    expect(user.get_me_calendar).to eq(user.calendars.find_by(name: "Me"))
+  end
+
 end
