@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
 
   belongs_to :calendar
   belongs_to :user
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
 

@@ -23,3 +23,18 @@ def sign_up_with(attributes)
   fill_in 'password confirmation', with: attributes[:password_confirmation]
   click_button 'Sign up'
 end
+
+
+def create_event
+  user = create(:user) 
+  create(:calendar, user: user)
+  login_as(user)
+  visit("/users/#{user.id}/events/new")
+  
+  fill_form(:event, {  name:  'Superhero Dance Off', 'event_date_1i' => '2015',
+                              'event_date_2i'=>'March', 'event_date_3i'=>'2',
+                              'event_date_4i'=>'12',
+                              'event_description'=>'Why is this happening?',
+                              'event_location'=>   'Hyde Park' })
+
+end 
