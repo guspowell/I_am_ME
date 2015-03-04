@@ -19,15 +19,8 @@ class CalendarsController < ApplicationController
     @time = Time.now
     @hour = Time.parse("1:00 am", @time)
     @number_of_hours = @hour + 82800
-    
-    if params[:week] == "next_week"
-      @day = @calendar.find_future_monday(params[:wkid].to_i)
-      @sunday = @calendar.find_future_sunday(params[:wkid].to_i)
-    else params[:week] == "next_week"
-      @day = @calendar.find_monday
-      @sunday = @calendar.find_sunday(@day)
-
-    end
+    @day = @calendar.find_future_monday(params[:wkid].to_i)
+    @sunday = @calendar.find_future_sunday(params[:wkid].to_i)
   end
 
   # GET /calendars/new
