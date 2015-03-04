@@ -91,21 +91,28 @@
   width: 6.5%;
   position: absolute;
     bottom: 22%;
-    left: 5%;
+    left: 5.5%;
 }
 
 .widget-large #price {
-  width: 8%;
+  width: 7.5%;
   position: absolute;
-    bottom: 13%;
+    bottom: 12.5%;
     left: 4.5%;
 }
 
 .widget-large #share {
   width: 9%;
   position: absolute;
-    bottom: 4%;
+    bottom: 3.5%;
     left: 4%;
+}
+
+.widget-large #edit {
+  width: 5%;
+  position: absolute;
+    bottom: 43%;
+    right: 4%;
 }
 
 .widget-large .me {
