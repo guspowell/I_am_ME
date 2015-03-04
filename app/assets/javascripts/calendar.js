@@ -4,7 +4,7 @@ $(document).ready(function() {
   console.log(number);
 
   $('.plus').click(function(){
-    
+    return number += number +1
   });
 
   $('.more').click(function() {
