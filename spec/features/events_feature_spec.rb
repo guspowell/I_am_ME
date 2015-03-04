@@ -1,4 +1,6 @@
 require 'rails_helper'
+# NOTE: To run this spec you need to have chromedriver. Follow error instructions
+# And download it to /usr/bin
 
 feature 'Event' do
 

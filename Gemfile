@@ -27,4 +27,5 @@ group :development, :test do
   gem 'formulaic'
   gem 'foreman'
   gem 'selenium-webdriver'
+  gem 'database_cleaner', '~> 1.4.0'
 end
