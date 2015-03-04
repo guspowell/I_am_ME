@@ -103,6 +103,7 @@ GEM
       activesupport
       capybara
       i18n
+    geocoder (1.2.7)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -266,6 +267,7 @@ DEPENDENCIES
   factory_girl_rails
   foreman
   formulaic
+  geocoder
   jasmine-jquery-rails
   jasmine-rails
   jbuilder (~> 2.0)

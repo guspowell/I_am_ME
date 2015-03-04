@@ -34,6 +34,7 @@
     <section class="day" id= <%="#{@week.day.strftime('%Y-%m-%d')}"%>>
       <% while @week.hour <= @week.hours_per_day %>
   
+
         <section class="widget-container">
          <% event_now = events_this_hour(todays_events, @week.hour) if todays_events.present? %>
           
@@ -50,9 +51,9 @@
                 <h2 class='location'><%= event_now.location %></h2>
               </div>
 
-              <div class="description"><p><%= event_now.description %></p></div>
 
               <section id='bottom-section'>
+                <div class="description"><p><%= event_now.description %></p></div>
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
