@@ -60,7 +60,7 @@
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
-                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit' %>  </p>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit', id: 'edit-event' %>  </p>
                 <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
               </section>
             </div>
