@@ -6,10 +6,10 @@
 </div>
 
 <section class="left-arrow">
-  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}"%>
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}", id: 'arrow-previous' %>
 </section>
 <section class="right-arrow">
-  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}" %>
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}", id: 'arrow-next' %>
 </section>
 
 <section id="days-and-calendar">
