@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
 
+
     if Event.by_tag(params[:search])
       @events = Event.by_tag(params[:search])
     else
