@@ -55,9 +55,8 @@
                 <h2 class='location'><%= @event.location %></h2>
               </div>
 
-              <div class="description"><p><%= @event.description %></p></div>
-
               <section id='bottom-section'>
+                <div class="description"><p><%= @event.description %></p></div>
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>

@@ -71,16 +71,20 @@
 .widget-large .description {
   display: block;
   width: 90%;
+  position: absolute;
+    bottom: 33%;
+    left: 6%;
   padding: 0 0 4% 0;
   font-size: 0.6em;
   line-height: 1.8em;
   word-wrap: break-word;
   border-bottom: 1px dashed grey;
-  margin: 0 auto;
-  margin-top: 85%;
 }
 
-.widget-large p { margin: 0; padding: 0; }
+.widget-large p { 
+  margin: 0;
+  padding: 0;
+}
 
 .widget-large #bottom-section {
   margin-top: 100%;
