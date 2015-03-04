@@ -23,10 +23,6 @@ feature 'Event' do
       user.get_me_calendar.events << event
 
       login_as(user)
-
-      visit user_calendar_path(user, user.get_me_calendar)
-      expect(find('img.me').visible?).to eq(false)
-
       find('img.more').click
       
       expect(find('img.me').visible?).to eq(true)

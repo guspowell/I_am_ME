@@ -7,7 +7,7 @@ require 'capybara/rails'
 require 'airborne'
 require 'factory_girl_rails'
 require 'helper'
-require_relative './database_cleaner'
+require_relative './database_cleaner' 
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
