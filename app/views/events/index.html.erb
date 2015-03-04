@@ -1,28 +1,33 @@
-<table>
-<tr class='days'>
-  <td>Monday</td>
-  <td>Tuesday</td>
-  <td>Wednesday</td>
-  <td>Thursday</td>
-  <td>Friday</td>
-  <td>Saturday</td>
-  <td>Sunday</td>
-</tr>
-</table>
+<% if @events%>
+  <ul style='margin-top:10em;'>  </ul>
+    <%@events.each do |event|%>
 
+    <section class="display-results">
+      <section class="widget-container">
+    
+            <div class="widget-small" style="background-image:url(<%= event.image.url(:medium) %>);">
+              <div id='map-canvas'></div>
+              <a><%= image_tag("more_info.png", :class => 'more') %></a>
+              <a><%= image_tag("play_button.png", :class => 'play') %></a>
+              <a><%= image_tag("plus.png", :class => 'plus')%></a>
 
-<section id="calendar">
-  <% @day = 1%>
-  <% while @day <= @number_of_days  do %>
+              <div id="name-and-location">
+                <h1 class='title'>   <%= event.name %></h1>
+                <h2 class='location'><%= event.location %></h2>
+              </div>
 
-    <% @hour = 1%>
-    <section class="day" id= <%="day#{@day}"%>>
-      <% while @hour <= @number_of_hours %>
+              <div class="description"><p><%= event.description %></p></div>
 
-        <div class="hours" id= <%="hour#{@hour}"%>> </div>
-        <% @hour +=1%>
-      <% end%>
+              <section id='bottom-section'>
+                <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
+                <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
+                <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + event.id.to_s + '/edit' %>  </p>
+                <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
+              </section>
+            </div>
+        </section>
       </section>
-    <% @day +=1%>
-  <%end %>
-</section>
+  <%end%>
+  </ul>
+<%end%>
