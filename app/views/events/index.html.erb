@@ -1,7 +1,7 @@
 <% if @events%>
   <ul style='margin-top:10em;'>  </ul>
-    <%@tags.each do |event|%>
-    <li><%=event.tags  %></li>
+    <%@events.each do |event|%>
+    <li><%=event.name  %></li>
   <%end%>
   </ul>
 <%end%>
