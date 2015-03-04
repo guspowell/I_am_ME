@@ -13,6 +13,8 @@ gem 'aws-sdk', '< 2.0'
 gem "paperclip", "~> 4.2"
 gem 'devise'
 gem 'geocoder'
+gem 'jquery-turbolinks'
+gem "select2-rails"
 
 group :development, :test do
   gem 'byebug'

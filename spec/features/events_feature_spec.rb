@@ -4,7 +4,7 @@ require 'rails_helper'
 
 feature 'Event' do
 
-  context 'When I want to view an event' do
+  context 'When I want to view an event from this week' do
 
     scenario 'I can see a small widget' do
       user = create(:user)
@@ -29,11 +29,11 @@ feature 'Event' do
     end
   end
 
+  
   context 'When I want to create an event' do
 
     scenario 'I can fill in a form to do so' do
       user = create(:user) 
-      create(:calendar, user: user)
       login_as(user)
       visit "/users/#{user.id}/events/new"
 
@@ -46,21 +46,37 @@ feature 'Event' do
     end
   end
 
+  context 'When I want to edit an event' do
+
+    scenario 'I can for an event I created' do
+      user = create(:user)
+      user.get_me_calendar.events << create(:event)
+      login_as(user)
+
+      find('img.more').click
+      click_link 'edit-event'
+      fill_in 'Name', with: 'Pot Luck'
+      click_button 'Update Event'
+
+      expect(page).to have_content 'Pot Luck'
+    end
+  end
+
   context 'When I want to delete an event' do 
 
-    scenario 'I can click delete within the edit event page' do 
+    scenario 'I created, I go to the edit event page, js: true, driver: :selenium' do 
       user  = create(:user) 
-      event = create(:event, name: 'Hippy Jam')
+      event = create(:event, name: 'Hippy Jam', user: user)
       user.get_me_calendar.events << event
 
+      login_as(user) 
+      find('img.more').click
       click_link 'Edit'
       click_link 'Delete'
-      visit '/'
 
       expect(page).not_to have_content('Hippy Jam')
     end 
   end
 end
-
 
 

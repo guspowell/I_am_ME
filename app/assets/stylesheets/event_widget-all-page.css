@@ -1,0 +1,96 @@
+.widget-container {
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.widget-container:hover {
+  background-color: #E6E6E6
+}
+
+section.widget-page {
+  border: 2px solid black;
+  padding: 0px;
+}
+
+.widget-page {
+  position: relative;
+  width: 100%;
+  height: 130%;
+  margin: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 5;
+}
+
+.widget-page .more {
+  width: 10%;
+  margin: 0% 0 0 0%;
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  cursor: pointer; cursor: hand;
+}
+
+.widget-page .play {
+  width: 10%;
+  margin: 0% 0 0 0%;
+  padding: 0;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  cursor: pointer; cursor: hand;
+}
+
+.widget-page .plus {
+  width: 15%;
+  margin: 0% 0 0 0%;
+  padding: 0;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  cursor: pointer; cursor: hand;
+}
+
+.widget-page #name-and-location {
+  color: black;
+  float: left;
+  width: 100%;
+  height: 50px;
+  background: rgba(54, 25, 25, .5);
+  position: absolute;
+    bottom: 0;
+}
+
+.widget-page h1.title {
+  font-weight: bold;
+  bottom: 30%;
+  position: absolute;
+  font-size: 1.3em;
+  color: white;
+  margin: 0 0 3% 0;
+  padding-left: 3%;
+}
+
+.widget-page h2.location {
+  bottom: 1%;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  color: #CCCCCC;
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-left: 3%;
+  margin-bottom: 2%;
+}
+
+.widget-page .description {
+  display: none;
+  position: relative;
+}
+
+.widget-page #bottom-section {
+  display: none;
+}

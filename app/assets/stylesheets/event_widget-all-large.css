@@ -1,5 +1,5 @@
 
-.widget-large {
+.widget-large-page {
   position: relative;
   border: 1px solid black;
   margin: 0px;
@@ -15,7 +15,7 @@
 
 }
 
-.widget-large .more {
+.widget-large-page .more {
   height: 4%;
   position: absolute;
   top: 3%;
@@ -23,7 +23,7 @@
   cursor: pointer; cursor: hand;
 }
 
-.widget-large .play {
+.widget-large-page .play {
   height: 4%;
   position: absolute;
   top: 9%;
@@ -31,7 +31,7 @@
   cursor: pointer; cursor: hand;
 }
 
-.widget-large .plus {
+.widget-large-page .plus {
   height: 4%;
   position: absolute;
   top: 15%;
@@ -39,7 +39,7 @@
   cursor: pointer; cursor: hand;
 }
 
-.widget-large #name-and-location {
+.widget-large-page #name-and-location {
   font-family: Helvetica;
   color: black;
   float: left;
@@ -47,7 +47,7 @@
   margin-top: 50%;
 }
 
-.widget-large h1.title {
+.widget-large-page h1.title {
   font-weight: bold;
   bottom: 38%;
   position: absolute;
@@ -57,7 +57,7 @@
   margin-left: 2%
 }
 
-.widget-large h2.location {
+.widget-large-page h2.location {
   bottom: 21%;
   position: absolute;
   font-family: Helvetica;
@@ -68,7 +68,7 @@
 
 }
 
-.widget-large .description {
+.widget-large-page .description {
   display: block;
   width: 90%;
   position: absolute;
@@ -81,45 +81,45 @@
   border-bottom: 1px dashed grey;
 }
 
-.widget-large p { 
+.widget-large-page p { 
   margin: 0;
   padding: 0;
 }
 
-.widget-large #bottom-section {
+.widget-large-page #bottom-section {
   margin-top: 100%;
   width: 10%;
 }
 
-.widget-large #map {
+.widget-large-page #map {
   width: 6.5%;
   position: absolute;
     bottom: 22%;
     left: 5.5%;
 }
 
-.widget-large #price {
+.widget-large-page #price {
   width: 7.5%;
   position: absolute;
     bottom: 12.5%;
     left: 4.5%;
 }
 
-.widget-large #share {
+.widget-large-page #share {
   width: 9%;
   position: absolute;
     bottom: 3.5%;
     left: 4%;
 }
 
-.widget-large #edit {
+.widget-large-page #edit {
   width: 5%;
   position: absolute;
     bottom: 43%;
     right: 4%;
 }
 
-.widget-large .me {
+.widget-large-page .me {
   height: 17%;
   position: absolute;
     bottom: 3.5%;

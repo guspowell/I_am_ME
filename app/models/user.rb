@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_many :events
-  has_many :calendars
+  has_many :calendars, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
