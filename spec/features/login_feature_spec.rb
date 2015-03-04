@@ -8,7 +8,8 @@ feature 'Login' do
 
     scenario 'I input my username and password' do
       login_as(user)
-      expect(current_path).to eq '/'
+
+      expect(current_path).to eq user_calendar_path(user, user.get_me_calendar)
     end
 
     scenario 'I can retrieve my password if I have forgotten it' do

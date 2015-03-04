@@ -13,14 +13,4 @@ RSpec.describe "Events", type: :request do
     end
   end
 
-  describe "POST /events" do
-
-    it "creates an event" do
-      post "/users/#{user.id}/events", :event => {name: "Rollerderby"}
-      expect(response).to be_success
-      expect(Event.find_by_name("Rollerderby")).not_to be_nil
-    end
-  end
-
-
 end

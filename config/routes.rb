@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'pages/map'
+  post "/calendars/mebutton" => "calendars#mebutton"
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   resources :events
 
   get '/' => 'calendars#index'
+
   # devise_for :users, controllers: { sessions: "users/sessions",
   #                                   registrations: "users/registrations",
   #                                   passwords: "users/passwords"

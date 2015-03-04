@@ -23,21 +23,22 @@ feature 'Registration' do
     scenario 'I enter valid credentials and am registered' do
       visit('/users/sign_up')
 
-      sign_up_with(attributes_for(:user))
+      sign_up_with(attributes_for(:user, username: "loki"))
 
-      expect(current_path).to eq('/')
+      user = User.find_by(username: 'loki')
+      expect(current_path).to eq user_calendar_path user, user.get_me_calendar
     end
 
-    scenario 'Registering with an invalid email' do
+    scenario 'I have to enter a valid email address' do
       visit('/users/sign_up')
 
-      invalid_attributes = attributes_for(:user, email_address: "emailfailatzombocom")
+      invalid_attributes = attributes_for(:user, email: "emailfailatzombocom")
       sign_up_with(invalid_attributes)
       
       expect(page).to have_content("Email is invalid Log in")
     end
 
-    scenario 'Registering with different passwords' do
+    scenario 'I have to enter matching passwords' do
       visit('/users/sign_up')
       
       sign_up_with(attributes_for(:user, password_confirmation: 'banaaanas'))

@@ -1,12 +1,15 @@
-#clock { 
-  /*display: none;*/ 
-  position: fixed; 
+#clock {
+  display: none; 
+  position: fixed;
   top: 135px; 
   right: 50px; 
-  z-index: 400; 
-  background: #484848;
-  border: 1px solid black; 
-  /*border-radius: 100%;*/
-  padding: 10px 10px 10px 20px; 
-  color: white;  
+  width: 80px;
+  z-index: 400;
+  padding: 3px;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dedede #bababa #aaa #bababa;
+  border-radius: 10px;    
+  background-color: #f6f6f6;
 }
