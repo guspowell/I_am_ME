@@ -34,7 +34,6 @@ feature 'Event' do
 
     scenario 'I can fill in a form to do so' do
       user = create(:user) 
-      create(:calendar, user: user)
       login_as(user)
       visit "/users/#{user.id}/events/new"
 
@@ -47,9 +46,25 @@ feature 'Event' do
     end
   end
 
-  context 'When I want to delete an event I created' do 
+  context 'When I want to edit an event' do
 
-    scenario 'I can navigate to the edit event page and click delete, js: true, driver: :selenium' do 
+    scenario 'I can for an event I created' do
+      user = create(:user)
+      user.get_me_calendar.events << create(:event)
+      login_as(user)
+
+      find('img.more').click
+      click_link 'edit-event'
+      fill_in 'Name', with: 'Pot Luck'
+      click_button 'Update Event'
+
+      expect(page).to have_content 'Pot Luck'
+    end
+  end
+
+  context 'When I want to delete an event' do 
+
+    scenario 'I created, I go to the edit event page, js: true, driver: :selenium' do 
       user  = create(:user) 
       event = create(:event, name: 'Hippy Jam', user: user)
       user.get_me_calendar.events << event
