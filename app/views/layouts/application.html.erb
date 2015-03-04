@@ -36,7 +36,7 @@
 
   <section class='right-buttons'>
     <ul>
-      <li><a><%= image_tag("create.svg", :class => 'plus') %></li>
+      <li><%= link_to image_tag("create.svg", :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><a href='#'><%= image_tag("inspireME.svg", :class => 'bunny') %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
