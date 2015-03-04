@@ -29,20 +29,7 @@ feature 'Event' do
     end
   end
 
-  context 'When I want to view an event happening in another week' do
-
-    scenario 'I can click the right arrow to view the next week' do
-      user = create(:user)
-      event= create(:event, date: (DateTime.now.change({min: 0, hour: 12}) + 7))
-      user.get_me_calendar.events << event
-
-      login_as(user)
-      click_link 'arrow-next'
-      
-      expect(page).to have_content event.name
-    end
-  end
-
+  
   context 'When I want to create an event' do
 
     scenario 'I can fill in a form to do so' do
