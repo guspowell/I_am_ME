@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   var number = 0;
-  console.log(number);
 
   $('.plus').click(function(){
     return number += number +1
