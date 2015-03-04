@@ -4,7 +4,7 @@ require 'rails_helper'
 
 feature 'Event' do
 
-  context 'When I want to view an event' do
+  context 'When I want to view an event from this week' do
 
     scenario 'I can see a small widget' do
       user = create(:user)
@@ -23,16 +23,13 @@ feature 'Event' do
       user.get_me_calendar.events << event
 
       login_as(user)
-
-      visit user_calendar_path(user, user.get_me_calendar)
-      expect(find('img.me').visible?).to eq(false)
-
       find('img.more').click
       
       expect(find('img.me').visible?).to eq(true)
     end
   end
 
+  
   context 'When I want to create an event' do
 
     scenario 'I can fill in a form to do so' do
@@ -65,6 +62,5 @@ feature 'Event' do
     end 
   end
 end
-
 
 
