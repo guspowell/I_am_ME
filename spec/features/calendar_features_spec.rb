@@ -47,8 +47,13 @@ feature 'Calendars' do
       user = create(:user)
       login_as(user)
 
-      visit '/'
+      visit user_calendar_path(user, user.get_me_calendar) 
       click_link 'Add Calendar' 
+      fill_in 'name', with: 'Sports'
+      click_button 'Create'
+
+      sports_cal = Calendar.find_by(name: 'Sports')
+      expect(current_path).to eq user_calendar_path user, sports_cal
     end
   end
 end
