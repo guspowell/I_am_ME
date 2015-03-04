@@ -11,24 +11,9 @@
   </script>
 </head>
 
-<script>
-
-$(document).ready(function() {
-
-  $('.add-cal').click(function() {
-    $('#background-blur').show();
-  });
-
-});
-
-
-</script>
-
-
 <body>
 
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
+
 <nav>
   <section class='left-buttons'>
     <ul>
@@ -47,7 +32,7 @@ $(document).ready(function() {
     </ul>
   </section>
 
-  <section class='center'><%= image_tag("ME.jpg", :class => 'logo') %>
+  <section class='center'><%= link_to image_tag("ME.jpg", :class => 'logo'), '/' %>
   </section>
 
   <section class='right-buttons'>

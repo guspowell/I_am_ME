@@ -19,7 +19,7 @@ feature 'Event' do
 
     scenario 'I can click to see a big widget with more information', js: true, :driver => :selenium do
       user = create(:user)
-      event= create(:event)
+      event= create(:event, user: user)
       user.get_me_calendar.events << event
 
       login_as(user)
@@ -56,7 +56,8 @@ feature 'Event' do
       find('img.more').click
       click_link 'edit-event'
       fill_in 'Name', with: 'Pot Luck'
-      click_button 'Update Event'
+      click_button 'submit' 
+      
 
       expect(page).to have_content 'Pot Luck'
     end

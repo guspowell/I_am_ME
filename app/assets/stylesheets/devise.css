@@ -1,11 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
 .landing-page {
-  background: url("blurredbackground.jpg") no-repeat;
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
+  background: url("blurredbackground.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #login-box {
