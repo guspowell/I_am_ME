@@ -47,16 +47,17 @@ feature 'Event' do
     end
   end
 
-  context 'When I want to delete an event' do 
+  context 'When I want to delete an event I created' do 
 
-    scenario 'I can click delete within the edit event page' do 
+    scenario 'I can navigate to the edit event page and click delete, js: true, driver: :selenium' do 
       user  = create(:user) 
-      event = create(:event, name: 'Hippy Jam')
+      event = create(:event, name: 'Hippy Jam', user: user)
       user.get_me_calendar.events << event
 
+      login_as(user) 
+      find('img.more').click
       click_link 'Edit'
       click_link 'Delete'
-      visit '/'
 
       expect(page).not_to have_content('Hippy Jam')
     end 
