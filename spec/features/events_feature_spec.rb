@@ -1,4 +1,5 @@
-require 'rails_helper'
+require_relative './init'
+
 # NOTE: To run this spec you need to have chromedriver. Follow error instructions
 # And download it to /usr/bin
 
@@ -25,7 +26,7 @@ feature 'Event' do
       login_as(user)
       find('img.more').click
       
-      expect(find('img.me').visible?).to eq(true)
+      expect(find('img#edit').visible?).to eq(true)
     end
   end
 
@@ -40,9 +41,25 @@ feature 'Event' do
       attrs = attributes_for(:event)
       fill_in_event_form(attrs)
       attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
-      click_button 'Create Event'
+      click_button 'submit'
 
       expect(page).to have_content(attrs[:name])
+    end
+
+    scenario 'I can specify which calendar to put it in' do
+      user     = create(:user) 
+      food_cal = create(:calendar, name: "Food")
+      user.calendars << food_cal
+      login_as(user)
+      visit "/users/#{user.id}/events/new"
+
+      attrs = attributes_for(:event, name: "Cocktail Party")
+      fill_in_event_form(attrs)
+      select("Food", from: "event[calendar_id]")
+      click_button 'submit'
+
+      visit user_calendar_path(user, food_cal)
+      expect(page).to have_content "Cocktail Party" 
     end
   end
 
@@ -67,7 +84,7 @@ feature 'Event' do
 
     scenario 'I created, I go to the edit event page', js: true, driver: :selenium do 
       user  = create(:user) 
-      event = create(:event, name: 'Hippy Jam', user: user)
+      event = create(:event, name: 'Hippy Jam')
       user.get_me_calendar.events << event
 
       login_as(user) 

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require_relative './init'
 
 feature 'Calendars' do
 
@@ -59,7 +59,7 @@ feature 'Calendars' do
 
   context 'When I want to add an event to my calendar' do
 
-    scenario 'I can add an event from another of my calendars to my ME calendar' do
+    scenario 'I can add an event from another of my calendars to my ME calendar', js: true, :driver => :selenium do
       user        = create(:user)
       sports_cal  = create(:calendar, name: "Sports")
       event       = create(:event, name: "Arsenal vs Chelsea")

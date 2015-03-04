@@ -1,4 +1,4 @@
-require 'rails_helper'
+require_relative './init'
 
 feature 'Login' do
 
