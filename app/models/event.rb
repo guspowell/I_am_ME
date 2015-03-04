@@ -10,6 +10,7 @@ class Event < ActiveRecord::Base
 
   scope :by_tag, ->(query) { joins(:tags).where('tags.name ilike ?', "tags=true&&%#{query}%") }
 
+
   def all_tags=(names)
     self.tags = names.split(",").map do |name|
         Tag.where(name: name.strip).first_or_create!

@@ -16,11 +16,7 @@ class CalendarsController < ApplicationController
   def show
     @week = CalendarWeek.new Integer(params[:wkid] || 0)
     @events = @calendar.events.all.select {|event|  event.date.between?(@week.day, @week.sunday) } 
-    number = 0
-    # @count = @events.select {|event| event.date.strftime("%H:%M") == @week.hour.strftime('%H:%M') }.count
-    # @event = @events.select {|event| event.date.hour == @week.hour }.sample
-     # <a><%= image_tag("plus.png", :class => 'plus') if @count > 1 %></a> 
-  end
+  end 
 
   # GET /calendars/new
   def new
