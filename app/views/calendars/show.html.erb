@@ -1,15 +1,16 @@
 <div id="clock">
+  <div class="dynamic-time">
+    <h3><span class="time">00:00</span></h3>
+  </div>
+  <!-- <div class="icon arrow"></div> -->
+</div>
+
 <section class="left-arrow">
   <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}"%>
 </section>
 <section class="right-arrow">
   <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}" %>
 </section>
-  <div class="dynamic-time">
-    <h3><span class="time">00:00</span></h3>
-  </div>
-  <!-- <div class="icon arrow"></div> -->
-</div>
 
 <section id="days-and-calendar">
 
@@ -27,7 +28,6 @@
 
 <section id="calendar">
 
-
   <% while @day <= @sunday %>
     <% @hour = Time.parse("1:00 am", @time)%>
     <% @calendar = Calendar.find(params[:id]) %>
@@ -42,7 +42,9 @@
 
         <section class="widget-container">
           <% if @event%>
+
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
+              <div id='map-canvas'></div>
               <a><%= image_tag("more_info.png", :class => 'more') %></a>
               <a><%= image_tag("play_button.png", :class => 'play') %></a>
               <a><%= image_tag("plus.png", :class => 'plus') if @count > 1 %></a>
@@ -55,7 +57,7 @@
               <div class="description"><p><%= @event.description %></p></div>
 
               <section id='bottom-section'>
-                <p class='large-icons'><%= image_tag("map.svg", :id => 'map') %>           </p>
+                <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share')  %>       </p>
                 <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>

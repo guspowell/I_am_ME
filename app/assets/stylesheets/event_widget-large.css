@@ -31,6 +31,14 @@
   cursor: pointer; cursor: hand;
 }
 
+.widget-large .plus {
+  height: 4%;
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  cursor: pointer; cursor: hand;
+}
+
 .widget-large #name-and-location {
   font-family: Helvetica;
   color: black;
