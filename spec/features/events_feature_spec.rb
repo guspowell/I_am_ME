@@ -46,7 +46,7 @@ feature 'Event' do
     end
   end
 
-  context 'When I want to edit an event' do
+  context 'When I want to edit an event', js: true, :driver => :selenium do
 
     scenario 'I can for an event I created' do
       user = create(:user)
@@ -54,7 +54,7 @@ feature 'Event' do
       login_as(user)
 
       find('img.more').click
-      click_link 'edit-event'
+      find('img#edit').click 
       fill_in 'Name', with: 'Pot Luck'
       click_button 'submit' 
       
@@ -65,14 +65,14 @@ feature 'Event' do
 
   context 'When I want to delete an event' do 
 
-    scenario 'I created, I go to the edit event page, js: true, driver: :selenium' do 
+    scenario 'I created, I go to the edit event page', js: true, driver: :selenium do 
       user  = create(:user) 
       event = create(:event, name: 'Hippy Jam', user: user)
       user.get_me_calendar.events << event
 
       login_as(user) 
       find('img.more').click
-      click_link 'Edit'
+      find('img#edit').click 
       click_link 'Delete'
 
       expect(page).not_to have_content('Hippy Jam')

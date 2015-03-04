@@ -56,5 +56,24 @@ feature 'Calendars' do
       expect(current_path).to eq user_calendar_path user, sports_cal
     end
   end
+
+  context 'When I want to add an event to my calendar' do
+
+    scenario 'I can add an event from another of my calendars to my ME calendar' do
+      user        = create(:user)
+      sports_cal  = create(:calendar, name: "Sports")
+      event       = create(:event, name: "Arsenal vs Chelsea")
+      sports_cal.events << event
+      user.calendars << sports_cal
+      login_as(user)
+
+      visit user_calendar_path(user, sports_cal) 
+      find('img.more').click
+      find('img.me').click
+      visit user_calendar_path(user, user.get_me_calendar)
+
+      expect(page).to have_content event.name
+    end
+  end
 end
     
