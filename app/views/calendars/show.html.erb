@@ -2,14 +2,13 @@
   <div class="dynamic-time">
     <h3><span class="time">00:00</span></h3>
   </div>
-  <!-- <div class="icon arrow"></div> -->
 </div>
 
 <section class="left-arrow">
-  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}", id: 'arrow-previous' %>
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id, wkid: params[:wkid].to_i - 1 ), id: 'arrow-previous' %>
 </section>
 <section class="right-arrow">
-  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}", id: 'arrow-next' %>
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id, wkid: params[:wkid].to_i + 1 ), id: 'arrow-next' %>
 </section>
 
 <section id="days-and-calendar">
@@ -28,49 +27,47 @@
 
 <section id="calendar">
 
-  <% while @day <= @sunday %>
-    <% @hour = Time.parse("1:00 am", @time)%>
-    <% @calendar = Calendar.find(params[:id]) %>
-    <% @events = @calendar.events.all.select {|event| event.date.strftime('%Y-%m-%d') == @day.strftime('%Y-%m-%d') } %>
+  <% while @week.day <= @week.sunday %>
+    <%@week.reset_hour%>
+    <% todays_events = events_today(@events, @week.day) if @events.present? %>
 
-
-    <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
-      <% while @hour <= @number_of_hours %>
-        <% number = 0 %>
-        <% @count = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.count %>
-        <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }[number] %>
+    <section class="day" id= <%="#{@week.day.strftime('%Y-%m-%d')}"%>>
+      <% while @week.hour <= @week.hours_per_day %>
+  
 
         <section class="widget-container">
-          <% if @event%>
+         <% event_now = events_this_hour(todays_events, @week.hour) if todays_events.present? %>
+          
+          <%- if event_now %>
 
-            <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
+            <div class="widget-small" id= <%="#{@week.hour}"%> style="background-image:url(<%= event_now.image.url(:medium) %>);">
               <div id='map-canvas'></div>
               <a><%= image_tag("more_info.png", :class => 'more') %></a>
               <a><%= image_tag("play_button.png", :class => 'play') %></a>
-              <a><%= image_tag("plus.png", :class => 'plus') if @count > 1 %></a>
+              
 
               <div id="name-and-location">
-                <h1 class='title'>   <%= @event.name %></h1>
-                <h2 class='location'><%= @event.location %></h2>
+                <h1 class='title'>   <%= event_now.name %></h1>
+                <h2 class='location'><%= event_now.location %></h2>
               </div>
 
+
               <section id='bottom-section'>
-                <div class="description"><p><%= @event.description %></p></div>
+                <div class="description"><p><%= event_now.description %></p></div>
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
-                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit' %>  </p>
-                <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
+                <%= button_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => event_now.id } %>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + event_now.id.to_s + '/edit', id: 'edit-event' %>  </p>
               </section>
             </div>
           <% end %>
+
         </section>
-
-
-        <% @hour = @hour + 3600%>
+        <% @week.hour += 1 %>
       <% end%>
     </section>
-    <% @day = @day.next_day %>
+    <% @week.day = @week.day.next_day %>
   <%end %>
 </section>
 
@@ -78,7 +75,9 @@
   var clock_div = $('#clock').offset().top, $window = $(window);
 
   $(function(){
+    
     if($(window).width() > 480){
+      var time;
       $(this).scrollTop(0);
       $(document).scroll(function(){
         if($(this).scrollTop() >= (100 - clock_div) ){
@@ -164,3 +163,4 @@
     $("#clock").fadeIn();   
  });
 </script>
+

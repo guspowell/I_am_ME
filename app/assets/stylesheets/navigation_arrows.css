@@ -1,13 +1,23 @@
 .left-arrow {
+  display: none;
   position: fixed;
-  top: 400px; 
-  left: 50px;
+  top: 400px;
+  left: 0%;
   z-index: 400;
 }
 
 .right-arrow {
+  display: none;
   position: fixed;
-  top: 400px; 
-  right: 50px;
+  top: 400px;
+  right: -2%;
   z-index: 400;
+}
+
+.left-arrow img{
+  width: 80%;
+}
+
+.right-arrow img{
+  width: 80%;
 }

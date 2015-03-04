@@ -7,21 +7,16 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.json
   def index
-    @calendar = current_user.calendars.find_by(name: "Me")
-    redirect_to "/users/#{current_user.id}/calendars/#{@calendar.id}"
+    @calendar = current_user.calendars.me
+    redirect_to user_calendar_path current_user, @calendar
   end
 
   # GET /calendars/1
   # GET /calendars/1.json
   def show
-    @calendar = Calendar.find(params[:id])
-    @events = @calendar.events.all
-    @time = Time.now
-    @hour = Time.parse("1:00 am", @time)
-    @number_of_hours = @hour + 82800
-    @day = @calendar.find_future_monday(params[:wkid].to_i)
-    @sunday = @calendar.find_future_sunday(params[:wkid].to_i)
-  end
+    @week = CalendarWeek.new Integer(params[:wkid] || 0)
+    @events = @calendar.events.all.select {|event|  event.date.between?(@week.day, @week.sunday) } 
+  end 
 
   # GET /calendars/new
   def new
