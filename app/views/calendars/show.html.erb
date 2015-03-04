@@ -36,6 +36,7 @@
 
     <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
       <% while @hour <= @number_of_hours %>
+        <% number = 0 %>
         <% @count = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.count %>
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }[number] %>
 
