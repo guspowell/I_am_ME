@@ -55,9 +55,7 @@ feature 'Event' do
       event = create(:event, name: 'Hippy Jam')
       user.get_me_calendar.events << event
 
-      within(:css, '#days-and-calendar') do
-        click_link 'Edit'
-      end 
+      click_link 'Edit'
       click_link 'Delete'
       visit '/'
 
