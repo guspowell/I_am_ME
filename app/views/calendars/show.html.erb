@@ -75,8 +75,9 @@
   var clock_div = $('#clock').offset().top, $window = $(window);
 
   $(function(){
-    var time;
+    
     if($(window).width() > 480){
+      var time;
       $(this).scrollTop(0);
       $(document).scroll(function(){
         if($(this).scrollTop() >= (100 - clock_div) ){
