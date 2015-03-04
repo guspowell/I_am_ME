@@ -36,10 +36,8 @@
 
     <section class="day" id= <%="#{@day.strftime('%Y-%m-%d')}"%>>
       <% while @hour <= @number_of_hours %>
-        <% number = 0 %>
         <% @count = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }.count %>
         <% @event = @events.select {|event| event.date.strftime("%H:%M") == @hour.strftime('%H:%M') }[number] %>
-
 
         <section class="widget-container">
           <% if @event%>
@@ -61,8 +59,8 @@
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
                 <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit' %>  </p>
-                <!-- <%= link_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => @event.id } %> -->
-                <%= button_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => @event.id } %>
+                <%= link_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => @event.id } %>
+                <!-- <%= button_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => @event.id } %> -->
                 <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit', id: 'edit-event' %>  </p>
               </section>
             </div>
