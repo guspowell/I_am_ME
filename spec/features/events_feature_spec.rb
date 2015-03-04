@@ -1,18 +1,35 @@
 require 'rails_helper'
+# NOTE: To run this spec you need to have chromedriver. Follow error instructions
+# And download it to /usr/bin
 
 feature 'Event' do
 
   context 'When I want to view an event' do
 
     scenario 'I can see a small widget' do
-      event = create(:event, name: "Mud Fight") 
-      user  = create(:user)
+      user = create(:user)
+      event= create(:event)
       user.get_me_calendar.events << event
-      
       login_as(user)
-      visit '/' 
+      
+      visit user_calendar_path(user, user.get_me_calendar) 
 
-      expect(page).to have_content 
+      expect(page).to have_content event.name
+    end
+
+    scenario 'I can click to see a big widget with more information', js: true, :driver => :selenium do
+      user = create(:user)
+      event= create(:event)
+      user.get_me_calendar.events << event
+
+      login_as(user)
+
+      visit user_calendar_path(user, user.get_me_calendar)
+      expect(find('img.me').visible?).to eq(false)
+
+      find('img.more').click
+      
+      expect(find('img.me').visible?).to eq(true)
     end
   end
 
@@ -40,9 +57,7 @@ feature 'Event' do
       event = create(:event, name: 'Hippy Jam')
       user.get_me_calendar.events << event
 
-      within(:css, '#days-and-calendar') do
-        click_link 'Edit'
-      end 
+      click_link 'Edit'
       click_link 'Delete'
       visit '/'
 
