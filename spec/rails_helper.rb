@@ -7,6 +7,7 @@ require 'capybara/rails'
 require 'airborne'
 require 'factory_girl_rails'
 require 'helper'
+require_relative './database_cleaner'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -36,7 +37,7 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   config.include FactoryGirl::Syntax::Methods
   # RSpec Rails can automatically mix in different behaviours to your tests
@@ -53,4 +54,5 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
 end
