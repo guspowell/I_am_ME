@@ -11,19 +11,9 @@
   </script>
 </head>
 
-<script>
-
-  $("search-form").select2({tags:["red", "green", "blue"]});
-
-});
-
-
-</script>
-
 <body>
 
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
+
 <nav>
   <section class='left-buttons'>
     <ul>
@@ -49,7 +39,7 @@
     <ul>
       <li><%= link_to image_tag("create.svg", :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
-      <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path %>
+      <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path + "?random=true" %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
       <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
         <ul class='cal-dropdown'>
