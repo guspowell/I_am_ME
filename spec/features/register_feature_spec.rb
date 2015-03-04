@@ -23,9 +23,10 @@ feature 'Registration' do
     scenario 'I enter valid credentials and am registered' do
       visit('/users/sign_up')
 
-      sign_up_with(attributes_for(:user))
+      sign_up_with(attributes_for(:user, username: "loki"))
 
-      expect(current_path).to eq('/')
+      user = User.find_by(username: 'loki')
+      expect(current_path).to eq user_calendar_path user, user.get_me_calendar
     end
 
     scenario 'Registering with an invalid email' do

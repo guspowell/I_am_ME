@@ -26,4 +26,5 @@ group :development, :test do
   gem 'launchy'
   gem 'formulaic'
   gem 'foreman'
+  gem 'selenium-webdriver'
 end
