@@ -1,4 +1,4 @@
-[logo]: https://raw.githubusercontent.com/ciawalsh/iamME/master/app/assets/images/iamME.png
+![image](https://raw.githubusercontent.com/ciawalsh/iamME/master/app/assets/images/iamME.png)
 ==================
 [![Code Climate](https://codeclimate.com/github/ciawalsh/iamME/badges/gpa.svg)](https://codeclimate.com/github/ciawalsh/iamME) [![Test Coverage](https://codeclimate.com/github/ciawalsh/iamME/badges/coverage.svg)](https://codeclimate.com/github/ciawalsh/iamME)
 ==================
