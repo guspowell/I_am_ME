@@ -16,7 +16,7 @@ section.widget-page {
 .widget-page {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 130%;
   margin: 0px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
