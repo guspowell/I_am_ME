@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  var number = 0;
+  console.log(number);
+
+  $('.plus').click(function(){
+    
+  });
+
   $('.more').click(function() {
     var widget = $(this).closest("[class^='widget']");
     var widgetClass;
