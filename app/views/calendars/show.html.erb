@@ -84,7 +84,9 @@
 
         <section class="widget-container">
           <% if @event%>
+
             <div class="widget-small" id= <%="#{@hour.strftime('%H:%M')}"%> style="background-image:url(<%= @event.image.url(:medium) %>);">
+              <div id='map-canvas'></div>
               <a><%= image_tag("more_info.png", :class => 'more') %></a>
               <a><%= image_tag("play_button.png", :class => 'play') %></a>
               <a><%= image_tag("plus.png", :class => 'plus') if @count > 1 %></a>
@@ -97,7 +99,7 @@
               <div class="description"><p><%= @event.description %></p></div>
 
               <section id='bottom-section'>
-                <p class='large-icons'><%= image_tag("map.svg", :id => 'map') %>           </p>
+                <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share')  %>       </p>
                 <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
