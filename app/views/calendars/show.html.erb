@@ -1,15 +1,16 @@
 <div id="clock">
-<section class="left-arrow">
-  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}"%>
-</section>
-<section class="right-arrow">
-  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}" %>
-</section>
   <div class="dynamic-time">
     <h3><span class="time">00:00</span></h3>
   </div>
   <!-- <div class="icon arrow"></div> -->
 </div>
+
+<section class="left-arrow">
+  <%= link_to (image_tag("arrow_previous.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)-1}", id: 'arrow-previous' %>
+</section>
+<section class="right-arrow">
+  <%= link_to (image_tag("arrow_next.png")), user_calendar_path(current_user, @calendar.id)+ "?wkid=#{(params[:wkid].to_i)+1}", id: 'arrow-next' %>
+</section>
 
 <section id="days-and-calendar">
 
@@ -26,7 +27,6 @@
 </table>
 
 <section id="calendar">
-
 
   <% while @day <= @sunday %>
     <% @hour = Time.parse("1:00 am", @time)%>
@@ -58,8 +58,9 @@
 
               <section id='bottom-section'>
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
-                <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>   </p>
-                <p class='large-icons'><%= image_tag("share.svg", :id => 'share')  %>       </p>
+                <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
+                <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + @event.id.to_s + '/edit' %>  </p>
                 <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
               </section>
             </div>
