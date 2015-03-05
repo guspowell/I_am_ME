@@ -3,7 +3,7 @@ class CalendarWeek
 
 
   def initialize(week_id)
-    @hour = 1
+    @hour = 0
     @date = Date.today
     @hours_per_day = 24
     @day = @date.beginning_of_week + (7 * week_id)
@@ -11,6 +11,6 @@ class CalendarWeek
   end
 
   def reset_hour
-    @hour = 1
+    @hour = 0
   end 
 end
