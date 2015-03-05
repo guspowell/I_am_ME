@@ -1,72 +1,117 @@
-#create-event {
+#background-create-event {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  background:white;
+  background:rgba(51,51,51,0.8);
+}
+
+#create-event-form {
+
+}
+
+form#new_event {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 500px;
+  padding-bottom: 2%;
+  border: 1px solid #333333;
+}
+
+#create-event-form input[type="text"] {
+  width: 90%;
+  line-height: 2.3em;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+}
+
+#create-event-form input[type="submit"] {
+  width: 25%;
+  line-height: 1.9em;
+  display: inline;
+  padding: 1%;
+  padding-bottom: 0.5%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  color: #333333;
+}
+
+#create-event-form {
   width: 450px;
   height: 450px;
   position: fixed;
   top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #333333;
+  border: 2px solid #333333;
 }
 
-#create-event h2 {
+#create-event-form h2 {
   color: white;
   background-color: #333333;
   width: 100%;
   margin: 0 0 2% 0;
   padding: 4%;
   padding-bottom: 2.5%;
-  border-bottom: 1px solid black
+  border-top: 1px solid #333333;
 }
 
-#create-event div {
+#create-event-form div {
   padding: 2%;
   padding-left: 4%;
 }
 
-#create-event .calendar-label {
+#create-event-form .calendar-label {
+  margin-right: auto;
+  margin-left: auto;
+  color: #737373;
   margin-right: 5%;
 }
 
-#create-event .name-field {
-  margin-left: 10%;
-  width: 67%
+#create-event-form .name-field {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#create-event .description-field {
-  margin-left: 1.5%;
-  width: 67%;
-  height: 80px;
-  font-size: 11px;
+#create-event-form .description-field {
+  width: 90%;
+  height: 100px;
+  font-weight: 500;
+  border: 1px solid black;
 }
 
-#create-event .location-field {
-  margin-left: 6%;
-  width: 67%
+#create-event-form .location-field {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#create-event input[type="submit"] {
-  display: inline;
-  color: white ;
-  background-color: #333333;
-  border: 1px solid white;
-  float: right;
-  margin-right: 12%;
-  font-size: 0.9em;
-  padding: 1.5%;
+#create-event-form .back-button {
   width: 25%;
-  border: 1px solid #333333;
-}
-
-#create-event .back-button {
+  line-height: 1.9em;
   display: inline;
-  color: #9d855f ;
-  background-color: white;
-  border: 1px solid white;
-  float: right;
-  margin-right: 3%;
-  font-size: 0.9em;
-  padding: 1.5%;
-  width: 25%;
+  padding: 1%;
+  padding-bottom: 0.5%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  color: #333333;
   text-decoration: none;
-  border: 1px solid #333333;
+  float: right;
+  display: inline;
+  margin-right: 4%;
 }

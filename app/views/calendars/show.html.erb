@@ -33,18 +33,18 @@
 
     <section class="day" id= <%="#{@week.day.strftime('%Y-%m-%d')}"%>>
       <% while @week.hour <= @week.hours_per_day %>
-  
+
 
         <section class="widget-container">
          <% event_now = events_this_hour(todays_events, @week.hour) if todays_events.present? %>
-          
+
           <%- if event_now %>
 
             <div class="widget-small" id= <%="#{@week.hour}"%> style="background-image:url(<%= event_now.image.url(:medium) %>);">
               <div id='map-canvas'></div>
               <a><%= image_tag("more_info.png", :class => 'more') %></a>
               <a><%= image_tag("play_button.png", :class => 'play') %></a>
-              
+
 
               <div id="name-and-location">
                 <h1 class='title'>   <%= event_now.name %></h1>
@@ -71,5 +71,55 @@
   <%end %>
 </section>
 
-<div>
-</div>
+<section id="background-create-event">
+  <section id="create-event-form">
+
+    <%= form_for(@event, url: events_path,  html: {class: "directUpload", multipart: true}) do |f| %>
+      <% if @event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+          <ul>
+          <% @event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <h2>Create Event</h2>
+
+      <div class="field">
+        <%= f.label :calendar_id, :class=>'calendar-label' %>
+        <%= f.collection_select :calendar_id, Calendar.all, :id, :name%>
+      </div>
+      <div class="field">
+        <%= f.text_field :name, :class=>'name-field', :placeholder => 'Event Name' %>
+      </div>
+      <div class="field">
+        <%= f.text_field :location, :class=>'location-field', :placeholder => 'Location' %>
+      </div>
+      <div class="field">
+        <%= f.text_area :description, :class=>'description-field', :placeholder => 'Description' %>
+      </div>
+      <div class="field">
+        <%= f.datetime_select :date, :minute_step => 30, :class=>'date-field' %>
+      </div>
+      <div class="field">
+        <%= f.file_field :image %>
+      </div>
+      <div class="field">
+        <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
+      </div>
+
+    <br>
+      <div class="actions">
+        <%= f.submit 'submit', id: 'edit_event_submit' %>
+        <button class= "back-button" type="button"><%= link_to 'Back', user_calendars_path %></button>
+      </div>
+
+
+    <% end %>
+
+  </section>
+</section>
