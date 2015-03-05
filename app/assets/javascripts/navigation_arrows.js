@@ -11,7 +11,7 @@ $(document).mousemove(function() {
     timer = setTimeout(function() {
         $(".left-arrow").fadeOut(1000);
         $(".right-arrow").fadeOut(1000);
-    }, 1500)
+    }, 500)
 })
 
 });

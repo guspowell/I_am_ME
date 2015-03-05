@@ -41,20 +41,14 @@ nav {
  margin-bottom: 42%;
 }
 
+.search-bar input[type="text"] {
+  border: 2px solid black;
+}
+
 .left-buttons .search {
  height: 53%;
  margin-left: 4%;
  margin-bottom: 45%;
-}
-
-.left-buttons .search-field {
- float: left;
- outline: none;
- margin-left: 0;
- margin-top: 22px;
- border: 2px solid black;
- height: 20px;
- width: 100%;
 }
 
 .center {
