@@ -1,8 +1,11 @@
+<section id="edit-event">
 <section id="create-event-form">
 
   <%= render 'form' %>
-
+<div class="actions">
   <%= link_to 'Back', events_path %> |
   <%= link_to  'Delete', event_path(@event), method: :delete %>
+</div>
 
+</section>
 </section>
