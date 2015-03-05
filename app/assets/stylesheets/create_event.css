@@ -119,6 +119,7 @@ form#new_event {
 }
 
 #edit-event #create-event-form {
+  margin-top: 50px;
   width: 750px;
   height: 700px;
   position: fixed;
