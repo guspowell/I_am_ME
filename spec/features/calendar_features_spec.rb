@@ -74,6 +74,16 @@ feature 'Calendars' do
 
       expect(page).to have_content event.name
     end
+
+    scenario 'I can click outside the create event form and be returned', js: true, :driver => :selenium do
+      user = create(:user)
+      login_as(user)
+
+      visit user_calendar_path(user, user.calendars.me) 
+      click_link 'Add Calendar' 
+
+      expect(find('#background-create-event').visible?).to eq(false)
+    end
   end
 end
     
