@@ -1,5 +1,4 @@
-require 'rails_helper'
-require 'formulaic'
+require_relative './init'
 
 feature 'Tags' do
 
