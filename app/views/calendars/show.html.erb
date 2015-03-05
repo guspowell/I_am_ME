@@ -28,16 +28,20 @@
 <section id="calendar">
 
   <% while @week.day <= @week.sunday %>
+    
     <%@week.reset_hour%>
-    <% todays_events = events_today(@events, @week.day) if @events.present? %>
 
+    <% todays_events = events_today(@events, @week.day) if @events.present? %>
+        
     <section class="day" id= <%="#{@week.day.strftime('%Y-%m-%d')}"%>>
       <% while @week.hour <= @week.hours_per_day %>
 
 
         <section class="widget-container">
-         <% event_now = events_this_hour(todays_events, @week.hour) if todays_events.present? %>
 
+
+         <% event_now = events_this_hour(todays_events, @week.hour) if todays_events.present? %>
+         
           <%- if event_now %>
 
             <div class="widget-small" id= <%="#{@week.hour}"%> style="background-image:url(<%= event_now.image.url(:medium) %>);">
@@ -67,6 +71,7 @@
         <% @week.hour += 1 %>
       <% end%>
     </section>
+    
     <% @week.day = @week.day.next_day %>
   <%end %>
 </section>

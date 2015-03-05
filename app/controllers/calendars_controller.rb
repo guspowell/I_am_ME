@@ -16,7 +16,7 @@ class CalendarsController < ApplicationController
   def show
     @event = Event.new
     @week = CalendarWeek.new Integer(params[:wkid] || 0)
-    @events = @calendar.events.all.select {|event|  event.date.between?(@week.day, @week.sunday) }
+    @events = @calendar.events.all.select {|event|  event.date.between?(@week.day, @week.sunday+1) }
   end
 
   # GET /calendars/new
