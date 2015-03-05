@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to user_calendar_path(current_user, current_user.get_me_calendar) }
+        format.html { redirect_to user_calendar_path(current_user, current_user.calendars.me) }
       else
         format.html { render :edit }
       end
