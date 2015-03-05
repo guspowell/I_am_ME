@@ -66,11 +66,6 @@ $(document).ready(function() {
     return 'widget-page';
   }
 
-
-
-
-
-
 var clock_div = $('#clock').offset().top, $window = $(window);
 
   $(function(){
