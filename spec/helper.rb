@@ -39,13 +39,15 @@ def create_event
 end 
 
 def fill_in_event_form(attrs)
-  fill_form(:event, {  'Event Name' => attrs[:name], 
-                       'event_date_1i' => attrs[:date].year,
-                       'event_date_2i'    => attrs[:date].strftime("%B"), 
+  fill_form(:event, {  'Event Name'       => attrs[:name], 
+                       'event_date_1i'    => attrs[:date].year,
+                       'event_location'   => attrs[:location],
+                       'event_description'=> attrs[:description],
+                       'event_date_2i'    => attrs[:date].strftime("%B"),
                        'event_date_3i'    => attrs[:date].day,
                        'event_date_4i'    => attrs[:date].hour,
-                       'event_description'=> attrs[:description],
-                       'event_location'   => attrs[:location] })
+                       
+  })
 end
 
 

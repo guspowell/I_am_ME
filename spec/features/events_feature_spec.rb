@@ -32,9 +32,9 @@ feature 'Event' do
   end
 
   
-  context 'When I want to create an event' do
+  context 'When I want to create an event', js: true, :driver => :selenium  do
 
-    scenario 'I can fill in a form to do so', js: true, :driver => :selenium do
+    scenario 'I can fill in a form to do so' do
       user = create(:user) 
       login_as(user)
 
@@ -51,12 +51,12 @@ feature 'Event' do
       food_cal = create(:calendar, name: "Food")
       user.calendars << food_cal
       login_as(user)
-      visit "/users/#{user.id}/events/new"
+      find('img.plus').click
 
       attrs = attributes_for(:event, name: "Cocktail Party")
       fill_in_event_form(attrs)
       select("Food", from: "event[calendar_id]")
-      click_button 'submit'
+      click_button 'Submit'
 
       visit user_calendar_path(user, food_cal)
       expect(page).to have_content "Cocktail Party" 
