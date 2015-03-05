@@ -26,7 +26,7 @@ form#new_event {
   transform: translate(-50%, -50%);
   background-color: white;
   width: 500px;
-  padding-bottom: 2%;
+  padding-bottom: 4%;
   border: 1px solid #333333;
 }
 
@@ -48,7 +48,9 @@ form#new_event {
   border: 1px solid black;
   background: white;
   border-radius: 2px;
-  color: #333333;
+  color: black;
+  float: right;
+  margin-right: 5%;
 }
 
 #create-event-form {
@@ -111,7 +113,7 @@ form#new_event {
   border-radius: 2px;
   color: #333333;
   text-decoration: none;
-  float: right;
+  float: left;
   display: inline;
   margin-right: 4%;
 }
