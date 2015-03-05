@@ -67,16 +67,27 @@ feature 'Event' do
 
     scenario 'I can for an event I created' do
       user = create(:user)
-      user.get_me_calendar.events << create(:event)
+      event= create(:event)
+      user.get_me_calendar.events << event
       login_as(user)
 
       find('img.more').click
-      find('img#edit').click 
-      fill_in 'Name', with: 'Pot Luck'
-      click_button 'submit' 
-      
+      click_link 'Edit' 
 
-      expect(page).to have_content 'Pot Luck'
+      expect(current_path).to eq edit_user_event_path user, event
+    end
+
+    scenario 'I can make changes in the edit event form' do
+      user = create(:user)
+      event = create(:event, user: user)
+      login_as(user)
+
+      visit edit_user_event_path(user, event)
+
+      fill_in 'Name', with: 'Jamboree'
+      click_button 'submit'
+
+      expect(page).to have_content 'Jamboree'
     end
   end
 
