@@ -115,3 +115,14 @@ form#new_event {
   display: inline;
   margin-right: 4%;
 }
+
+#edit-event #create-event-form {
+   width: 750px;
+  height: 750px;
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #333333;
+
+}
