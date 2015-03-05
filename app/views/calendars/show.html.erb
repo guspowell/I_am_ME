@@ -57,8 +57,8 @@
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
-                <%= button_to image_tag("ME.jpg", :class => 'me'), {:controller => "calendars", :action => "mebutton", :event_id => event_now.id } %>
-                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + event_now.id.to_s + '/edit', id: 'edit-event' %>  </p>
+                <%= link_to image_tag("ME.jpg", :class => 'me'), calendars_mebutton_path(:event_id => event_now.id), :method => :post  %>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + event_now.id.to_s + '/edit', id: 'edit-event' %></p>
               </section>
             </div>
           <% end %>
@@ -114,8 +114,8 @@
 
     <br>
       <div class="actions">
-        <%= f.submit 'submit', id: 'edit_event_submit' %>
         <button class= "back-button" type="button"><%= link_to 'Back', user_calendars_path %></button>
+        <%= f.submit 'submit', id: 'edit_event_submit' %>
       </div>
 
 

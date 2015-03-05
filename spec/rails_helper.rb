@@ -5,7 +5,10 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'airborne'
 require 'factory_girl_rails'
+require 'formulaic'
 require 'helper'
+require 'database_cleaner_helper'
+
 
 
 # Add additional requires below this line. Rails is not loaded until this point!

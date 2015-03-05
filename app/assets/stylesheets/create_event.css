@@ -40,17 +40,17 @@ form#new_event {
 }
 
 #create-event-form input[type="submit"] {
- width: 25%;
- line-height: 1.9em;
- display: inline;
- padding: 1%;
- padding-bottom: 0.5%;
- border: 1px solid black;
- background: white;
- border-radius: 2px;
- color: black;
- float: right;
- margin-right: 5%;
+  width: 25%;
+  line-height: 1.9em;
+  display: inline;
+  padding: 1%;
+  padding-bottom: 0.5%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  color: black;
+  float: right;
+  margin-right: 5%;
 }
 
 #create-event-form {
@@ -103,22 +103,23 @@ form#new_event {
 }
 
 #create-event-form .back-button {
- width: 25%;
- line-height: 1.9em;
- display: inline;
- padding: 1%;
- padding-bottom: 0.5%;
- border: 1px solid black;
- background: white;
- border-radius: 2px;
- color: #333333 ;
- text-decoration: none;
- float: left;
- display: inline;
- margin-right: 4%;
+  width: 25%;
+  line-height: 1.9em;
+  display: inline;
+  padding: 1%;
+  padding-bottom: 0.5%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  color: #333333;
+  text-decoration: none;
+  float: left;
+  display: inline;
+  margin-right: 4%;
 }
 
 #edit-event #create-event-form {
+  margin-top: 50px;
   width: 750px;
   height: 700px;
   position: fixed;

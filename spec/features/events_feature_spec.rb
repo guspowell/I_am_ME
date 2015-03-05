@@ -2,6 +2,9 @@ require_relative './init'
 
 # NOTE: To run this spec you need to have chromedriver. Follow error instructions
 # And download it to /usr/bin
+#
+  
+
 
 feature 'Event' do
 
@@ -61,11 +64,21 @@ feature 'Event' do
       visit user_calendar_path(user, food_cal)
       expect(page).to have_content "Cocktail Party" 
     end
+
+    scenario 'I can click outside the create event form and be returned', js: true, :driver => :selenium do
+      user = create(:user)
+      login_as(user)
+
+      visit user_calendar_path(user, user.get_me_calendar) 
+      find('img.plus').click 
+
+      expect(find('#background-create-event').visible?).to eq(false)
+    end
   end
 
-  context 'When I want to edit an event', js: true, :driver => :selenium do
+  context 'When I want to change an event', js: true, :driver => :selenium do
 
-    scenario 'I can for an event I created' do
+    scenario 'I click edit to go to the edit event page' do
       user = create(:user)
       event= create(:event)
       user.get_me_calendar.events << event
@@ -83,29 +96,37 @@ feature 'Event' do
       login_as(user)
 
       visit edit_user_event_path(user, event)
-
       fill_in 'Name', with: 'Jamboree'
       click_button 'submit'
 
       expect(page).to have_content 'Jamboree'
     end
-  end
 
-  context 'When I want to delete an event' do 
-
-    scenario 'I created, I go to the edit event page', js: true, driver: :selenium do 
+    scenario 'I can delete the event on the edit event page' do
       user  = create(:user) 
-      event = create(:event, name: 'Hippy Jam')
+      event = create(:event, name: 'Hippy Jam', user: user)
       user.get_me_calendar.events << event
 
       login_as(user) 
-      find('img.more').click
-      find('img#edit').click 
+      visit edit_user_event_path(user, event)
       click_link 'Delete'
 
       expect(page).not_to have_content('Hippy Jam')
     end 
+
+    scenario 'I cannot unless I created the event' do
+      user = create(:user)
+      event = create(:event, name: 'Pumpkin Contest', 
+                                  user: create(:user, username: 'Charlie', email: 'charlie@email.com'))
+      user.get_me_calendar.events << event 
+
+      login_as(user)
+      visit edit_user_event_path(user, event)
+      click_button 'Delete'
+
+      expect(page).to have_content 'Pumpkin Content'
+      expect(page).to have_content 'You cannot edit an event you did not create'
+    end
   end
 end
-
 
