@@ -44,10 +44,8 @@ class CalendarsController < ApplicationController
       if @calendar.save
         current_user.calendars << @calendar
         format.html { redirect_to '/users/' + current_user.id.to_s + '/calendars/' + @calendar.id.to_s, notice: 'Calendar was successfully created.' }
-        format.json { render :show, status: :created, location: @calendar }
       else
         format.html { render :new }
-        format.json { render json: @calendar.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,10 +56,8 @@ class CalendarsController < ApplicationController
     respond_to do |format|
       if @calendar.update(calendar_params)
         format.html { redirect_to @calendar, notice: 'Calendar was successfully updated.' }
-        format.json { render :show, status: :ok, location: @calendar }
       else
         format.html { render :edit }
-        format.json { render json: @calendar.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -72,7 +68,6 @@ class CalendarsController < ApplicationController
     @calendar.destroy
     respond_to do |format|
       format.html { redirect_to calendars_url, notice: 'Calendar was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
