@@ -12,32 +12,13 @@
   </script>
 </head>
 
-<script>
-
-$(document).ready(function() {
-
-  $('.add-cal').click(function() {
-    $('#background-blur').show();
-  });
-
-});
-
-
-</script>
 
 <body>
-
 
 <nav>
   <section class='left-buttons'>
     <ul>
-      <li><a><%= image_tag("settings.svg", :class => 'settings') %>
-        <ul class='plus-dropdown'>
-          <li><a href='#'>Profile</a></li>
-          <li><a href='#'>hfdsafh</a></li>
-          <li><a href='#'>hfdsafh</a></li>
-        </ul>
-      </li>
+      <li><a><%= image_tag("settings.svg", :class => 'settings') %></li>
       <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
       <li><%= form_tag(events_path, :method => 'get', :class => 'search', id: 'search-form') do %></li>
       <li class= 'search-bar'><%= text_field_tag :search, params[:search] %></li>
@@ -55,14 +36,28 @@ $(document).ready(function() {
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
-      <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
+
+      <li class="calendar-name">
+          <%= image_tag("MEcals.svg", :class => 'cal') %>
+          <h2><%= Calendar.find(params[:id]).name %></h2>
+          <ul class='cal-dropdown'>
+            <% current_user.calendars.each do |calendar|%>
+              <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
+            <% end %>
+            <li><strong><a href='#', class="add-cal">Add Calendar</li>
+          </ul>
+      </li>
+
+
+      <!-- <li class="calendar-name"><a href='#'>ME</a><%= image_tag("MEcals.svg", :class => 'cal') %>
         <ul class='cal-dropdown'>
           <% current_user.calendars.each do |calendar|%>
             <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
           <% end %>
           <li><strong><a href='#', class="add-cal">Add Calendar</li>
         </ul>
-      </li>
+      </li> -->
+
     </ul>
   </section>
 </nav>
