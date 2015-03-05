@@ -16,9 +16,6 @@ $(document).ready(function() {
     });
   });
 
-
-
-
   $('.plus').click(function() {
     var createEventBox = $('#background-create-event');
     createEventBox.show();
@@ -34,6 +31,5 @@ $(document).ready(function() {
       }
     });
   });
-
 
 });

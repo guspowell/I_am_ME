@@ -40,7 +40,7 @@
         <li class="calendar-name">
             <%= image_tag("MEcals.svg", :class => 'cal') %>
             <%if @calendar%>
-            <h2><%= Calendar.find(params[:id]).name %></h2>
+              <h2><%= Calendar.find(params[:id]).name %></h2>
             <%end%>
             <ul class='cal-dropdown'>
               <% current_user.calendars.each do |calendar|%>
