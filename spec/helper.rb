@@ -49,4 +49,10 @@ def fill_in_event_form(attrs)
 end
 
 
+def event_form_with_tag(attrs)
+  fill_in_event_form(attrs)
+  fill_in 'Tags separated with comma', with: 'Sports'
+end
+
+
 
