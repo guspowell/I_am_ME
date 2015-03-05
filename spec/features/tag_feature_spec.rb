@@ -11,7 +11,7 @@ feature 'Tags' do
     
     attrs = attributes_for(:event)
     fill_in_event_form(attrs)
-    fill_in 'Tags', with: 'Sports'
+    fill_in 'Tags separated with comma', with: 'Sports'
     click_button 'submit'
 
     expect(Event.find_by(name: attrs[:name]).tags.first.name).to eq('Sports')
