@@ -1,0 +1,11 @@
+#edit-event #create-event-form {
+  margin-top: 50px;
+  width: 750px;
+  height: 700px;
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #333333;
+
+}
