@@ -27,43 +27,41 @@ $(document).ready(function() {
 
 <body>
 
+  <nav>
+    <section class='left-buttons'>
+      <ul>
+        <li><a><%= image_tag("settings.svg", :class => 'settings') %>
+          <ul class='plus-dropdown'>
+            <li><a href='#'>Profile</a></li>
+          </ul>
+        </li>
+        <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
+        <li><%= form_tag(events_path, :method => 'get', :class => 'search', id: 'search-form') do %></li>
+        <li class= 'search-bar'><%= text_field_tag :search, params[:search] %></li>
+        <li><%= image_submit_tag("search.svg", :class => 'search') %> </li>
+        <% end %>
+      </ul>
+    </section>
 
-<nav>
-  <section class='left-buttons'>
-    <ul>
-      <li><a><%= image_tag("settings.svg", :class => 'settings') %>
-        <ul class='plus-dropdown'>
-          <li><a href='#'>Profile</a></li>
-        </ul>
-      </li>
-      <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
-      <li><%= form_tag(events_path, :method => 'get', :class => 'search', id: 'search-form') do %></li>
-      <li class= 'search-bar'><%= text_field_tag :search, params[:search] %></li>
-      <li><%= image_submit_tag("search.svg", :class => 'search') %> </li>
-<% end %>
-    </ul>
-  </section>
+    <section class='center'><%= link_to image_tag("ME.jpg", :class => 'logo'), '/' %></section>
 
-  <section class='center'><%= link_to image_tag("ME.jpg", :class => 'logo'), '/' %>
-  </section>
-
-  <section class='right-buttons'>
-    <ul>
-      <li><%= link_to image_tag("create.svg", :class => 'plus'), '#' %></li>
-      <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
-      <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path %>
-      <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
-      <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
-        <ul class='cal-dropdown'>
-          <% current_user.calendars.each do |calendar|%>
-            <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
-          <% end %>
-          <li><strong><a href='#', class="add-cal">Add Calendar</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-</nav>
+    <section class='right-buttons'>
+      <ul>
+        <li><%= link_to image_tag("create.svg", :class => 'plus'), '#' %></li>
+        <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
+        <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path %>
+        <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>
+        <li><a href='#'><%= image_tag("MEcals.svg", :class => 'cal') %>
+          <ul class='cal-dropdown'>
+            <% current_user.calendars.each do |calendar|%>
+              <li><%= link_to calendar.name, '/users/' + current_user.id.to_s + '/calendars/' + calendar.id.to_s %></li>
+            <% end %>
+            <li><strong><a href='#', class="add-cal">Add Calendar</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
 
   <section id="background-blur">
     <section id="new-cal">
@@ -73,9 +71,8 @@ $(document).ready(function() {
         <%= submit_tag("Create") %>
       </div>
     <% end %>
+    </section>
   </section>
-  </section>
-
 
 <%= yield %>
 
