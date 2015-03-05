@@ -34,15 +34,14 @@ feature 'Event' do
   
   context 'When I want to create an event' do
 
-    scenario 'I can fill in a form to do so' do
+    scenario 'I can fill in a form to do so', js: true, :driver => :selenium do
       user = create(:user) 
       login_as(user)
-      visit "/users/#{user.id}/events/new"
 
+      find('img.plus').click
       attrs = attributes_for(:event)
       fill_in_event_form(attrs)
-      attach_file('Image', "#{Rails.root}/spec/support/uploads/spiderman.jpg")
-      click_button 'submit'
+      click_button 'Submit'
 
       expect(page).to have_content(attrs[:name])
     end
