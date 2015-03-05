@@ -4,7 +4,6 @@ FactoryGirl.define do
     date DateTime.now.change({min: 00, hour: 12})
     description "FOOOOTBBBAAAALLLLL"
     location "Hyde Park"
-
   end
   
   factory :event_with_tag, parent: :event do

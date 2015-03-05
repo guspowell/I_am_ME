@@ -1,6 +1,11 @@
 require 'database_cleaner'
+puts " I was required "
+
+if ENV['TEST_MODE'] == "features"
 
 RSpec.configure do |config|
+  
+  config.use_transactional_fixtures = false
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
@@ -21,5 +26,7 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+end
 
 end

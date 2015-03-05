@@ -39,7 +39,7 @@ $(document).ready(function() {
       </li>
       <li><%= link_to image_tag("log_out.svg", :class => 'log-out'), destroy_user_session_path, :method => :delete %></li>
       <li><%= form_tag(events_path, :method => 'get', :class => 'search', id: 'search-form') do %></li>
-      <li><%= text_field_tag :search, params[:search] %></li>
+      <li class= 'search-bar'><%= text_field_tag :search, params[:search] %></li>
       <li><%= image_submit_tag("search.svg", :class => 'search') %> </li>
 <% end %>
     </ul>
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
   <section class='right-buttons'>
     <ul>
-      <li><%= link_to image_tag("create.svg", :class => 'plus'), '/users/' + current_user.id.to_s + '/events/new' %></li>
+      <li><%= link_to image_tag("create.svg", :class => 'plus'), '#' %></li>
       <li><a href='#'><%= image_tag("MEmates.svg", :class => 'friends') %>
       <li><%= link_to image_tag("inspireME.svg", :class => 'bunny'), events_path + "?random=true" %>
       <li><%= link_to image_tag("map.svg", :class => 'map'), '/pages/map' %></li>

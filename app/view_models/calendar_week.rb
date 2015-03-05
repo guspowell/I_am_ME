@@ -10,7 +10,6 @@ class CalendarWeek
     @sunday = @day.end_of_week
   end
 
-
   def reset_hour
     @hour = 1
   end 
