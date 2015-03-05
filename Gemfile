@@ -32,3 +32,10 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner', '~> 1.4.0'
 end
+
+group :production do
+
+  gem 'rails_12factor'
+
+end
+
