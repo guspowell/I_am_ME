@@ -13,5 +13,3 @@ $(document).mousemove(function() {
         $(".right-arrow").fadeOut(1000);
     }, 500)
 })
-
-});
