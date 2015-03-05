@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
     respond_to do |format|
       if @calendar.save
         current_user.calendars << @calendar
-        format.html { redirect_to '/users/' + current_user.id.to_s + '/calendars/' + @calendar.id.to_s, notice: 'Calendar was successfully created.' }
+        format.html { redirect_to user_calendar_path(current_user, @calendar.id), notice: 'Calendar was successfully created.' }
       else
         format.html { render :new }
       end
