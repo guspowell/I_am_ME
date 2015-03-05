@@ -12,12 +12,10 @@
   background:rgba(51,51,51,0.8);
 }
 
-#create-event-form {}
-
 form#new_event {
   position: fixed;
   width: 100%;
-  top: 50%;
+  top: 60%;
   left: 50%;
   background-color: white;
   /* bring your own prefixes */
