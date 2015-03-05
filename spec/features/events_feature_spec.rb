@@ -3,8 +3,6 @@ require_relative './init'
 # NOTE: To run this spec you need to have chromedriver. Follow error instructions
 # And download it to /usr/bin
 #
-  
-
 
 feature 'Event' do
 
@@ -71,8 +69,9 @@ feature 'Event' do
 
       visit user_calendar_path(user, user.get_me_calendar) 
       find('img.plus').click 
+      page.execute_script("$(document.elementFromPoint(10, 10)).click();")
 
-      expect(find('#background-create-event').visible?).to eq(false)
+      expect(page).not_to have_css('#background-create-event')
     end
   end
 

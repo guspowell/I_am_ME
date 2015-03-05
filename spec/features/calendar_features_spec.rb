@@ -55,6 +55,19 @@ feature 'Calendars' do
       sports_cal = Calendar.find_by(name: 'Sports')
       expect(current_path).to eq user_calendar_path user, sports_cal
     end
+
+    scenario 'I can click outside the create calendar form and be returned', js: true, :driver => :selenium do
+      user = create(:user)
+      login_as(user)
+
+      visit user_calendar_path(user, user.get_me_calendar) 
+      find('img.cal').hover
+      click_link 'Add Calendar' 
+      page.execute_script("$(document.elementFromPoint(10, 10)).click();")
+
+      expect(page).not_to have_css('#background-blur')
+    end
+
   end
 
   context 'When I want to add an event to my calendar' do
@@ -74,6 +87,7 @@ feature 'Calendars' do
 
       expect(page).to have_content event.name
     end
+
   end
 end
     
