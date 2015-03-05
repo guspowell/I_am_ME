@@ -84,7 +84,11 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-    $("#clock").fadeIn();
+    $("#clock").fadeIn(1000);
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function() {
+        $("#clock").fadeOut(1000);
+    }, 1500));
   });
   
 });
