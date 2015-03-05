@@ -26,11 +26,7 @@ form#new_event {
   transform: translate(-50%, -50%);
   background-color: white;
   width: 500px;
-<<<<<<< HEAD
   padding-bottom: 4%;
-=======
-  padding-bottom: 5%;
->>>>>>> e814a1d100a5f4aa127dd27994d066648d37297b
   border: 1px solid #333333;
 }
 
