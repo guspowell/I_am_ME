@@ -30,7 +30,7 @@ $(document).ready(function() {
   $('.plus').click(function() {
     var createEventBox = $('#background-create-event');
     createEventBox.show();
-
+    
     createEventBox.click(function (e)  {
       var container = $('form#new_event');
 
@@ -40,6 +40,5 @@ $(document).ready(function() {
       }
     });
   });
-
 
 });

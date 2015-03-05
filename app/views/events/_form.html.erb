@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <h2>Create/Edit Event</h2>
+  <h2>Edit/Delete Event</h2>
 
   <div class="field">
     <%= f.label :calendar_id, :class=>'calendar-label' %>
@@ -37,12 +37,12 @@
     <%= f.file_field :image %>
   </div>
   <div class="field">
-    <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %> 
+    <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
   </div>
 
   <br>
   <div class="actions">
-    <%= f.submit 'submit', id: 'edit_event_submit' %>
+    <%= f.submit 'Submit', id: 'edit_event_submit' %>
     <button class= "back-button" type="button"><%= link_to 'Back', user_calendars_path %></button>
   </div>
 

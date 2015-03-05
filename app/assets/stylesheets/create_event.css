@@ -12,14 +12,10 @@
   background:rgba(51,51,51,0.8);
 }
 
-#create-event-form {
-
-}
-
 form#new_event {
   position: fixed;
   width: 100%;
-  top: 50%;
+  top: 60%;
   left: 50%;
   background-color: white;
   /* bring your own prefixes */
@@ -27,30 +23,17 @@ form#new_event {
   background-color: white;
   width: 500px;
   padding-bottom: 5%;
-  border: 1px solid #333333;
+  border: 2px solid white;
 }
 
 #create-event-form input[type="text"] {
-  width: 90%;
+  width: 98%;
   line-height: 2.3em;
   background-color: transparent;
   border: 1px solid black;
   color: black;
   border-radius: 2px;
-}
-
-#create-event-form input[type="submit"] {
-  width: 25%;
-  line-height: 1.9em;
-  display: inline;
-  padding: 1%;
-  padding-bottom: 0.5%;
-  border: 1px solid black;
-  background: white;
-  border-radius: 2px;
-  color: black;
-  float: right;
-  margin-right: 5%;
+  padding-left: 1%;
 }
 
 #create-event-form {
@@ -83,6 +66,8 @@ form#new_event {
   margin-left: auto;
   color: #737373;
   margin-right: 5%;
+  font-size: 1.1em;
+  padding-left: 1%;
 }
 
 #create-event-form .name-field {
@@ -91,10 +76,13 @@ form#new_event {
 }
 
 #create-event-form .description-field {
-  width: 90%;
+  width: 98%;
   height: 100px;
   font-weight: 500;
   border: 1px solid black;
+  border-radius: 2px;
+  padding-left: 1%;
+
 }
 
 #create-event-form .location-field {
@@ -111,9 +99,37 @@ form#new_event {
   border: 1px solid black;
   background: white;
   border-radius: 2px;
-  color: #333333;
+  color: black;
   text-decoration: none;
   float: left;
   display: inline;
+  margin-left: 20%;
   margin-right: 4%;
+}
+
+#create-event-form input[type="submit"] {
+  width: 25%;
+  line-height: 1.9em;
+  display: inline;
+  padding: 1%;
+  padding-bottom: 0.5%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  color: black;
+  text-decoration: none;
+  float: left;
+  display: inline;
+}
+
+#edit-event #create-event-form {
+  margin-top: 50px;
+  width: 750px;
+  height: 700px;
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #333333;
+
 }
