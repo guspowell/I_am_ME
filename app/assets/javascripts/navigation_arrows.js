@@ -12,6 +12,5 @@ $(document).mousemove(function() {
         $(".left-arrow").fadeOut(1000);
         $(".right-arrow").fadeOut(1000);
     }, 1500)
-})
-
+  })
 });
