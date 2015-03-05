@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-  scope :by_tag, ->(query) { joins(:tags).where('tags.name ilike ?', "tags=true&&%#{query}%") }
+  scope :by_tag, ->(query) { joins(:tags).where('tags.name ilike ?', "%#{query}%") }
 
 
   def all_tags=(names)
