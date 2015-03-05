@@ -2,6 +2,9 @@ require_relative './init'
 
 # NOTE: To run this spec you need to have chromedriver. Follow error instructions
 # And download it to /usr/bin
+#
+  
+
 
 feature 'Event' do
 
@@ -68,9 +71,8 @@ feature 'Event' do
 
       visit user_calendar_path(user, user.get_me_calendar) 
       find('img.plus').click 
-      find('#background-create-event').click
 
-      expect(find('#create-event-form').visible?).to eq(false)
+      expect(find('#background-create-event').visible?).to eq(false)
     end
   end
 
