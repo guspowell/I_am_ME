@@ -1,7 +1,4 @@
 require 'database_cleaner'
-puts " I was required "
-
-if ENV['TEST_MODE'] == "features"
 
 RSpec.configure do |config|
   
@@ -29,4 +26,3 @@ RSpec.configure do |config|
 
 end
 
-end
