@@ -83,10 +83,6 @@ $(document).ready(function() {
     };
   });
 
-  // $(window).scroll(function() {
-  //   $("#clock").fadeIn();
-  // });
-
   $(window).scroll(function() {
     $("#clock").fadeIn(1000);
     clearTimeout($.data(this, 'scrollTimer'));
