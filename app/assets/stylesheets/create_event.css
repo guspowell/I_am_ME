@@ -26,11 +26,7 @@ form#new_event {
   transform: translate(-50%, -50%);
   background-color: white;
   width: 500px;
-<<<<<<< HEAD
-  padding-bottom: 4%;
-=======
   padding-bottom: 5%;
->>>>>>> e814a1d100a5f4aa127dd27994d066648d37297b
   border: 1px solid #333333;
 }
 
@@ -107,7 +103,6 @@ form#new_event {
 }
 
 #create-event-form .back-button {
-<<<<<<< HEAD
   width: 25%;
   line-height: 1.9em;
   display: inline;
@@ -121,21 +116,6 @@ form#new_event {
   float: left;
   display: inline;
   margin-right: 4%;
-=======
- width: 25%;
- line-height: 1.9em;
- display: inline;
- padding: 1%;
- padding-bottom: 0.5%;
- border: 1px solid black;
- background: white;
- border-radius: 2px;
- color: #333333 ;
- text-decoration: none;
- float: left;
- display: inline;
- margin-right: 4%;
->>>>>>> e814a1d100a5f4aa127dd27994d066648d37297b
 }
 
 #edit-event #create-event-form {
