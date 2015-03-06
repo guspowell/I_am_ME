@@ -45,9 +45,13 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to '/', notice: 'Event was successfully destroyed.' }
+    if @event.user == current_user
+      @event.destroy
+      redirect_to user_calendar_path(current_user, current_user.calendars.me),
+                  notice: 'Event was successfully destroyed.' 
+    else
+      redirect_to user_calendar_path(current_user, current_user.calendars.me),
+                  notice: 'You cannot delete an event you did not create'
     end
   end
 

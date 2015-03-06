@@ -10,7 +10,7 @@ feature 'Event' do
 
     scenario 'I can see a small widget' do
       user = create(:user)
-      event= create(:event)
+      event= create(:event, user: user)
       user.get_me_calendar.events << event
       login_as(user)
       
@@ -29,6 +29,7 @@ feature 'Event' do
       
       expect(find('img#edit').visible?).to eq(true)
     end
+
   end
 
   
@@ -122,8 +123,7 @@ feature 'Event' do
       visit edit_user_event_path(user, event)
       click_link 'Delete'
 
-      expect(page).to have_content 'Pumpkin Content'
-      expect(page).to have_content 'You cannot edit an event you did not create'
+      expect(page).to have_content event.name 
     end
   end
 end

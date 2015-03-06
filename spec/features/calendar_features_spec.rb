@@ -88,6 +88,16 @@ feature 'Calendars' do
       expect(page).to have_content event.name
     end
 
+    scenario 'I can view an event that another user created' do
+      user = create(:user)
+      event= create(:event, user: create(:user, username: 'Bob', email: 'bob@gmail.com'))
+      user.calendars.me.events << event
+
+      login_as(user)
+      visit user_calendar_path(user, user.calendars.me)
+
+      expect(page).to have_content event.name
+    end
   end
 end
     
