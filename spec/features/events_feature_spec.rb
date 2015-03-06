@@ -84,7 +84,7 @@ feature 'Event' do
       login_as(user)
 
       find('img.more').click
-      find(:xpath, '//*[@id="edit"]').click
+      click_link 'Edit' 
 
       expect(current_path).to eq edit_user_event_path user, event
     end
