@@ -125,6 +125,12 @@ feature 'Event' do
 
       expect(page).to have_content event.name 
     end
+    
+    scenario 'After deletion, events no longer appear in search results' do
+
+
+
+    end
   end
 end
 
