@@ -96,7 +96,7 @@
 
       <div class="field">
         <%= f.label :calendar_id, :class=>'calendar-label' %>
-        <%= f.collection_select :calendar_id, Calendar.all, :id, :name%>
+        <%= f.collection_select :calendar_id, current_user.calendars, :id, :name%>
       </div>
       <div class="field">
         <%= f.text_field :name, :class=>'name-field', :placeholder => 'Event Name' %>
