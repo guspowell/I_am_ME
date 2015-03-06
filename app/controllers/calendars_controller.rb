@@ -32,7 +32,7 @@ class CalendarsController < ApplicationController
 
   def create
     @calendar = Calendar.new(:name => params[:name])
-    @calendar.user = current_user
+    @calendar.user_id = current_user
     respond_to do |format|
       if @calendar.save
         current_user.calendars << @calendar
