@@ -4,7 +4,7 @@
   <%= render 'form' %>
 <div class="actions">
   <%= link_to 'Back', events_path %> |
-  <%= link_to 'Delete', event_path(@event), method: :delete %>
+  <%= link_to 'Delete', user_event_path(current_user, @event), method: :delete %>
 </div>
 
 </section>
