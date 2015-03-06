@@ -6,7 +6,6 @@ feature 'Tags' do
     user= create(:user)
     
     login_as(user)
-
     visit user_calendar_path(user, user.calendars.me)
     
     attrs = attributes_for(:event)
