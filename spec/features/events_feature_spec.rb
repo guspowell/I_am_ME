@@ -83,7 +83,7 @@ feature 'Event' do
       login_as(user)
 
       find('img.more').click
-      click_link 'Edit' 
+      find(:xpath, '//*[@id="edit"]').click
 
       expect(current_path).to eq edit_user_event_path user, event
     end
@@ -95,7 +95,7 @@ feature 'Event' do
 
       visit edit_user_event_path(user, event)
       fill_in 'Name', with: 'Jamboree'
-      click_button 'submit'
+      click_button 'Submit'
 
       expect(page).to have_content 'Jamboree'
     end
@@ -113,14 +113,14 @@ feature 'Event' do
     end 
 
     scenario 'I cannot unless I created the event' do
-      user = create(:user)
+      user  = create(:user)
       event = create(:event, name: 'Pumpkin Contest', 
-                                  user: create(:user, username: 'Charlie', email: 'charlie@email.com'))
+                             user: create(:user, username: 'Charlie', email: 'charlie@email.com'))
       user.get_me_calendar.events << event 
 
       login_as(user)
       visit edit_user_event_path(user, event)
-      click_button 'Delete'
+      click_link 'Delete'
 
       expect(page).to have_content 'Pumpkin Content'
       expect(page).to have_content 'You cannot edit an event you did not create'
