@@ -26,7 +26,7 @@ class CalendarsController < ApplicationController
   def mebutton
     @event = Event.find(params[:event_id])
     current_user.calendars.where(:name=>'Me').sample.events << @event
-    redirect_to "/"
+    redirect_to :back 
   end
 
 
@@ -45,13 +45,9 @@ class CalendarsController < ApplicationController
 
 
   def update
-    respond_to do |format|
-      if @calendar.update(calendar_params)
-        format.html { redirect_to @calendar, notice: 'Calendar was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
+    @event = Event.find(params[:event])
+    current_user.calendars.where(:name=>'Me').sample.events << @event
+    redirect_to user_calendar_path(current_user, current_user.calendars.me)
   end
 
 

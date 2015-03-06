@@ -21,8 +21,8 @@
                 <p class='large-icons'><%= image_tag("map.svg", :id => 'map', :class => 'map') %></p>
                 <p class='large-icons'><%= image_tag("price_tag.svg", :id => 'price') %>         </p>
                 <p class='large-icons'><%= image_tag("share.svg", :id => 'share') %>             </p>
-                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), '/users/' + current_user.id.to_s + '/events/' + event.id.to_s + '/edit' %>  </p>
-                <a href='#'><%= image_tag("ME.jpg", :class => 'me') %></a>
+                <p class='large-icons'><%= link_to image_tag("edit.png", :id => 'edit'), edit_user_event_path(current_user, event) %>  </p>
+                <%= link_to image_tag("ME.jpg", :class => 'me'), user_calendar_path(current_user, current_user.calendars.me, event: event.id), :method => :patch  %>
               </section>
             </div>
         </section>
